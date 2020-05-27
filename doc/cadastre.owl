@@ -1,0 +1,614 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3id.org/cityont-core"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.w3id.org/cityont-core">
+    <Prefix name="" IRI="http://www.w3id.org/cityont-core"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="city-data-conceptual" IRI="http://www.w3id.org/cityont-core#"/>
+    <Declaration>
+        <Class IRI="#AreaObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Building"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CadastralBlock"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CadastralDistrict"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CadastralOkrug"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CadastralParcel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CadastreNumber"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CadastreRegister"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Land"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhysicalObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Reference"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Service"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Space"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCadastralBlock"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCadastralDistrict"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCadastralNumber"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCadastralOkrug"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLand"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasNestedObject"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasFullCadastralNumber"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Bicyclers"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BusinessTourist"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CarOwner"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CitizensWithEarlyChildhood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CitizensWithInfant"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CitizensWithPreschooler"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CitizensWithPrimarySchoolAge"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DisabledMovement"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DisabledSight"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#EarlyChildhood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ElderlyWorkingCitizens"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#EventTourist"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HealthyLifestyleCitizens"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Infant"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MiddleAgeWorkingCitizens"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MigrantWorker"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NoHealthyLifestyleCitizens"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OlderRetiree"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PetOwner"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pregnant"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Preschooler"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PrimarySchoolAge"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PublicTransportUser"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Religious"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SelfEmployedCitizens"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SeniorWorkingCitizens"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Student"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Teenager"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TemporarilyStayingCitizens"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TouristInGroup"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tween"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#UncoordinatedTourist"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#WasteSortingCitizens"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#YoungRetiree"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#YoungWorkingCitizens"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#param"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#AreaObject"/>
+        <Class IRI="#PhysicalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Building"/>
+        <Class IRI="#AreaObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CadastralBlock"/>
+        <Class IRI="#CadastreNumber"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CadastralDistrict"/>
+        <Class IRI="#CadastreNumber"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CadastralOkrug"/>
+        <Class IRI="#CadastreNumber"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CadastralParcel"/>
+        <Class IRI="#Land"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CadastreNumber"/>
+        <Class IRI="#CadastreRegister"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CadastreRegister"/>
+        <Class IRI="#Reference"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Land"/>
+        <Class IRI="#Space"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Reference"/>
+        <Class IRI="#Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Space"/>
+        <Class IRI="#AreaObject"/>
+    </SubClassOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCadastralBlock"/>
+        <ObjectProperty IRI="#hasCadastralNumber"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCadastralDistrict"/>
+        <ObjectProperty IRI="#hasCadastralNumber"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCadastralOkrug"/>
+        <ObjectProperty IRI="#hasCadastralNumber"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCadastralBlock"/>
+        <Class IRI="#CadastreNumber"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCadastralDistrict"/>
+        <Class IRI="#CadastreNumber"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCadastralNumber"/>
+        <Class IRI="#CadastralParcel"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCadastralOkrug"/>
+        <Class IRI="#CadastreNumber"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasLand"/>
+        <Class IRI="#Building"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasNestedObject"/>
+        <Class IRI="#PhysicalObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCadastralBlock"/>
+        <Class IRI="#CadastralBlock"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCadastralDistrict"/>
+        <Class IRI="#CadastralDistrict"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCadastralNumber"/>
+        <Class IRI="#CadastreNumber"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCadastralOkrug"/>
+        <Class IRI="#CadastralOkrug"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasLand"/>
+        <Class IRI="#Space"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasNestedObject"/>
+        <Class IRI="#PhysicalObject"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+        <Class IRI="#Building"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasFullCadastralNumber"/>
+        <Class IRI="#CadastreNumber"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasFullCadastralNumber"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AreaObject</IRI>
+        <Literal>Объект, обозначаемый площадью на карте (например, здание или парк).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AreaObject</IRI>
+        <Literal>Площадной объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Bicyclers</IRI>
+        <Literal>Велосипедисты</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Building</IRI>
+        <Literal>Площадной объект, представляющий собой постройку</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Building</IRI>
+        <Literal>Сооружение</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#BusinessTourist</IRI>
+        <Literal>Приезжие по рабочим вопросам</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CadastralBlock</IRI>
+        <Literal>Кадастровый квартал</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CadastralDistrict</IRI>
+        <Literal>Кадастровый район</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CadastralOkrug</IRI>
+        <Literal>Кадастровый округ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CadastralParcel</IRI>
+        <Literal>Кадастровый участок</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CadastreNumber</IRI>
+        <Literal>Кадастровый номер</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CadastreRegister</IRI>
+        <Literal>Сюда добавлять все виды кадастров (земельный, лесной и пр.)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CadastreRegister</IRI>
+        <Literal>Кадастровый реестр</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CarOwner</IRI>
+        <Literal>Автовладельцы</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CitizensWithEarlyChildhood</IRI>
+        <Literal>Горожане с детьми до-детсадовского возраста (от 1 до 3 лет)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CitizensWithInfant</IRI>
+        <Literal>Горожане с младенцами (от 0 до 1 года)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CitizensWithPreschooler</IRI>
+        <Literal>Горожане с детьми дошкольного возраста (от 3 до 7 лет)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CitizensWithPrimarySchoolAge</IRI>
+        <Literal>Горожане с детьми младшего школьного возраста (от 7 до 11 лет)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DisabledMovement</IRI>
+        <Literal>Лица с ограниченными возможностями передвижения</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DisabledSight</IRI>
+        <Literal>Лица с инвалидностью по зрению</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#EarlyChildhood</IRI>
+        <Literal>Дети до-детсадовского возраста (раннее детство от 1 до 3 лет)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ElderlyWorkingCitizens</IRI>
+        <Literal>Работающие горожане предпенсионного и пенсионного возраста (61-70 лет)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#EventTourist</IRI>
+        <Literal>Приезжие к мероприятиям</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#HealthyLifestyleCitizens</IRI>
+        <Literal>Горожане, ведущие здоровый образ жизни</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Infant</IRI>
+        <Literal>Младенцы (от 0 до 1 года)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Land</IRI>
+        <Literal>Земельный участок</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MiddleAgeWorkingCitizens</IRI>
+        <Literal>Работающие горожане среднего возраста (от 31 до 40 лет)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MigrantWorker</IRI>
+        <Literal>Трудовые мигранты</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NoHealthyLifestyleCitizens</IRI>
+        <Literal>Горожане, не ведущие здоровый образ жизни</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OlderRetiree</IRI>
+        <Literal>Пенсионеры старших возрастов (старше 75 лет</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PetOwner</IRI>
+        <Literal>Владельцы домашних животных</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PhysicalObject</IRI>
+        <Literal>Класс городских сущностей. Сюда помещаются конкретные физические объекты (например, здание), которые связываются с функциями (например, университет), координатами и управляющими ими организациями (например, Университет ИТМО).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PhysicalObject</IRI>
+        <Literal>Физический объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Pregnant</IRI>
+        <Literal>Беременные женщины</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Preschooler</IRI>
+        <Literal>Дети дошкольного возраста (от 3 до 7 лет)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PrimarySchoolAge</IRI>
+        <Literal>Дети младшего школьного возраста (от 7 до 11 лет)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PublicTransportUser</IRI>
+        <Literal>Пользователи общественного транспорта</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Reference</IRI>
+        <Literal>Справочник</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Religious</IRI>
+        <Literal>Верующие</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SelfEmployedCitizens</IRI>
+        <Literal>Самозанятые горожане</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SeniorWorkingCitizens</IRI>
+        <Literal>Работающие горожане старшего возраста (от 41 до 60 лет)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Service</IRI>
+        <Literal>Служебная сущность</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Space</IRI>
+        <Literal>Площадной объект, представляющий собой участок земли (без учёта построек на нём)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Space</IRI>
+        <Literal>Пространство</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Student</IRI>
+        <Literal>Студенты и учащиеся</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Teenager</IRI>
+        <Literal>Подростки старшего возраста (от 15 до 18 лет)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TemporarilyStayingCitizens</IRI>
+        <Literal>Горожане, временно пребывающие в городе</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TouristInGroup</IRI>
+        <Literal>Туристы в составе организованных групп</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Tween</IRI>
+        <Literal>Подростки младшего возраста (от 12 до 15 лет)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#UncoordinatedTourist</IRI>
+        <Literal>Неорганизованные туристы</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#WasteSortingCitizens</IRI>
+        <Literal>Горожане, ведущие раздельный сбор мусора</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#YoungRetiree</IRI>
+        <Literal>Молодые пенсионеры (65 - 75 лет)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#YoungWorkingCitizens</IRI>
+        <Literal>Молодые работающие горожане (до 30 лет)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCadastralBlock</IRI>
+        <Literal>кадастровый квартал</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCadastralDistrict</IRI>
+        <Literal>кадастровый район</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCadastralNumber</IRI>
+        <Literal>имеет Кадастровый номер</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCadastralOkrug</IRI>
+        <Literal>кадастровый округ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasFullCadastralNumber</IRI>
+        <Literal>кадастровый номер (полный)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasLand</IRI>
+        <Literal>расположено на земельном участке</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasNestedObject</IRI>
+        <Literal>Связывает объекты класса Физический объект c объектами класса Физический объект, которые в него входят (например, жилой дом и земельный участок, на котором он расположен)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasNestedObject</IRI>
+        <Literal>имеет вложенный объект</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,653 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3id.org/cityont-core"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.w3id.org/cityont-core">
+    <Prefix name="" IRI="http://www.w3id.org/cityont-core"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="city-data-conceptual" IRI="http://www.w3id.org/cityont-core#"/>
+    <Declaration>
+        <Class IRI="#Agent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AreaObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Building"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CommercialObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CulturalObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EducationalObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FunctionalObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Geometry"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Group"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IndustrialObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Layer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LivingObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MedicalObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MovableObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NatureObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NetObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Organization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhysicalObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PointObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PublicObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PublicTransportationObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Reference"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ReligiousObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Service"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SocialObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Space"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SportsObject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCoordinates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFunction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasManagingOrganization"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasNestedObject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOwner"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAddress"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasArea"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCadastralNumber"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasFloors"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasHeight"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#param"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#AreaObject"/>
+        <Class IRI="#PhysicalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Building"/>
+        <Class IRI="#AreaObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CommercialObject"/>
+        <Class IRI="#SocialObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CulturalObject"/>
+        <Class IRI="#SocialObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EducationalObject"/>
+        <Class IRI="#SocialObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Group"/>
+        <Class IRI="#Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IndustrialObject"/>
+        <Class IRI="#FunctionalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Layer"/>
+        <Class IRI="#Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LivingObject"/>
+        <Class IRI="#FunctionalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MedicalObject"/>
+        <Class IRI="#SocialObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MovableObject"/>
+        <Class IRI="#PhysicalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NatureObject"/>
+        <Class IRI="#FunctionalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NetObject"/>
+        <Class IRI="#PhysicalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Organization"/>
+        <Class IRI="#Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Person"/>
+        <Class IRI="#Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PointObject"/>
+        <Class IRI="#PhysicalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PublicObject"/>
+        <Class IRI="#SocialObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PublicTransportationObject"/>
+        <Class IRI="#FunctionalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Reference"/>
+        <Class IRI="#Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ReligiousObject"/>
+        <Class IRI="#SocialObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SocialObject"/>
+        <Class IRI="#FunctionalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Space"/>
+        <Class IRI="#AreaObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SportsObject"/>
+        <Class IRI="#SocialObject"/>
+    </SubClassOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCoordinates"/>
+        <Class IRI="#PhysicalObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasFunction"/>
+        <Class IRI="#PhysicalObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasManagingOrganization"/>
+        <Class IRI="#PhysicalObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasNestedObject"/>
+        <Class IRI="#PhysicalObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasOwner"/>
+        <Class IRI="#LivingObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCoordinates"/>
+        <Class IRI="#Geometry"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasFunction"/>
+        <Class IRI="#FunctionalObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasManagingOrganization"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasNestedObject"/>
+        <Class IRI="#PhysicalObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasOwner"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+        <Class IRI="#Building"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasAddress"/>
+        <Class IRI="#Building"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasArea"/>
+        <Class IRI="#AreaObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasCadastralNumber"/>
+        <Class IRI="#AreaObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasFloors"/>
+        <Class IRI="#Building"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasHeight"/>
+        <Class IRI="#Building"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAddress"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasArea"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasCadastralNumber"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasFloors"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasHeight"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Agent</IRI>
+        <Literal>Этот класс характеризует сущности, способные выполнять какие либо действия с иными сущностями. Могут иметь правоотношения как между собой, так и с другими сущностями. Например, человек может владеть недвижимостью. Организация может управлять территорией.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Agent</IRI>
+        <Literal>http://xmlns.com/foaf/spec/#term_Agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Agent</IRI>
+        <Literal xml:lang="en">Agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Agent</IRI>
+        <Literal xml:lang="ru">Агент</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#param"/>
+        <IRI>#Agent</IRI>
+        <Literal>name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AreaObject</IRI>
+        <Literal>Объект, обозначаемый площадью на карте (например, здание или парк).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AreaObject</IRI>
+        <Literal>Площадной объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Building</IRI>
+        <Literal>Площадной объект, представляющий собой постройку</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Building</IRI>
+        <Literal>Сооружение</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CommercialObject</IRI>
+        <Literal>Коммерческий объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CulturalObject</IRI>
+        <Literal>Культурный объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#EducationalObject</IRI>
+        <Literal>Образовательный объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#FunctionalObject</IRI>
+        <Literal>Описание функций физического объекта</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FunctionalObject</IRI>
+        <Literal>Функциональный объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Geometry</IRI>
+        <Literal>Геометрия</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Group</IRI>
+        <Literal>Этот класс представляет собой объединение Агентов</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Group</IRI>
+        <Literal>http://xmlns.com/foaf/spec/#term_Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Group</IRI>
+        <Literal xml:lang="en">Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Group</IRI>
+        <Literal xml:lang="ru">Группа</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#IndustrialObject</IRI>
+        <Literal>Промышленный объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Layer</IRI>
+        <Literal>Для хранения слоёв, созданных пользователем</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Layer</IRI>
+        <Literal>Пользовательский слой</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LivingObject</IRI>
+        <Literal>Жилой объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MedicalObject</IRI>
+        <Literal>Медицинский объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MovableObject</IRI>
+        <Literal>Объект, который не имеет фиксированного местоположения/прикрепления к земле (например, транспорт или движимая уличная техника). Имеет обязательные аттрибуты: modelName и licencePlate (исключением могут быть трактора и иная техника, используемая в поселках, оставлять пустую строку).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MovableObject</IRI>
+        <Literal>Движимый объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NatureObject</IRI>
+        <Literal>Объект живой природы (например, зелёное насаждение)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NatureObject</IRI>
+        <Literal>Природный объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NetObject</IRI>
+        <Literal>Объект, обозначаемый на карте линией или сетью линий (например, дорога или система водоснабжения)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NetObject</IRI>
+        <Literal>Сетевой объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Organization</IRI>
+        <Literal>The Organization class represents a kind of Agent corresponding to social instititutions such as companies, societies etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Organization</IRI>
+        <Literal>http://xmlns.com/foaf/spec/#term_Organization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Organization</IRI>
+        <Literal xml:lang="en">Organization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Organization</IRI>
+        <Literal xml:lang="ru">Организация</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Person</IRI>
+        <Literal>The Person class represents people.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Person</IRI>
+        <Literal>http://xmlns.com/foaf/spec/#term_Person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Person</IRI>
+        <Literal xml:lang="en">Person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Person</IRI>
+        <Literal xml:lang="ru">Человек</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PhysicalObject</IRI>
+        <Literal>Класс городских сущностей. Сюда помещаются конкретные физические объекты (например, здание), которые связываются с функциями (например, университет), координатами и управляющими ими организациями (например, Университет ИТМО).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PhysicalObject</IRI>
+        <Literal>Физический объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PointObject</IRI>
+        <Literal>Точечный объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PublicObject</IRI>
+        <Literal>Общественный объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PublicTransportationObject</IRI>
+        <Literal>Элемент транспортной инфраструктуры</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Reference</IRI>
+        <Literal>Справочник</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ReligiousObject</IRI>
+        <Literal>Религиозный объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Service</IRI>
+        <Literal>Служебная сущность</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SocialObject</IRI>
+        <Literal>Объект, несущий функцию обеспечения населения города любыми сервисами (например, школа или музей)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SocialObject</IRI>
+        <Literal>Социальный объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Space</IRI>
+        <Literal>Площадной объект, представляющий собой участок земли (без учёта построек на нём)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Space</IRI>
+        <Literal>Пространство</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SportsObject</IRI>
+        <Literal>Спортивный объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAddress</IRI>
+        <Literal>имеет адрес</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasArea</IRI>
+        <Literal>Свойство будет объединять семейство для обозначения разных площадей: общая, жилых помещений, нежилых помещений, помещений, входящих в состав общего имущества</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasArea</IRI>
+        <Literal>имеет площадь</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCadastralNumber</IRI>
+        <Literal>имеет кадастровый номер</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasCoordinates</IRI>
+        <Literal>Кординаты объекта: геометрия в случае стационарного и местонахождение в случае движимого</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCoordinates</IRI>
+        <Literal>имеет координаты</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasFloors</IRI>
+        <Literal>имеет количество этажей</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasFunction</IRI>
+        <Literal>Связывает объекты подклассов Физический объект с Объектами подклассов Функциональный объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasFunction</IRI>
+        <Literal>имеет функцию</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasHeight</IRI>
+        <Literal>имеет высоту</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasManagingOrganization</IRI>
+        <Literal>Связывает объекты класса Физический объект с объектами класса Организация (управляющая данным физическим объектом)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasManagingOrganization</IRI>
+        <Literal>имеет управляющую организацию</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasNestedObject</IRI>
+        <Literal>Связывает объекты класса Физический объект c объектами класса Физический объект, которые в него входят (например, жилой дом и земельный участок, на котором он расположен)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasNestedObject</IRI>
+        <Literal>имеет вложенный объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasOwner</IRI>
+        <Literal>Связывает ФИзические объекты и Организации с их владельцами-людьми</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasOwner</IRI>
+        <Literal>имеет собственника</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

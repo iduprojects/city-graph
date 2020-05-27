@@ -1,0 +1,3160 @@
+@prefix : <http://www.w3id.org/cityont-core> .
+@prefix coc: <http://www.w3id.org/cityont-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3id.org/cityont-core> .
+
+<http://www.w3id.org/cityont-core> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3id.org/cityont-core#param
+coc:param rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.w3id.org/cityont-core#hasApartmentType
+coc:hasApartmentType rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf coc:hasBuildingSpecificProperties ;
+                     rdfs:domain coc:MultyAptHouse ,
+                                 coc:TallMultyApt ,
+                                 coc:Townhouse ;
+                     rdfs:range coc:ApartmentType ;
+                     rdfs:label "имеет тип квартиры" .
+
+
+###  http://www.w3id.org/cityont-core#hasBuidlingSeries
+coc:hasBuidlingSeries rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf coc:hasBuildingSpecificProperties ;
+                      rdfs:domain coc:LivingObject ;
+                      rdfs:range coc:BuidlingSeries ;
+                      rdfs:label "имеет серию здания" .
+
+
+###  http://www.w3id.org/cityont-core#hasBuildingSpecificProperties
+coc:hasBuildingSpecificProperties rdf:type owl:ObjectProperty ;
+                                  rdfs:comment "Свойство для группировки свойств, относящихся к определённым парметрам Сооружений. Не все свойства относятся напрямую к Сооружениям, группировка сделана исключительно для целей удобства отображения" ;
+                                  rdfs:label "атрибут сооружения" .
+
+
+###  http://www.w3id.org/cityont-core#hasCadastralBlock
+coc:hasCadastralBlock rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf coc:hasCadastralNumber ;
+                      rdfs:domain coc:CadastreNumber ;
+                      rdfs:range coc:CadastralBlock ;
+                      rdfs:label "кадастровый квартал" .
+
+
+###  http://www.w3id.org/cityont-core#hasCadastralDistrict
+coc:hasCadastralDistrict rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf coc:hasCadastralNumber ;
+                         rdfs:domain coc:CadastreNumber ;
+                         rdfs:range coc:CadastralDistrict ;
+                         rdfs:label "кадастровый район" .
+
+
+###  http://www.w3id.org/cityont-core#hasCadastralNumber
+coc:hasCadastralNumber rdf:type owl:ObjectProperty ;
+                       rdfs:domain coc:CadastralParcel ;
+                       rdfs:range coc:CadastreNumber ;
+                       rdfs:label "имеет Кадастровый номер" .
+
+
+###  http://www.w3id.org/cityont-core#hasCadastralOkrug
+coc:hasCadastralOkrug rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf coc:hasCadastralNumber ;
+                      rdfs:domain coc:CadastreNumber ;
+                      rdfs:range coc:CadastralOkrug ;
+                      rdfs:label "кадастровый округ" .
+
+
+###  http://www.w3id.org/cityont-core#hasCoordinates
+coc:hasCoordinates rdf:type owl:ObjectProperty ;
+                   rdfs:domain coc:PhysicalObject ;
+                   rdfs:range coc:Geometry ;
+                   rdfs:comment "Кординаты объекта: геометрия в случае стационарного и местонахождение в случае движимого" ;
+                   rdfs:label "гео-координаты" .
+
+
+###  http://www.w3id.org/cityont-core#hasFunction
+coc:hasFunction rdf:type owl:ObjectProperty ;
+                rdfs:domain coc:PhysicalObject ;
+                rdfs:range coc:FunctionalObject ;
+                rdfs:comment "Связывает объекты подклассов Физический объект с Объектами подклассов Функциональный объект" ;
+                rdfs:label "имеет функцию" .
+
+
+###  http://www.w3id.org/cityont-core#hasLand
+coc:hasLand rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf coc:hasBuildingSpecificProperties ;
+            rdfs:domain coc:Building ;
+            rdfs:range coc:Land ;
+            rdfs:label "расположено на земельном участке" .
+
+
+###  http://www.w3id.org/cityont-core#hasMajorRenovation
+coc:hasMajorRenovation rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf coc:hasBuildingSpecificProperties ;
+                       rdfs:domain coc:Building ;
+                       rdfs:range coc:MajorRenovation ;
+                       rdfs:label "имеет капитальный ремонт" .
+
+
+###  http://www.w3id.org/cityont-core#hasManagingOrganization
+coc:hasManagingOrganization rdf:type owl:ObjectProperty ;
+                            rdfs:domain coc:PhysicalObject ;
+                            rdfs:range <http://xmlns.com/foaf/spec/#term_Organization> ;
+                            rdfs:comment "Связывает объекты класса Физический объект с объектами класса Организация (управляющая данным физическим объектом)" ;
+                            rdfs:label "имеет управляющую организацию" .
+
+
+###  http://www.w3id.org/cityont-core#hasNestedObject
+coc:hasNestedObject rdf:type owl:ObjectProperty ;
+                    rdfs:domain coc:PhysicalObject ;
+                    rdfs:range coc:PhysicalObject ;
+                    rdfs:comment "Связывает объекты класса Физический объект c объектами класса Физический объект, которые в него входят (например, жилой дом и земельный участок, на котором он расположен)" ;
+                    rdfs:label "имеет вложенный объект" .
+
+
+###  http://www.w3id.org/cityont-core#hasOwner
+coc:hasOwner rdf:type owl:ObjectProperty ;
+             rdfs:domain coc:LivingObject ;
+             rdfs:range <http://xmlns.com/foaf/spec/#term_Organization> ;
+             rdfs:comment "Связывает ФИзические объекты и Организации с их владельцами-людьми" ;
+             rdfs:label "имеет собственника" .
+
+
+###  http://www.w3id.org/cityont-core#hasPublicAmenity
+coc:hasPublicAmenity rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf coc:hasBuildingSpecificProperties ;
+                     rdfs:domain coc:LivingObject ;
+                     rdfs:label "имеет элемент благоустройства" .
+
+
+###  http://www.w3id.org/cityont-core#hasWorkType
+coc:hasWorkType rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf coc:hasBuildingSpecificProperties ;
+                rdfs:domain coc:MajorRenovation ;
+                rdfs:range coc:WorkType ;
+                rdfs:label "имеет вид работ" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.w3.org/2002/07/owl#topDataProperty
+owl:topDataProperty rdfs:domain coc:Building ;
+                    rdfs:range xsd:int .
+
+
+###  http://www.w3id.org/cityont-core#CentralHotWaterWoods
+coc:CentralHotWaterWoods rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf coc:hasLivingObjectParameter ;
+                         rdfs:domain coc:LivingObject ;
+                         rdfs:range xsd:boolean ;
+                         rdfs:label "имеет горячее водоснабжение от дровяных колонок" .
+
+
+###  http://www.w3id.org/cityont-core#hasAddress
+coc:hasAddress rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain coc:Building ;
+               rdfs:range xsd:string ;
+               rdfs:label "имеет адрес" .
+
+
+###  http://www.w3id.org/cityont-core#hasApartmentsAmount
+coc:hasApartmentsAmount rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf coc:hasLivingObjectParameter ;
+                        rdfs:domain coc:MultyAptHouse ,
+                                    coc:TallMultyApt ,
+                                    coc:Townhouse ;
+                        rdfs:range xsd:int ;
+                        rdfs:label "имеет количество квартир" .
+
+
+###  http://www.w3id.org/cityont-core#hasArea
+coc:hasArea rdf:type owl:DatatypeProperty ;
+            rdfs:domain coc:AreaObject ;
+            rdfs:range xsd:int ;
+            rdfs:comment "Свойство будет объединять семейство для обозначения разных площадей: общая, жилых помещений, нежилых помещений, помещений, входящих в состав общего имущества" ;
+            rdfs:label "имеет площадь" .
+
+
+###  http://www.w3id.org/cityont-core#hasAreaGeneral
+coc:hasAreaGeneral rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf coc:hasArea ;
+                   rdfs:domain coc:AreaObject ;
+                   rdfs:range xsd:int ;
+                   rdfs:label "имеет общую площадь" .
+
+
+###  http://www.w3id.org/cityont-core#hasAutoBoilerRoom
+coc:hasAutoBoilerRoom rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf coc:hasLivingObjectParameter ;
+                      rdfs:domain coc:LivingObject ;
+                      rdfs:range xsd:boolean ;
+                      rdfs:label "имеет автономную котельную" .
+
+
+###  http://www.w3id.org/cityont-core#hasBuildingDescription
+coc:hasBuildingDescription rdf:type owl:DatatypeProperty ;
+                           rdfs:subPropertyOf coc:hasBuildingParameter ;
+                           rdfs:domain coc:Building ;
+                           rdfs:range xsd:string ;
+                           rdfs:comment "Текстовое описание зданий, которое генерируется в базе данных" ;
+                           rdfs:label "имеет описание сооружения" .
+
+
+###  http://www.w3id.org/cityont-core#hasBuildingParameter
+coc:hasBuildingParameter rdf:type owl:DatatypeProperty ;
+                         rdfs:comment "Семейство характеристик сооружений" ;
+                         rdfs:label "характеристика сооружения" .
+
+
+###  http://www.w3id.org/cityont-core#hasCentralElectricity
+coc:hasCentralElectricity rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf coc:hasLivingObjectParameter ;
+                          rdfs:domain coc:LivingObject ;
+                          rdfs:range xsd:boolean ;
+                          rdfs:label "имеет центральное электроснабжение" .
+
+
+###  http://www.w3id.org/cityont-core#hasCentralGas
+coc:hasCentralGas rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf coc:hasLivingObjectParameter ;
+                  rdfs:domain coc:LivingObject ;
+                  rdfs:range xsd:boolean ;
+                  rdfs:label "имеет центральное газоснабжение" .
+
+
+###  http://www.w3id.org/cityont-core#hasCentralHeating
+coc:hasCentralHeating rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf coc:hasLivingObjectParameter ;
+                      rdfs:domain coc:LivingObject ;
+                      rdfs:range xsd:boolean ;
+                      rdfs:label "имеет центральное отопление" .
+
+
+###  http://www.w3id.org/cityont-core#hasCentralHotWater
+coc:hasCentralHotWater rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf coc:hasLivingObjectParameter ;
+                       rdfs:domain coc:LivingObject ;
+                       rdfs:range xsd:boolean ;
+                       rdfs:label "имеет центральное горячее водоснабжение" .
+
+
+###  http://www.w3id.org/cityont-core#hasCentralHotWaterGas
+coc:hasCentralHotWaterGas rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf coc:hasLivingObjectParameter ;
+                          rdfs:domain coc:LivingObject ;
+                          rdfs:range xsd:boolean ;
+                          rdfs:label "имеет горячее водоснабжение от газовых колонок" .
+
+
+###  http://www.w3id.org/cityont-core#hasClassificationCode
+coc:hasClassificationCode rdf:type owl:DatatypeProperty ;
+                          rdfs:domain coc:Reference ;
+                          rdfs:label "используется в классификаторе" .
+
+
+###  http://www.w3id.org/cityont-core#hasCode
+coc:hasCode rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf coc:hasClassificationCode ;
+            rdfs:domain coc:Reference ;
+            rdfs:range xsd:string ;
+            rdfs:label "код" .
+
+
+###  http://www.w3id.org/cityont-core#hasCommunalApartmentsAmount
+coc:hasCommunalApartmentsAmount rdf:type owl:DatatypeProperty ;
+                                rdfs:subPropertyOf coc:hasLivingObjectParameter ;
+                                rdfs:domain coc:MultyAptHouse ,
+                                            coc:TallMultyApt ,
+                                            coc:Townhouse ;
+                                rdfs:range xsd:int ;
+                                rdfs:label "имеет количество коммунальных квартир" .
+
+
+###  http://www.w3id.org/cityont-core#hasCommunalFacilitiesArea
+coc:hasCommunalFacilitiesArea rdf:type owl:DatatypeProperty ;
+                              rdfs:subPropertyOf coc:hasArea ;
+                              rdfs:domain coc:LivingObject ;
+                              rdfs:range xsd:int ;
+                              rdfs:label "имеет площадь помещений, входящих в состав общего имущества" .
+
+
+###  http://www.w3id.org/cityont-core#hasDomofonAmount
+coc:hasDomofonAmount rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf coc:hasBuildingParameter ;
+                     rdfs:domain coc:Building ;
+                     rdfs:range xsd:int ;
+                     rdfs:label "имеет количество переговорно-замочных устройств" .
+
+
+###  http://www.w3id.org/cityont-core#hasFailureStatus
+coc:hasFailureStatus rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf coc:hasBuildingParameter ;
+                     rdfs:domain coc:Building ;
+                     rdfs:range xsd:boolean ;
+                     rdfs:label "является аварийным" .
+
+
+###  http://www.w3id.org/cityont-core#hasFloors
+coc:hasFloors rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf coc:hasBuildingParameter ;
+              rdfs:domain coc:Building ;
+              rdfs:range xsd:int ;
+              rdfs:label "имеет количество этажей" .
+
+
+###  http://www.w3id.org/cityont-core#hasGarbageAmount
+coc:hasGarbageAmount rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf coc:hasLivingObjectParameter ;
+                     rdfs:domain coc:MultyAptHouse ,
+                                 coc:TallMultyApt ,
+                                 coc:Townhouse ;
+                     rdfs:range xsd:int ;
+                     rdfs:label "имеет количество мусоропроводов" .
+
+
+###  http://www.w3id.org/cityont-core#hasHeight
+coc:hasHeight rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf coc:hasBuildingParameter ;
+              rdfs:domain coc:Building ;
+              rdfs:range xsd:int ;
+              rdfs:label "имеет высоту" .
+
+
+###  http://www.w3id.org/cityont-core#hasIllumination
+coc:hasIllumination rdf:type owl:DatatypeProperty ;
+                    rdfs:domain coc:AreaObject ;
+                    rdfs:range xsd:boolean ;
+                    rdfs:label "имеет освещение" .
+
+
+###  http://www.w3id.org/cityont-core#hasInhabitableArea
+coc:hasInhabitableArea rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf coc:hasArea ;
+                       rdfs:domain coc:LivingObject ;
+                       rdfs:range xsd:int ;
+                       rdfs:label "имеет площадь жилых помещений" .
+
+
+###  http://www.w3id.org/cityont-core#hasLiftAmount
+coc:hasLiftAmount rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf coc:hasBuildingParameter ;
+                  rdfs:domain coc:Building ;
+                  rdfs:range xsd:int ;
+                  rdfs:label "имеет количество лифтов" .
+
+
+###  http://www.w3id.org/cityont-core#hasLivingObjectParameter
+coc:hasLivingObjectParameter rdf:type owl:DatatypeProperty ;
+                             rdfs:comment "Семейство характеристик жилых объектов" ;
+                             rdfs:label "характеристика жилого дома" .
+
+
+###  http://www.w3id.org/cityont-core#hasMaxFloors
+coc:hasMaxFloors rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf coc:hasFloors ;
+                 rdfs:domain coc:Building ;
+                 rdfs:range xsd:int ;
+                 rdfs:label "имеет максимальное количество этажей" .
+
+
+###  http://www.w3id.org/cityont-core#hasMinFloors
+coc:hasMinFloors rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf coc:hasFloors ;
+                 rdfs:domain coc:Building ;
+                 rdfs:range xsd:int ;
+                 rdfs:label "имеет минимальное количество этажей" .
+
+
+###  http://www.w3id.org/cityont-core#hasNotCentralGas
+coc:hasNotCentralGas rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf coc:hasLivingObjectParameter ;
+                     rdfs:domain coc:LivingObject ;
+                     rdfs:range xsd:boolean ;
+                     rdfs:label "имеет не центральное газоснабжение" .
+
+
+###  http://www.w3id.org/cityont-core#hasParkingArea
+coc:hasParkingArea rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf coc:hasArea ;
+                   rdfs:domain coc:Land ;
+                   rdfs:range xsd:int ;
+                   rdfs:comment "Площадь парковки в границах земельного участка" ;
+                   rdfs:label "имеет площадь парковки" .
+
+
+###  http://www.w3id.org/cityont-core#hasRooms
+coc:hasRooms rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf coc:hasLivingObjectParameter ;
+             rdfs:domain coc:LivingObject ;
+             rdfs:range xsd:int ;
+             rdfs:label "комнаты квартир" .
+
+
+###  http://www.w3id.org/cityont-core#hasRoomsCommunal
+coc:hasRoomsCommunal rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf coc:hasLivingObjectParameter ;
+                     rdfs:domain coc:LivingObject ;
+                     rdfs:range xsd:int ;
+                     rdfs:label "комнаты коммунальных квартир" .
+
+
+###  http://www.w3id.org/cityont-core#hasRoomsCommunal_2
+coc:hasRoomsCommunal_2 rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf coc:hasRoomsCommunal ;
+                       rdfs:domain coc:LivingObject ;
+                       rdfs:range xsd:int ;
+                       rdfs:label "2комн. комм. квартира" .
+
+
+###  http://www.w3id.org/cityont-core#hasRoomsCommunal_3
+coc:hasRoomsCommunal_3 rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf coc:hasRoomsCommunal ;
+                       rdfs:domain coc:LivingObject ;
+                       rdfs:range xsd:int ;
+                       rdfs:label "3комн. комм. квартира" .
+
+
+###  http://www.w3id.org/cityont-core#hasRoomsCommunal_4
+coc:hasRoomsCommunal_4 rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf coc:hasRoomsCommunal ;
+                       rdfs:domain coc:LivingObject ;
+                       rdfs:range xsd:int ;
+                       rdfs:label "4комн. комм. квартира" .
+
+
+###  http://www.w3id.org/cityont-core#hasRoomsCommunal_5
+coc:hasRoomsCommunal_5 rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf coc:hasRoomsCommunal ;
+                       rdfs:domain coc:LivingObject ;
+                       rdfs:range xsd:int ;
+                       rdfs:label "5комн. комм. квартира" .
+
+
+###  http://www.w3id.org/cityont-core#hasRoomsCommunal_6
+coc:hasRoomsCommunal_6 rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf coc:hasRoomsCommunal ;
+                       rdfs:domain coc:LivingObject ;
+                       rdfs:range xsd:int ;
+                       rdfs:label "6комн. комм. квартира" .
+
+
+###  http://www.w3id.org/cityont-core#hasRoomsCommunal_7
+coc:hasRoomsCommunal_7 rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf coc:hasRoomsCommunal ;
+                       rdfs:domain coc:LivingObject ;
+                       rdfs:range xsd:int ;
+                       rdfs:label "7 комн. комм. квартира" .
+
+
+###  http://www.w3id.org/cityont-core#hasRooms_1
+coc:hasRooms_1 rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf coc:hasRooms ;
+               rdfs:domain coc:LivingObject ;
+               rdfs:range xsd:int ;
+               rdfs:label "1 комн. квартира" .
+
+
+###  http://www.w3id.org/cityont-core#hasRooms_2
+coc:hasRooms_2 rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf coc:hasRooms ;
+               rdfs:domain coc:LivingObject ;
+               rdfs:range xsd:int ;
+               rdfs:label "2 комн. квартира" .
+
+
+###  http://www.w3id.org/cityont-core#hasRooms_3
+coc:hasRooms_3 rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf coc:hasRooms ;
+               rdfs:range xsd:int ;
+               rdfs:label "3 комн. квартира" .
+
+
+###  http://www.w3id.org/cityont-core#hasRooms_4
+coc:hasRooms_4 rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf coc:hasRooms ;
+               rdfs:range xsd:int ;
+               rdfs:label "4 комн. квартира" .
+
+
+###  http://www.w3id.org/cityont-core#hasRooms_5
+coc:hasRooms_5 rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf coc:hasRooms ;
+               rdfs:range xsd:int ;
+               rdfs:label "5 комн. квартира" .
+
+
+###  http://www.w3id.org/cityont-core#hasRooms_6
+coc:hasRooms_6 rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf coc:hasRooms ;
+               rdfs:range xsd:int ;
+               rdfs:label "6 комн. квартира" .
+
+
+###  http://www.w3id.org/cityont-core#hasRooms_7
+coc:hasRooms_7 rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf coc:hasRooms ;
+               rdfs:range xsd:int ;
+               rdfs:label "7 комн. квартира" .
+
+
+###  http://www.w3id.org/cityont-core#hasStairsAmount
+coc:hasStairsAmount rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf coc:hasBuildingParameter ;
+                    rdfs:domain coc:Building ;
+                    rdfs:range xsd:int ;
+                    rdfs:label "имеет количество лестниц" .
+
+
+###  http://www.w3id.org/cityont-core#hasStoveHeating
+coc:hasStoveHeating rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf coc:hasLivingObjectParameter ;
+                    rdfs:domain coc:LivingObject ;
+                    rdfs:range xsd:boolean ;
+                    rdfs:label "имеет печное отопление" .
+
+
+###  http://www.w3id.org/cityont-core#hasStringSeries
+coc:hasStringSeries rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf coc:hasBuildingParameter ;
+                    rdfs:domain coc:Building ;
+                    rdfs:range xsd:string ;
+                    rdfs:label "серия здания строкой" .
+
+
+###  http://www.w3id.org/cityont-core#hasTitle
+coc:hasTitle rdf:type owl:DatatypeProperty ;
+             rdfs:domain coc:WorkType ;
+             rdfs:range xsd:string ;
+             rdfs:label "имеет название" .
+
+
+###  http://www.w3id.org/cityont-core#hasUninhabitableArea
+coc:hasUninhabitableArea rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf coc:hasArea ;
+                         rdfs:domain coc:LivingObject ;
+                         rdfs:range xsd:int ;
+                         rdfs:label "имеет площадь нежилых помещений" .
+
+
+###  http://www.w3id.org/cityont-core#hasValue
+coc:hasValue rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf coc:hasClassificationCode ;
+             rdfs:domain coc:Reference ;
+             rdfs:range xsd:string ;
+             rdfs:label "значение" .
+
+
+###  http://www.w3id.org/cityont-core#hasYearConstruct
+coc:hasYearConstruct rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf coc:hasBuildingParameter ;
+                     rdfs:domain coc:Building ;
+                     rdfs:range xsd:dateTime ;
+                     rdfs:label "имеет год постройки" .
+
+
+###  http://www.w3id.org/cityont-core#hasYearRepair
+coc:hasYearRepair rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf coc:hasBuildingParameter ;
+                  rdfs:domain coc:Building ;
+                  rdfs:range xsd:dateTime ;
+                  rdfs:label "имеет год восстановления" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3id.org/cityont-core#Apartment
+coc:Apartment rdf:type owl:Class ;
+              rdfs:subClassOf coc:LivingObject ;
+              rdfs:label "Квартира" .
+
+
+###  http://www.w3id.org/cityont-core#ApartmentType
+coc:ApartmentType rdf:type owl:Class ;
+                  rdfs:subClassOf coc:Reference ;
+                  rdfs:comment "Перечисление типов квартир по количеству комнат" ;
+                  rdfs:label "Тип квартиры" .
+
+
+###  http://www.w3id.org/cityont-core#AreaObject
+coc:AreaObject rdf:type owl:Class ;
+               rdfs:subClassOf coc:PhysicalObject ;
+               rdfs:comment "Объект, обозначаемый площадью на карте (например, здание или парк)." ;
+               rdfs:label "Площадной объект" .
+
+
+###  http://www.w3id.org/cityont-core#BuidlingSeries
+coc:BuidlingSeries rdf:type owl:Class ;
+                   rdfs:subClassOf coc:Reference ;
+                   rdfs:comment "Перечисление серий жилых домов" ;
+                   rdfs:label "Серия здания" .
+
+
+###  http://www.w3id.org/cityont-core#Building
+coc:Building rdf:type owl:Class ;
+             rdfs:subClassOf coc:AreaObject ;
+             rdfs:comment "Площадной объект, представляющий собой постройку" ;
+             rdfs:label "Сооружение" .
+
+
+###  http://www.w3id.org/cityont-core#CadastralBlock
+coc:CadastralBlock rdf:type owl:Class ;
+                   rdfs:subClassOf coc:CadastreNumber ;
+                   rdfs:label "Кадастровый квартал" .
+
+
+###  http://www.w3id.org/cityont-core#CadastralDistrict
+coc:CadastralDistrict rdf:type owl:Class ;
+                      rdfs:subClassOf coc:CadastreNumber ;
+                      rdfs:label "Кадастровый район" .
+
+
+###  http://www.w3id.org/cityont-core#CadastralOkrug
+coc:CadastralOkrug rdf:type owl:Class ;
+                   rdfs:subClassOf coc:CadastreNumber ;
+                   rdfs:label "Кадастровый округ" .
+
+
+###  http://www.w3id.org/cityont-core#CadastralParcel
+coc:CadastralParcel rdf:type owl:Class ;
+                    rdfs:subClassOf coc:Land ;
+                    rdfs:label "Кадастровый участок" .
+
+
+###  http://www.w3id.org/cityont-core#CadastreNumber
+coc:CadastreNumber rdf:type owl:Class ;
+                   rdfs:subClassOf coc:CadastreRegister ;
+                   rdfs:label "Кадастровый номер" .
+
+
+###  http://www.w3id.org/cityont-core#CadastreRegister
+coc:CadastreRegister rdf:type owl:Class ;
+                     rdfs:subClassOf coc:Reference ;
+                     rdfs:comment "Сюда добавлять все виды кадастров (земельный, лесной и пр.)" ;
+                     rdfs:label "Кадастровый реестр" .
+
+
+###  http://www.w3id.org/cityont-core#CapitalConstruction
+coc:CapitalConstruction rdf:type owl:Class ;
+                        rdfs:subClassOf coc:Building ;
+                        rdfs:label "Объект капитального строительства" .
+
+
+###  http://www.w3id.org/cityont-core#FunctionalObject
+coc:FunctionalObject rdf:type owl:Class ;
+                     rdfs:comment "Описание функций физического объекта" ;
+                     rdfs:label "Функциональный объект" .
+
+
+###  http://www.w3id.org/cityont-core#Garage
+coc:Garage rdf:type owl:Class ;
+           rdfs:subClassOf coc:Building ;
+           rdfs:label "Гараж" .
+
+
+###  http://www.w3id.org/cityont-core#Geometry
+coc:Geometry rdf:type owl:Class ;
+             rdfs:label "Геометрия" .
+
+
+###  http://www.w3id.org/cityont-core#House
+coc:House rdf:type owl:Class ;
+          rdfs:subClassOf coc:LivingObject ;
+          rdfs:label "Частный дом" .
+
+
+###  http://www.w3id.org/cityont-core#Land
+coc:Land rdf:type owl:Class ;
+         rdfs:subClassOf coc:Space ;
+         rdfs:label "Земельный участок" .
+
+
+###  http://www.w3id.org/cityont-core#LivingObject
+coc:LivingObject rdf:type owl:Class ;
+                 rdfs:subClassOf coc:FunctionalObject ;
+                 rdfs:label "Жилой объект" .
+
+
+###  http://www.w3id.org/cityont-core#MajorRenovation
+coc:MajorRenovation rdf:type owl:Class ;
+                    rdfs:subClassOf coc:Reference ;
+                    rdfs:comment "Список капитальных ремонтов. Класс в будущем будет выведен в другую ветвь иерархии" ;
+                    rdfs:label "Капитальный ремонт" .
+
+
+###  http://www.w3id.org/cityont-core#MultyAptHouse
+coc:MultyAptHouse rdf:type owl:Class ;
+                  rdfs:subClassOf coc:LivingObject ;
+                  rdfs:label "Многоквартирный дом" .
+
+
+###  http://www.w3id.org/cityont-core#PhysicalObject
+coc:PhysicalObject rdf:type owl:Class ;
+                   rdfs:comment "Класс городских сущностей. Сюда помещаются конкретные физические объекты (например, здание), которые связываются с функциями (например, университет), координатами и управляющими ими организациями (например, Университет ИТМО)." ;
+                   rdfs:label "Физический объект" .
+
+
+###  http://www.w3id.org/cityont-core#Reference
+coc:Reference rdf:type owl:Class ;
+              rdfs:subClassOf coc:Service ;
+              rdfs:label "Справочник" .
+
+
+###  http://www.w3id.org/cityont-core#Service
+coc:Service rdf:type owl:Class ;
+            rdfs:label "Служебная сущность" .
+
+
+###  http://www.w3id.org/cityont-core#Space
+coc:Space rdf:type owl:Class ;
+          rdfs:subClassOf coc:AreaObject ;
+          rdfs:comment "Площадной объект, представляющий собой участок земли (без учёта построек на нём)" ;
+          rdfs:label "Пространство" .
+
+
+###  http://www.w3id.org/cityont-core#TallMultyApt
+coc:TallMultyApt rdf:type owl:Class ;
+                 rdfs:subClassOf coc:LivingObject ;
+                 rdfs:label "Высотное жилое строение" .
+
+
+###  http://www.w3id.org/cityont-core#TemporalBuilding
+coc:TemporalBuilding rdf:type owl:Class ;
+                     rdfs:subClassOf coc:Building ;
+                     rdfs:label "Временное сооружение" .
+
+
+###  http://www.w3id.org/cityont-core#Townhouse
+coc:Townhouse rdf:type owl:Class ;
+              rdfs:subClassOf coc:LivingObject ;
+              rdfs:label "Таунхаус" .
+
+
+###  http://www.w3id.org/cityont-core#WorkType
+coc:WorkType rdf:type owl:Class ;
+             rdfs:subClassOf coc:Reference ;
+             rdfs:comment "Перечисление видов работ при капитальном ремонте" ;
+             rdfs:label "Вид работ" .
+
+
+###  http://xmlns.com/foaf/spec/#term_Agent
+<http://xmlns.com/foaf/spec/#term_Agent> rdf:type owl:Class ;
+                                         rdfs:comment "Этот класс характеризует сущности, способные выполнять какие либо действия с иными сущностями. Могут иметь правоотношения как между собой, так и с другими сущностями. Например, человек может владеть недвижимостью. Организация может управлять территорией." ;
+                                         rdfs:isDefinedBy "" ;
+                                         rdfs:label "Agent"@en ,
+                                                    "Агент"@ru .
+
+
+###  http://xmlns.com/foaf/spec/#term_Organization
+<http://xmlns.com/foaf/spec/#term_Organization> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://xmlns.com/foaf/spec/#term_Agent> ;
+                                                rdfs:comment "The Organization class represents a kind of Agent corresponding to social instititutions such as companies, societies etc." ;
+                                                rdfs:label "Organization"@en ,
+                                                           "Организация"@ru .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.w3id.org/cityont-core#House_1
+coc:House_1 rdf:type owl:NamedIndividual ,
+                     coc:CapitalConstruction ;
+            coc:hasFunction coc:Living_House_1 ;
+            coc:hasAreaGeneral "9497,9" ;
+            coc:hasDomofonAmount 0 ;
+            coc:hasFailureStatus "false"^^xsd:boolean ;
+            coc:hasFloors 9 ;
+            coc:hasLiftAmount 4 ;
+            coc:hasStairsAmount 4 ;
+            coc:hasYearConstruct 1986 .
+
+
+###  http://www.w3id.org/cityont-core#Living_House_1
+coc:Living_House_1 rdf:type owl:NamedIndividual ,
+                            coc:MultyAptHouse ;
+                   coc:CentralHotWaterWoods "false"^^xsd:boolean ;
+                   coc:hasApartmentsAmount 142 ;
+                   coc:hasAutoBoilerRoom "false"^^xsd:boolean ;
+                   coc:hasCentralElectricity "true"^^xsd:boolean ;
+                   coc:hasCentralGas "false"^^xsd:boolean ;
+                   coc:hasCentralHeating "true"^^xsd:boolean ;
+                   coc:hasCentralHotWater "true"^^xsd:boolean ;
+                   coc:hasCentralHotWaterGas "false"^^xsd:boolean ;
+                   coc:hasCommunalApartmentsAmount 1 ;
+                   coc:hasCommunalFacilitiesArea "916,2" ;
+                   coc:hasGarbageAmount 4 ;
+                   coc:hasInhabitableArea "8399,2" ;
+                   coc:hasNotCentralGas "false"^^xsd:boolean ;
+                   coc:hasStoveHeating "false"^^xsd:boolean .
+
+
+###  http://www.w3id.org/cityont-core#WT_1
+coc:WT_1 rdf:type owl:NamedIndividual ,
+                  coc:WorkType ;
+         coc:hasTitle "Аварийный ремонт балконов и лоджий" .
+
+
+###  http://www.w3id.org/cityont-core#WT_10
+coc:WT_10 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Асфальтирование и замощение придомовой территории" .
+
+
+###  http://www.w3id.org/cityont-core#WT_100
+coc:WT_100 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Разделение узла учета электроэнергии" .
+
+
+###  http://www.w3id.org/cityont-core#WT_101
+coc:WT_101 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/ замена розлива центрального отопления в подвале" .
+
+
+###  http://www.w3id.org/cityont-core#WT_102
+coc:WT_102 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/ наружные теплосетти" .
+
+
+###  http://www.w3id.org/cityont-core#WT_103
+coc:WT_103 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/АВР нар. втор. сетей" .
+
+
+###  http://www.w3id.org/cityont-core#WT_104
+coc:WT_104 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/благоустройство" .
+
+
+###  http://www.w3id.org/cityont-core#WT_105
+coc:WT_105 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/гидроизоляция подвала" .
+
+
+###  http://www.w3id.org/cityont-core#WT_106
+coc:WT_106 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/замена втор. нгаружн. сетей ХВС" .
+
+
+###  http://www.w3id.org/cityont-core#WT_107
+coc:WT_107 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/замена нар. втор. сетей ХВС между домами" .
+
+
+###  http://www.w3id.org/cityont-core#WT_108
+coc:WT_108 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/замена нар.втор.сетей ХВС между домами по Дибуновской ул. д.39-41-43-47 Школьная ул. д.56-58" .
+
+
+###  http://www.w3id.org/cityont-core#WT_109
+coc:WT_109 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/замена наруж. втор. сетей ХВС между домами" .
+
+
+###  http://www.w3id.org/cityont-core#WT_11
+coc:WT_11 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Благоустройство дворовых территорий" .
+
+
+###  http://www.w3id.org/cityont-core#WT_110
+coc:WT_110 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/замена наружн. теплосетей" .
+
+
+###  http://www.w3id.org/cityont-core#WT_111
+coc:WT_111 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/замена наружных сетей" .
+
+
+###  http://www.w3id.org/cityont-core#WT_112
+coc:WT_112 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/замена розлива ГВС" .
+
+
+###  http://www.w3id.org/cityont-core#WT_113
+coc:WT_113 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/замена розлива и участков инженерных сетей" .
+
+
+###  http://www.w3id.org/cityont-core#WT_114
+coc:WT_114 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/замена розлива ЦО" .
+
+
+###  http://www.w3id.org/cityont-core#WT_115
+coc:WT_115 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/замена розливов ХВС" .
+
+
+###  http://www.w3id.org/cityont-core#WT_116
+coc:WT_116 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/замена розливов ЦО в подвале" .
+
+
+###  http://www.w3id.org/cityont-core#WT_117
+coc:WT_117 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/замена системы холодного водоснабжения в подвале" .
+
+
+###  http://www.w3id.org/cityont-core#WT_118
+coc:WT_118 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/замена трубопроводов  каналализации в подвале" .
+
+
+###  http://www.w3id.org/cityont-core#WT_119
+coc:WT_119 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/замена трубопроводов в подвале" .
+
+
+###  http://www.w3id.org/cityont-core#WT_12
+coc:WT_12 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Благоустройство придомовой территории" .
+
+
+###  http://www.w3id.org/cityont-core#WT_120
+coc:WT_120 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/замена трубопроводов канализации в подвале" .
+
+
+###  http://www.w3id.org/cityont-core#WT_121
+coc:WT_121 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/замена трубопроводов ЦО в подвале" .
+
+
+###  http://www.w3id.org/cityont-core#WT_122
+coc:WT_122 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/замена участков трубопроводов инженерных сетей" .
+
+
+###  http://www.w3id.org/cityont-core#WT_123
+coc:WT_123 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/замена электросетей" .
+
+
+###  http://www.w3id.org/cityont-core#WT_124
+coc:WT_124 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/замена электросетей в подвале" .
+
+
+###  http://www.w3id.org/cityont-core#WT_125
+coc:WT_125 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/изготовление ПСД на инженерные сети" .
+
+
+###  http://www.w3id.org/cityont-core#WT_126
+coc:WT_126 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/изготовление ПСД на лифты" .
+
+
+###  http://www.w3id.org/cityont-core#WT_127
+coc:WT_127 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/капитальный ремонт квартир" .
+
+
+###  http://www.w3id.org/cityont-core#WT_128
+coc:WT_128 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/ликвидация последствий пожара" .
+
+
+###  http://www.w3id.org/cityont-core#WT_129
+coc:WT_129 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/наружные теплосети между домами" .
+
+
+###  http://www.w3id.org/cityont-core#WT_13
+coc:WT_13 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Благоустройство придомовой территории (Контейнерная площадка)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_130
+coc:WT_130 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/обследование дома на предмет аварийности" .
+
+
+###  http://www.w3id.org/cityont-core#WT_131
+coc:WT_131 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/обследование жилого дома" .
+
+
+###  http://www.w3id.org/cityont-core#WT_132
+coc:WT_132 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/обследование и экспертная оценка аварийности дома" .
+
+
+###  http://www.w3id.org/cityont-core#WT_133
+coc:WT_133 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/обследование МКД" .
+
+
+###  http://www.w3id.org/cityont-core#WT_134
+coc:WT_134 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/обследование МКД (вместе с Лахтинским 106)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_135
+coc:WT_135 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/обследование МКД на предмет его аварийности" .
+
+
+###  http://www.w3id.org/cityont-core#WT_136
+coc:WT_136 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/обследование МКД на предмет признания его аварийным" .
+
+
+###  http://www.w3id.org/cityont-core#WT_137
+coc:WT_137 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/общестроительные работы по ликвидации последствий пожара" .
+
+
+###  http://www.w3id.org/cityont-core#WT_138
+coc:WT_138 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/работа по нормализации температурно-влажного режима крыш" .
+
+
+###  http://www.w3id.org/cityont-core#WT_139
+coc:WT_139 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/работы по нормализации температурно-влажного режима" .
+
+
+###  http://www.w3id.org/cityont-core#WT_14
+coc:WT_14 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Благоустройство придомовой территории (Устройство набивных дорожек)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_140
+coc:WT_140 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/расходы на изготовление проектно-сметной документации на замену внутр. инженерных сетей" .
+
+
+###  http://www.w3id.org/cityont-core#WT_141
+coc:WT_141 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/ремонт )замена( изношенныхвнутриквартальных инжененых наружных сетей (вторичные сети)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_142
+coc:WT_142 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/ремонт водопровода и канализации" .
+
+
+###  http://www.w3id.org/cityont-core#WT_143
+coc:WT_143 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/ремонт вторич. наружн. сетей теплотрасы" .
+
+
+###  http://www.w3id.org/cityont-core#WT_144
+coc:WT_144 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/ремонт и установка узлов учета" .
+
+
+###  http://www.w3id.org/cityont-core#WT_145
+coc:WT_145 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/ремонт или замена внутридомовых инженерных сетей" .
+
+
+###  http://www.w3id.org/cityont-core#WT_146
+coc:WT_146 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/ремонт или замена системы канализации и водоотведения" .
+
+
+###  http://www.w3id.org/cityont-core#WT_147
+coc:WT_147 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/ремонт канализац. стояков" .
+
+
+###  http://www.w3id.org/cityont-core#WT_148
+coc:WT_148 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/ремонт системы горячего водоснабжения" .
+
+
+###  http://www.w3id.org/cityont-core#WT_149
+coc:WT_149 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/ремонт системы канализации" .
+
+
+###  http://www.w3id.org/cityont-core#WT_15
+coc:WT_15 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Благоустройство территории" .
+
+
+###  http://www.w3id.org/cityont-core#WT_150
+coc:WT_150 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Разные виды работ/ремонт системы теплоснабжения" .
+
+
+###  http://www.w3id.org/cityont-core#WT_151
+coc:WT_151 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/ремонт системы электроснабжения" .
+
+
+###  http://www.w3id.org/cityont-core#WT_152
+coc:WT_152 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/узлы учета электроэнергии" .
+
+
+###  http://www.w3id.org/cityont-core#WT_153
+coc:WT_153 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/усиление конструкций надпольного перекрытия лест. марша" .
+
+
+###  http://www.w3id.org/cityont-core#WT_154
+coc:WT_154 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/установка общедомовых приборов учета потребления теплловой энергии на нужды отопления" .
+
+
+###  http://www.w3id.org/cityont-core#WT_155
+coc:WT_155 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/установка общедомовых приборов учета потребления тепловой энергии на нужды газа" .
+
+
+###  http://www.w3id.org/cityont-core#WT_156
+coc:WT_156 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/установка узла учета тепловой энергии" .
+
+
+###  http://www.w3id.org/cityont-core#WT_157
+coc:WT_157 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/установка узлов учета" .
+
+
+###  http://www.w3id.org/cityont-core#WT_158
+coc:WT_158 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/установка УУТЭ" .
+
+
+###  http://www.w3id.org/cityont-core#WT_159
+coc:WT_159 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные виды работ/устройство пандусов" .
+
+
+###  http://www.w3id.org/cityont-core#WT_16
+coc:WT_16 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Внутренние инженерные сети" .
+
+
+###  http://www.w3id.org/cityont-core#WT_160
+coc:WT_160 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Разные работы" .
+
+
+###  http://www.w3id.org/cityont-core#WT_161
+coc:WT_161 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Разные работы - замена розливов ГВС в подвале" .
+
+
+###  http://www.w3id.org/cityont-core#WT_162
+coc:WT_162 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные работы - замена розливов ХВС в подвале" .
+
+
+###  http://www.w3id.org/cityont-core#WT_163
+coc:WT_163 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные работы - ремонт трубопровода канализации в подвале (2 пар.)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_164
+coc:WT_164 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Разные работы (канализация)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_165
+coc:WT_165 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Разные работы (ремонт крылец)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_166
+coc:WT_166 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Разные работы (ремонт лестничных клеток)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_167
+coc:WT_167 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Разные работы (сан)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_168
+coc:WT_168 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Разные работы (трубопроводы канализации)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_169
+coc:WT_169 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Разные работы (усил)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_17
+coc:WT_17 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Водопровод и канализация" .
+
+
+###  http://www.w3id.org/cityont-core#WT_170
+coc:WT_170 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные работы/ замена розлива ЦО" .
+
+
+###  http://www.w3id.org/cityont-core#WT_171
+coc:WT_171 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные работы/замена противопожарных стояков ХВС" .
+
+
+###  http://www.w3id.org/cityont-core#WT_172
+coc:WT_172 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные работы/замена трубопров. канализации" .
+
+
+###  http://www.w3id.org/cityont-core#WT_173
+coc:WT_173 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные работы/замена трубопроводов ГВС  на тех.этаже и  чердаке" .
+
+
+###  http://www.w3id.org/cityont-core#WT_174
+coc:WT_174 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные работы/замена участков труб ГВС в подвале" .
+
+
+###  http://www.w3id.org/cityont-core#WT_175
+coc:WT_175 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные работы/замена-ремонт наруж. теплосетей" .
+
+
+###  http://www.w3id.org/cityont-core#WT_176
+coc:WT_176 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные работы/обследование многоквартирного дома" .
+
+
+###  http://www.w3id.org/cityont-core#WT_177
+coc:WT_177 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные работы/ремонт выгребных ям" .
+
+
+###  http://www.w3id.org/cityont-core#WT_178
+coc:WT_178 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные работы/ремонт канал-и стояков" .
+
+
+###  http://www.w3id.org/cityont-core#WT_179
+coc:WT_179 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные работы/ремонт нижнего розлива ХВС" .
+
+
+###  http://www.w3id.org/cityont-core#WT_18
+coc:WT_18 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Восстановление пожарного водопровода" .
+
+
+###  http://www.w3id.org/cityont-core#WT_180
+coc:WT_180 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные работы/ремонт систем канал-и" .
+
+
+###  http://www.w3id.org/cityont-core#WT_181
+coc:WT_181 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные работы/ремонт системы теплоснабжения" .
+
+
+###  http://www.w3id.org/cityont-core#WT_182
+coc:WT_182 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные работы/ремонт теплотрассы" .
+
+
+###  http://www.w3id.org/cityont-core#WT_183
+coc:WT_183 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "разные работы/установка узла учета тепловой энергии" .
+
+
+###  http://www.w3id.org/cityont-core#WT_184
+coc:WT_184 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Расходы на изготовление проектно-сметной документации" .
+
+
+###  http://www.w3id.org/cityont-core#WT_185
+coc:WT_185 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "расходы на изготовление ПСД" .
+
+
+###  http://www.w3id.org/cityont-core#WT_186
+coc:WT_186 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Расходы на строительный контроль (технадзор)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_187
+coc:WT_187 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "реконструкция и модернизация лифтов" .
+
+
+###  http://www.w3id.org/cityont-core#WT_188
+coc:WT_188 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Реконструкция инженерных сетей по программе АПКВ" .
+
+
+###  http://www.w3id.org/cityont-core#WT_189
+coc:WT_189 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Реконструкция элеваторного узла" .
+
+
+###  http://www.w3id.org/cityont-core#WT_19
+coc:WT_19 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "ГВС-розлив" .
+
+
+###  http://www.w3id.org/cityont-core#WT_190
+coc:WT_190 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Реконструкция элеваторных узлов" .
+
+
+###  http://www.w3id.org/cityont-core#WT_191
+coc:WT_191 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "рем. ИТП" .
+
+
+###  http://www.w3id.org/cityont-core#WT_192
+coc:WT_192 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "рем.козырьков" .
+
+
+###  http://www.w3id.org/cityont-core#WT_193
+coc:WT_193 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "рем.системы ГВС" .
+
+
+###  http://www.w3id.org/cityont-core#WT_194
+coc:WT_194 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "рем.теплотрассы" .
+
+
+###  http://www.w3id.org/cityont-core#WT_195
+coc:WT_195 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт  (замена)изношенных внутриквартальных   инженерных наружных сетей  (вторичные сети)  с присоединением к существующим   магистральным сетям при расстоянии от ввода до точки подключения к магистралям до 150 м" .
+
+
+###  http://www.w3id.org/cityont-core#WT_196
+coc:WT_196 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт аварийного балкона" .
+
+
+###  http://www.w3id.org/cityont-core#WT_197
+coc:WT_197 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт аварийных балконов" .
+
+
+###  http://www.w3id.org/cityont-core#WT_198
+coc:WT_198 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт аварийных балконов и лоджий" .
+
+
+###  http://www.w3id.org/cityont-core#WT_199
+coc:WT_199 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт аварийных стояков холодного водоснабжения" .
+
+
+###  http://www.w3id.org/cityont-core#WT_2
+coc:WT_2 rdf:type owl:NamedIndividual ,
+                  coc:WorkType ;
+         coc:hasTitle "АВКР" .
+
+
+###  http://www.w3id.org/cityont-core#WT_20
+coc:WT_20 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Герметизация горизонтальных и вертикальных стыков стеновых панелей" .
+
+
+###  http://www.w3id.org/cityont-core#WT_200
+coc:WT_200 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт аварийных стояков холодного и горячего водоснабжений" .
+
+
+###  http://www.w3id.org/cityont-core#WT_201
+coc:WT_201 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт АППЗ" .
+
+
+###  http://www.w3id.org/cityont-core#WT_202
+coc:WT_202 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт балконов" .
+
+
+###  http://www.w3id.org/cityont-core#WT_203
+coc:WT_203 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт балконов и козырьков" .
+
+
+###  http://www.w3id.org/cityont-core#WT_204
+coc:WT_204 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт балконов и эркеров" .
+
+
+###  http://www.w3id.org/cityont-core#WT_205
+coc:WT_205 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт в/к" .
+
+
+###  http://www.w3id.org/cityont-core#WT_206
+coc:WT_206 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт внутренних  инженерных сетей" .
+
+
+###  http://www.w3id.org/cityont-core#WT_207
+coc:WT_207 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт внутренних инженерных систем" .
+
+
+###  http://www.w3id.org/cityont-core#WT_208
+coc:WT_208 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт внутридомовых инженерных систем" .
+
+
+###  http://www.w3id.org/cityont-core#WT_209
+coc:WT_209 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт внутридомовых инженерных систем (ВК)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_21
+coc:WT_21 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Герметизация стыков стеновых панелей" .
+
+
+###  http://www.w3id.org/cityont-core#WT_210
+coc:WT_210 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт внутридомовых инженерных систем водоотведения" .
+
+
+###  http://www.w3id.org/cityont-core#WT_211
+coc:WT_211 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт внутридомовых инженерных систем горячего водоснабжения (ГВС)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_212
+coc:WT_212 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт внутридомовых инженерных систем теплоснабжения" .
+
+
+###  http://www.w3id.org/cityont-core#WT_213
+coc:WT_213 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт внутридомовых инженерных систем холодного водоснабжения (ХВС)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_214
+coc:WT_214 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт внутридомовых инженерных систем электроснабжения" .
+
+
+###  http://www.w3id.org/cityont-core#WT_215
+coc:WT_215 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт дренажа" .
+
+
+###  http://www.w3id.org/cityont-core#WT_216
+coc:WT_216 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт и восстановление озеленения" .
+
+
+###  http://www.w3id.org/cityont-core#WT_217
+coc:WT_217 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт и замена инженерных сетей" .
+
+
+###  http://www.w3id.org/cityont-core#WT_218
+coc:WT_218 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт и замена покрытий крыш" .
+
+
+###  http://www.w3id.org/cityont-core#WT_219
+coc:WT_219 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт или восстановление АППЗ" .
+
+
+###  http://www.w3id.org/cityont-core#WT_22
+coc:WT_22 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Гидроизоляция подвала" .
+
+
+###  http://www.w3id.org/cityont-core#WT_220
+coc:WT_220 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт или восстановление внутридомовых инженерных систем" .
+
+
+###  http://www.w3id.org/cityont-core#WT_221
+coc:WT_221 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт или восстановление внутридомовых инженерных систем (нижние розливы)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_222
+coc:WT_222 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт или восстановление внутридомовых инженерных систем (розлив ЦО)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_223
+coc:WT_223 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт или восстановление внутридомовых инженерных систем холодного горячего водоснабжения" .
+
+
+###  http://www.w3id.org/cityont-core#WT_224
+coc:WT_224 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт или восстановление ОДС" .
+
+
+###  http://www.w3id.org/cityont-core#WT_225
+coc:WT_225 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт или восстановление системы ПЗУ" .
+
+
+###  http://www.w3id.org/cityont-core#WT_226
+coc:WT_226 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "ремонт или восстановление участков внутридомовых инженерных систем" .
+
+
+###  http://www.w3id.org/cityont-core#WT_227
+coc:WT_227 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт или замена внутридомовых инженерных сетей" .
+
+
+###  http://www.w3id.org/cityont-core#WT_228
+coc:WT_228 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт или замена внутридомовых инженерных систем (ВК)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_229
+coc:WT_229 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "ремонт или замена дренажной системы" .
+
+
+###  http://www.w3id.org/cityont-core#WT_23
+coc:WT_23 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "гидроизоляция стен и пола подвала" .
+
+
+###  http://www.w3id.org/cityont-core#WT_230
+coc:WT_230 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт или замена инженерных сетей" .
+
+
+###  http://www.w3id.org/cityont-core#WT_231
+coc:WT_231 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт или замена лифтвого оборудования" .
+
+
+###  http://www.w3id.org/cityont-core#WT_232
+coc:WT_232 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт или замена системы водоотведения" .
+
+
+###  http://www.w3id.org/cityont-core#WT_233
+coc:WT_233 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт или замена системы газоснабжения" .
+
+
+###  http://www.w3id.org/cityont-core#WT_234
+coc:WT_234 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт или замена системы горячего водоснабжения" .
+
+
+###  http://www.w3id.org/cityont-core#WT_235
+coc:WT_235 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт или замена системы горячего водоснабжения. Ремонт или замена системы отопления" .
+
+
+###  http://www.w3id.org/cityont-core#WT_236
+coc:WT_236 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт или замена системы канализования и водоотведения" .
+
+
+###  http://www.w3id.org/cityont-core#WT_237
+coc:WT_237 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт или замена системы отопления" .
+
+
+###  http://www.w3id.org/cityont-core#WT_238
+coc:WT_238 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт или замена системы отопления. Ремонт или замена системы холодного водоснабжения. Ремонт или замена системы горячего водоснабжения. Ремонт или замена системы канализования и водоотведения" .
+
+
+###  http://www.w3id.org/cityont-core#WT_239
+coc:WT_239 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт или замена системы холодного водоснабжения" .
+
+
+###  http://www.w3id.org/cityont-core#WT_24
+coc:WT_24 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Гидроизоляция тех.этажа" .
+
+
+###  http://www.w3id.org/cityont-core#WT_240
+coc:WT_240 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт или замена системы холодного водоснабжения (верхний розлив)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_241
+coc:WT_241 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт или замена системы холодного водоснабжения. Ремонт или замена системы горячего водоснабжения." .
+
+
+###  http://www.w3id.org/cityont-core#WT_242
+coc:WT_242 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт или замена системы холодного водоснабжения. Ремонт или замена системы канализования и водоотведения." .
+
+
+###  http://www.w3id.org/cityont-core#WT_243
+coc:WT_243 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт или замена системы холодного водоснабжения. Ремонт или замена системы отопления.Ремонт или замена системы горячего водоснабжения." .
+
+
+###  http://www.w3id.org/cityont-core#WT_244
+coc:WT_244 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт или замена системы электроснабжения" .
+
+
+###  http://www.w3id.org/cityont-core#WT_245
+coc:WT_245 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт или замена системы электроснабжения (разделение узла учета)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_246
+coc:WT_246 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт или замена холодного системы холодного водоснабжени и канализации" .
+
+
+###  http://www.w3id.org/cityont-core#WT_247
+coc:WT_247 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт инженерных сетей" .
+
+
+###  http://www.w3id.org/cityont-core#WT_248
+coc:WT_248 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт козырьков" .
+
+
+###  http://www.w3id.org/cityont-core#WT_249
+coc:WT_249 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт конструкций и замена покрытий крыш" .
+
+
+###  http://www.w3id.org/cityont-core#WT_25
+coc:WT_25 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Детские площадки" .
+
+
+###  http://www.w3id.org/cityont-core#WT_250
+coc:WT_250 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт кровли (инвестиции)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_251
+coc:WT_251 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт крылец" .
+
+
+###  http://www.w3id.org/cityont-core#WT_252
+coc:WT_252 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт крыши" .
+
+
+###  http://www.w3id.org/cityont-core#WT_253
+coc:WT_253 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт лестниц" .
+
+
+###  http://www.w3id.org/cityont-core#WT_254
+coc:WT_254 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт лестничных клеток" .
+
+
+###  http://www.w3id.org/cityont-core#WT_255
+coc:WT_255 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт ливнестоков" .
+
+
+###  http://www.w3id.org/cityont-core#WT_256
+coc:WT_256 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт лифтов" .
+
+
+###  http://www.w3id.org/cityont-core#WT_257
+coc:WT_257 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт лифтов с техническим освидетельством" .
+
+
+###  http://www.w3id.org/cityont-core#WT_258
+coc:WT_258 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт лифтового оборудования" .
+
+
+###  http://www.w3id.org/cityont-core#WT_259
+coc:WT_259 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт лифтового оборудования (рег 40479-Б)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_26
+coc:WT_26 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Диагностика лифтового оборудования" .
+
+
+###  http://www.w3id.org/cityont-core#WT_260
+coc:WT_260 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт лифтового оборудования с заменой крупных узлов	 (это не замена и ремонт)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_261
+coc:WT_261 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт лицевого фасада" .
+
+
+###  http://www.w3id.org/cityont-core#WT_262
+coc:WT_262 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт наружного водопровода" .
+
+
+###  http://www.w3id.org/cityont-core#WT_263
+coc:WT_263 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "ремонт наружных сетей теплоснабжения (вторичные сети)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_264
+coc:WT_264 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "ремонт наружныхсетей теплоснабжения (вторичные сети) Приморский пр. д.57/1-57/2" .
+
+
+###  http://www.w3id.org/cityont-core#WT_265
+coc:WT_265 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт насосных" .
+
+
+###  http://www.w3id.org/cityont-core#WT_266
+coc:WT_266 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт нижнего розлива" .
+
+
+###  http://www.w3id.org/cityont-core#WT_267
+coc:WT_267 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт нижнего розлива ГВС" .
+
+
+###  http://www.w3id.org/cityont-core#WT_268
+coc:WT_268 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт нижнего розлива отопления" .
+
+
+###  http://www.w3id.org/cityont-core#WT_269
+coc:WT_269 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт нижнего розлива холодного водоснабжения" .
+
+
+###  http://www.w3id.org/cityont-core#WT_27
+coc:WT_27 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Замена верхнего розлива центрального отопления" .
+
+
+###  http://www.w3id.org/cityont-core#WT_270
+coc:WT_270 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт нижнего розлива ЦО" .
+
+
+###  http://www.w3id.org/cityont-core#WT_271
+coc:WT_271 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт нижних розливов" .
+
+
+###  http://www.w3id.org/cityont-core#WT_272
+coc:WT_272 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт подвальных помещений" .
+
+
+###  http://www.w3id.org/cityont-core#WT_273
+coc:WT_273 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт пожарного водопровода" .
+
+
+###  http://www.w3id.org/cityont-core#WT_274
+coc:WT_274 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт пожарного гидранта" .
+
+
+###  http://www.w3id.org/cityont-core#WT_275
+coc:WT_275 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт розлив трубопроводов ХВС" .
+
+
+###  http://www.w3id.org/cityont-core#WT_276
+coc:WT_276 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт розлива ГВС" .
+
+
+###  http://www.w3id.org/cityont-core#WT_277
+coc:WT_277 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт розлива отопления" .
+
+
+###  http://www.w3id.org/cityont-core#WT_278
+coc:WT_278 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт розлива ХВС" .
+
+
+###  http://www.w3id.org/cityont-core#WT_279
+coc:WT_279 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт розлива холодного водоснабжения. Ремонт розлива отопления.Ремонт розлива горячего водоснабжения." .
+
+
+###  http://www.w3id.org/cityont-core#WT_28
+coc:WT_28 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Замена кабины пассажирских и грузовых лифтов" .
+
+
+###  http://www.w3id.org/cityont-core#WT_280
+coc:WT_280 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт розлива центрального отопления" .
+
+
+###  http://www.w3id.org/cityont-core#WT_281
+coc:WT_281 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт розлива ЦО" .
+
+
+###  http://www.w3id.org/cityont-core#WT_282
+coc:WT_282 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт розливов систем холодного водоснабжения и канализации" .
+
+
+###  http://www.w3id.org/cityont-core#WT_283
+coc:WT_283 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт розливов ХВС и ГВС" .
+
+
+###  http://www.w3id.org/cityont-core#WT_284
+coc:WT_284 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт розливов холодного и горячего водоснабжения" .
+
+
+###  http://www.w3id.org/cityont-core#WT_285
+coc:WT_285 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт розливов ЦО" .
+
+
+###  http://www.w3id.org/cityont-core#WT_286
+coc:WT_286 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт сетей канализации" .
+
+
+###  http://www.w3id.org/cityont-core#WT_287
+coc:WT_287 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт сетей канализации и водоотведения" .
+
+
+###  http://www.w3id.org/cityont-core#WT_288
+coc:WT_288 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт системы водоотведения" .
+
+
+###  http://www.w3id.org/cityont-core#WT_289
+coc:WT_289 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт системы горячего водоснабжения" .
+
+
+###  http://www.w3id.org/cityont-core#WT_29
+coc:WT_29 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Замена нижнего розлива центрального отопления" .
+
+
+###  http://www.w3id.org/cityont-core#WT_290
+coc:WT_290 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт системы теплоснабжения" .
+
+
+###  http://www.w3id.org/cityont-core#WT_291
+coc:WT_291 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт системы ХВС и канализации" .
+
+
+###  http://www.w3id.org/cityont-core#WT_292
+coc:WT_292 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт системы холодного водоснабжения" .
+
+
+###  http://www.w3id.org/cityont-core#WT_293
+coc:WT_293 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт системы холодного водоснабжения и канализации" .
+
+
+###  http://www.w3id.org/cityont-core#WT_294
+coc:WT_294 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт системы электроснабжения" .
+
+
+###  http://www.w3id.org/cityont-core#WT_295
+coc:WT_295 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт системы электроснабжения (разделение узла учета)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_296
+coc:WT_296 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт системы электроснабжения (рзаделения узла учета)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_297
+coc:WT_297 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт систмы ХВС и ГВС" .
+
+
+###  http://www.w3id.org/cityont-core#WT_298
+coc:WT_298 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт стояков горячего водоснабжения" .
+
+
+###  http://www.w3id.org/cityont-core#WT_299
+coc:WT_299 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт стояков ХВС" .
+
+
+###  http://www.w3id.org/cityont-core#WT_3
+coc:WT_3 rdf:type owl:NamedIndividual ,
+                  coc:WorkType ;
+         coc:hasTitle "АВКР (балконы)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_30
+coc:WT_30 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Замена нижних розливов" .
+
+
+###  http://www.w3id.org/cityont-core#WT_300
+coc:WT_300 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт стояков холодного и горячего водоснабжения" .
+
+
+###  http://www.w3id.org/cityont-core#WT_301
+coc:WT_301 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт стояков центрального отопления" .
+
+
+###  http://www.w3id.org/cityont-core#WT_302
+coc:WT_302 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт т/пункта" .
+
+
+###  http://www.w3id.org/cityont-core#WT_303
+coc:WT_303 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт т/ц" .
+
+
+###  http://www.w3id.org/cityont-core#WT_304
+coc:WT_304 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт тепловых сетей в подвале" .
+
+
+###  http://www.w3id.org/cityont-core#WT_305
+coc:WT_305 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт теплотрассы" .
+
+
+###  http://www.w3id.org/cityont-core#WT_306
+coc:WT_306 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "ремонт технических помещений с установкой металлических дверей" .
+
+
+###  http://www.w3id.org/cityont-core#WT_307
+coc:WT_307 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт трубопровода (розлива) водоотведения в подвальном помещении" .
+
+
+###  http://www.w3id.org/cityont-core#WT_308
+coc:WT_308 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт трубопровода (розлива) горячего водоснабжения в подвальном помещении" .
+
+
+###  http://www.w3id.org/cityont-core#WT_309
+coc:WT_309 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт трубопровода (розлива) канализации в подвальном помещении" .
+
+
+###  http://www.w3id.org/cityont-core#WT_31
+coc:WT_31 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Замена пожарных гидрантов" .
+
+
+###  http://www.w3id.org/cityont-core#WT_310
+coc:WT_310 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт трубопровода (розлива) холодного водоснабжения в подвальном помещении" .
+
+
+###  http://www.w3id.org/cityont-core#WT_311
+coc:WT_311 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт трубопровода (розлива) центрального отопления в подвальном помещении" .
+
+
+###  http://www.w3id.org/cityont-core#WT_312
+coc:WT_312 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт трубопровода канализации и водоотведения" .
+
+
+###  http://www.w3id.org/cityont-core#WT_313
+coc:WT_313 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт трубопроводов (розливов) теплоснабжения в подвальном помещении" .
+
+
+###  http://www.w3id.org/cityont-core#WT_314
+coc:WT_314 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт трубопроводов ГВС" .
+
+
+###  http://www.w3id.org/cityont-core#WT_315
+coc:WT_315 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт трубопроводов горячего водоснабжения и центрального отопления" .
+
+
+###  http://www.w3id.org/cityont-core#WT_316
+coc:WT_316 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт трубопроводов канализации" .
+
+
+###  http://www.w3id.org/cityont-core#WT_317
+coc:WT_317 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт трубопроводов системы  канализации" .
+
+
+###  http://www.w3id.org/cityont-core#WT_318
+coc:WT_318 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт трубопроводов ХВС" .
+
+
+###  http://www.w3id.org/cityont-core#WT_319
+coc:WT_319 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт трубопроводов холодного и горячего водоснабжения" .
+
+
+###  http://www.w3id.org/cityont-core#WT_32
+coc:WT_32 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Замена розлива горячего водоснабжения" .
+
+
+###  http://www.w3id.org/cityont-core#WT_320
+coc:WT_320 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт трубопроводов центрального отопления" .
+
+
+###  http://www.w3id.org/cityont-core#WT_321
+coc:WT_321 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт уч. инж. сетей" .
+
+
+###  http://www.w3id.org/cityont-core#WT_322
+coc:WT_322 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "ремонт участков стен подвалов и пола" .
+
+
+###  http://www.w3id.org/cityont-core#WT_323
+coc:WT_323 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт фасада" .
+
+
+###  http://www.w3id.org/cityont-core#WT_324
+coc:WT_324 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт фасада (Герметизация стыков стеновых панелей)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_325
+coc:WT_325 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт фасада (двор)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_326
+coc:WT_326 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт фасада (лицевой)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_327
+coc:WT_327 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт фасадов без утепления" .
+
+
+###  http://www.w3id.org/cityont-core#WT_328
+coc:WT_328 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт фасадов и эркеров" .
+
+
+###  http://www.w3id.org/cityont-core#WT_329
+coc:WT_329 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт фасадов с утеплением" .
+
+
+###  http://www.w3id.org/cityont-core#WT_33
+coc:WT_33 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Замена розлива холодного водоснабжения" .
+
+
+###  http://www.w3id.org/cityont-core#WT_330
+coc:WT_330 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт фундаментов" .
+
+
+###  http://www.w3id.org/cityont-core#WT_331
+coc:WT_331 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт ХВС и канализации" .
+
+
+###  http://www.w3id.org/cityont-core#WT_332
+coc:WT_332 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт элеваторных узлов" .
+
+
+###  http://www.w3id.org/cityont-core#WT_333
+coc:WT_333 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт электросети" .
+
+
+###  http://www.w3id.org/cityont-core#WT_334
+coc:WT_334 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонт эркера" .
+
+
+###  http://www.w3id.org/cityont-core#WT_335
+coc:WT_335 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонтно-строительные работы" .
+
+
+###  http://www.w3id.org/cityont-core#WT_336
+coc:WT_336 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Ремонтно-строительные работы (козырек)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_337
+coc:WT_337 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Розлив хвс" .
+
+
+###  http://www.w3id.org/cityont-core#WT_338
+coc:WT_338 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Санация (двери)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_339
+coc:WT_339 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Санация (окна)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_34
+coc:WT_34 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Замена розливов" .
+
+
+###  http://www.w3id.org/cityont-core#WT_340
+coc:WT_340 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Сети ЦО" .
+
+
+###  http://www.w3id.org/cityont-core#WT_341
+coc:WT_341 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Система канализации" .
+
+
+###  http://www.w3id.org/cityont-core#WT_342
+coc:WT_342 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Скоростные водонагреватели" .
+
+
+###  http://www.w3id.org/cityont-core#WT_343
+coc:WT_343 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Скоростные водонагреватели-установка" .
+
+
+###  http://www.w3id.org/cityont-core#WT_344
+coc:WT_344 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Смена стояков и пож.гидр" .
+
+
+###  http://www.w3id.org/cityont-core#WT_345
+coc:WT_345 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Стояки пожаротушения" .
+
+
+###  http://www.w3id.org/cityont-core#WT_346
+coc:WT_346 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "ТВР чердачного помещения" .
+
+
+###  http://www.w3id.org/cityont-core#WT_347
+coc:WT_347 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "ТВР чердачных помещений" .
+
+
+###  http://www.w3id.org/cityont-core#WT_348
+coc:WT_348 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Тепловой ввод" .
+
+
+###  http://www.w3id.org/cityont-core#WT_349
+coc:WT_349 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Теплотрассы" .
+
+
+###  http://www.w3id.org/cityont-core#WT_35
+coc:WT_35 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Замена стояков ХВС и ГВС" .
+
+
+###  http://www.w3id.org/cityont-core#WT_350
+coc:WT_350 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Техническое обследование дома" .
+
+
+###  http://www.w3id.org/cityont-core#WT_351
+coc:WT_351 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Техническое обследование здания" .
+
+
+###  http://www.w3id.org/cityont-core#WT_352
+coc:WT_352 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Техническое обследование МКД" .
+
+
+###  http://www.w3id.org/cityont-core#WT_353
+coc:WT_353 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "УВТЭ" .
+
+
+###  http://www.w3id.org/cityont-core#WT_354
+coc:WT_354 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Узел учёта" .
+
+
+###  http://www.w3id.org/cityont-core#WT_355
+coc:WT_355 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "узлы ввода ЦО и ГВС" .
+
+
+###  http://www.w3id.org/cityont-core#WT_356
+coc:WT_356 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Узлы учёта" .
+
+
+###  http://www.w3id.org/cityont-core#WT_357
+coc:WT_357 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Усиление конструкиц здания" .
+
+
+###  http://www.w3id.org/cityont-core#WT_358
+coc:WT_358 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Усиление конструкций здания" .
+
+
+###  http://www.w3id.org/cityont-core#WT_359
+coc:WT_359 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Усиление конструкций лестничных маршей (где кв. 34)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_36
+coc:WT_36 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Замена трубопродов (стояков) холодного водоснабжения" .
+
+
+###  http://www.w3id.org/cityont-core#WT_360
+coc:WT_360 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Усиление наружн стены" .
+
+
+###  http://www.w3id.org/cityont-core#WT_361
+coc:WT_361 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Усиление несущих конструкций" .
+
+
+###  http://www.w3id.org/cityont-core#WT_362
+coc:WT_362 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Усиление основных конструкций" .
+
+
+###  http://www.w3id.org/cityont-core#WT_363
+coc:WT_363 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Усиление стен и фундаментов" .
+
+
+###  http://www.w3id.org/cityont-core#WT_364
+coc:WT_364 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Усиление участков стен (колонн кирпичной вставки по проекту)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_365
+coc:WT_365 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Установка бойлеров" .
+
+
+###  http://www.w3id.org/cityont-core#WT_366
+coc:WT_366 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "установка ИТП" .
+
+
+###  http://www.w3id.org/cityont-core#WT_367
+coc:WT_367 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Установка коммерческих узлов учета тепловой энергии" .
+
+
+###  http://www.w3id.org/cityont-core#WT_368
+coc:WT_368 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "установка МАФ" .
+
+
+###  http://www.w3id.org/cityont-core#WT_369
+coc:WT_369 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Установка обратных клапанов системы центрального отопления" .
+
+
+###  http://www.w3id.org/cityont-core#WT_37
+coc:WT_37 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Замена холодного водорозлива подвала" .
+
+
+###  http://www.w3id.org/cityont-core#WT_370
+coc:WT_370 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Установка общедомового прибора учета потребления тепловой энергии" .
+
+
+###  http://www.w3id.org/cityont-core#WT_371
+coc:WT_371 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Установка узла учета тепловой энергии" .
+
+
+###  http://www.w3id.org/cityont-core#WT_372
+coc:WT_372 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Установка узлов учета" .
+
+
+###  http://www.w3id.org/cityont-core#WT_373
+coc:WT_373 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Установка узлов учета ХВС на здание" .
+
+
+###  http://www.w3id.org/cityont-core#WT_374
+coc:WT_374 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Установка УУТЭ" .
+
+
+###  http://www.w3id.org/cityont-core#WT_375
+coc:WT_375 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "устр.набивных дорожек" .
+
+
+###  http://www.w3id.org/cityont-core#WT_376
+coc:WT_376 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Устранение аварийного состояния строительных конструкций" .
+
+
+###  http://www.w3id.org/cityont-core#WT_377
+coc:WT_377 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Устройство детских и спортивных площадок" .
+
+
+###  http://www.w3id.org/cityont-core#WT_378
+coc:WT_378 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Устройство детских площадок" .
+
+
+###  http://www.w3id.org/cityont-core#WT_379
+coc:WT_379 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "устройство контейнерных площадок" .
+
+
+###  http://www.w3id.org/cityont-core#WT_38
+coc:WT_38 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Замена электрощитов на лест. клетках" .
+
+
+###  http://www.w3id.org/cityont-core#WT_380
+coc:WT_380 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Устройство набивных дорожек" .
+
+
+###  http://www.w3id.org/cityont-core#WT_381
+coc:WT_381 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Устройство набивных покрытий" .
+
+
+###  http://www.w3id.org/cityont-core#WT_382
+coc:WT_382 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Устройство пандуса" .
+
+
+###  http://www.w3id.org/cityont-core#WT_383
+coc:WT_383 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Утепление и ремонт фасада" .
+
+
+###  http://www.w3id.org/cityont-core#WT_384
+coc:WT_384 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Утепление чердака" .
+
+
+###  http://www.w3id.org/cityont-core#WT_385
+coc:WT_385 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Утепление чердаков" .
+
+
+###  http://www.w3id.org/cityont-core#WT_386
+coc:WT_386 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "УУТЭ" .
+
+
+###  http://www.w3id.org/cityont-core#WT_387
+coc:WT_387 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Экспертиза лифта" .
+
+
+###  http://www.w3id.org/cityont-core#WT_388
+coc:WT_388 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Экспертиза лифтов" .
+
+
+###  http://www.w3id.org/cityont-core#WT_389
+coc:WT_389 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Экспертиза лифтов отработавших нормативный срок службы" .
+
+
+###  http://www.w3id.org/cityont-core#WT_39
+coc:WT_39 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Инженерное обследование здания" .
+
+
+###  http://www.w3id.org/cityont-core#WT_390
+coc:WT_390 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Экспертиза строительных конструкций" .
+
+
+###  http://www.w3id.org/cityont-core#WT_391
+coc:WT_391 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Эркеры" .
+
+
+###  http://www.w3id.org/cityont-core#WT_392
+coc:WT_392 rdf:type owl:NamedIndividual ,
+                    coc:WorkType ;
+           coc:hasTitle "Эркеры (где кв.17)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_4
+coc:WT_4 rdf:type owl:NamedIndividual ,
+                  coc:WorkType ;
+         coc:hasTitle "АВКР (л/кл)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_40
+coc:WT_40 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Инженерные сети" .
+
+
+###  http://www.w3id.org/cityont-core#WT_41
+coc:WT_41 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Капитальный ремонт крыши и водосточной системы" .
+
+
+###  http://www.w3id.org/cityont-core#WT_42
+coc:WT_42 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Капитальный ремонт лифтов" .
+
+
+###  http://www.w3id.org/cityont-core#WT_43
+coc:WT_43 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Капитальный ремонт лифтов (с заменой крупных узлов)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_44
+coc:WT_44 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Капитальный ремонт лифтов с полной  заменой оборудования: реконструкция  лифтов" .
+
+
+###  http://www.w3id.org/cityont-core#WT_45
+coc:WT_45 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Капитальный ремонт лифтов с полной заменой оборудования: реконструкция лифтов	 (рег.№ 51910)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_46
+coc:WT_46 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Капитальный ремонт лифтов с частичной заменой оборудования: модернизация лифтов" .
+
+
+###  http://www.w3id.org/cityont-core#WT_47
+coc:WT_47 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Капитальный ремонт лифтов с частичной заменой оборудования: модернизация лифтов 1 ед." .
+
+
+###  http://www.w3id.org/cityont-core#WT_48
+coc:WT_48 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "ККР" .
+
+
+###  http://www.w3id.org/cityont-core#WT_49
+coc:WT_49 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Комплексное благоустройство" .
+
+
+###  http://www.w3id.org/cityont-core#WT_5
+coc:WT_5 rdf:type owl:NamedIndividual ,
+                  coc:WorkType ;
+         coc:hasTitle "АВКР (ремонт балконов и эркеров)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_50
+coc:WT_50 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Комплексный капитальный ремонт" .
+
+
+###  http://www.w3id.org/cityont-core#WT_51
+coc:WT_51 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Контейнерные площадки" .
+
+
+###  http://www.w3id.org/cityont-core#WT_52
+coc:WT_52 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "МАФ" .
+
+
+###  http://www.w3id.org/cityont-core#WT_53
+coc:WT_53 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Металлические ворота" .
+
+
+###  http://www.w3id.org/cityont-core#WT_54
+coc:WT_54 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Металлические двери" .
+
+
+###  http://www.w3id.org/cityont-core#WT_55
+coc:WT_55 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Монтаж ИТП" .
+
+
+###  http://www.w3id.org/cityont-core#WT_56
+coc:WT_56 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Монтаж ПЗУ" .
+
+
+###  http://www.w3id.org/cityont-core#WT_57
+coc:WT_57 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Монтаж системы вентел." .
+
+
+###  http://www.w3id.org/cityont-core#WT_58
+coc:WT_58 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Монтаж узла учета тепловой энергии" .
+
+
+###  http://www.w3id.org/cityont-core#WT_59
+coc:WT_59 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "монтаж узлов ввода т/э" .
+
+
+###  http://www.w3id.org/cityont-core#WT_6
+coc:WT_6 rdf:type owl:NamedIndividual ,
+                  coc:WorkType ;
+         coc:hasTitle "АВКР (ремонт козырьков)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_60
+coc:WT_60 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Мощение" .
+
+
+###  http://www.w3id.org/cityont-core#WT_61
+coc:WT_61 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Наружные инженерные сети ЦО" .
+
+
+###  http://www.w3id.org/cityont-core#WT_62
+coc:WT_62 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "обследование дома и экспертная оценка аварийности дома" .
+
+
+###  http://www.w3id.org/cityont-core#WT_63
+coc:WT_63 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "обследование конструкций жилых домов" .
+
+
+###  http://www.w3id.org/cityont-core#WT_64
+coc:WT_64 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "обследование МВК" .
+
+
+###  http://www.w3id.org/cityont-core#WT_65
+coc:WT_65 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Обследование МКД" .
+
+
+###  http://www.w3id.org/cityont-core#WT_66
+coc:WT_66 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "обследование многоквартирного дома" .
+
+
+###  http://www.w3id.org/cityont-core#WT_67
+coc:WT_67 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Обследование технического состояния существующих строительных конструкций" .
+
+
+###  http://www.w3id.org/cityont-core#WT_68
+coc:WT_68 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "общ.работы (уст-во пандусов)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_69
+coc:WT_69 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Общестроительные работы" .
+
+
+###  http://www.w3id.org/cityont-core#WT_7
+coc:WT_7 rdf:type owl:NamedIndividual ,
+                  coc:WorkType ;
+         coc:hasTitle "АВКР (ремонт одной квартиры)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_70
+coc:WT_70 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Общестроительные работы (ремонт лест.клеток)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_71
+coc:WT_71 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Общестроительные работы (ремонт оконных проемов)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_72
+coc:WT_72 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Общестроительные работы (ремонт фасадной плитки)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_73
+coc:WT_73 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Пожарный водопровод" .
+
+
+###  http://www.w3id.org/cityont-core#WT_74
+coc:WT_74 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Пожарный гидрант" .
+
+
+###  http://www.w3id.org/cityont-core#WT_75
+coc:WT_75 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Полная реконструкция здания с расселением" .
+
+
+###  http://www.w3id.org/cityont-core#WT_76
+coc:WT_76 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "ППКР" .
+
+
+###  http://www.w3id.org/cityont-core#WT_77
+coc:WT_77 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "признан аварийным и подлежит сносу решение от 27.08.14" .
+
+
+###  http://www.w3id.org/cityont-core#WT_78
+coc:WT_78 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Проектные работы" .
+
+
+###  http://www.w3id.org/cityont-core#WT_79
+coc:WT_79 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Проектные работы на усиление стен в квартире 14" .
+
+
+###  http://www.w3id.org/cityont-core#WT_8
+coc:WT_8 rdf:type owl:NamedIndividual ,
+                  coc:WorkType ;
+         coc:hasTitle "АВКР (усиление л/кл)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_80
+coc:WT_80 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Проектные работы на устройство козырька" .
+
+
+###  http://www.w3id.org/cityont-core#WT_81
+coc:WT_81 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Промывка фасадов" .
+
+
+###  http://www.w3id.org/cityont-core#WT_82
+coc:WT_82 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Противокапилярная защита стен" .
+
+
+###  http://www.w3id.org/cityont-core#WT_83
+coc:WT_83 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Прочие виды работ (ремонт балконов и эркеров)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_84
+coc:WT_84 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Прочие виды работ (ремонт балконов)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_85
+coc:WT_85 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Прочие виды работ (ремонт лестничных клеток)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_86
+coc:WT_86 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Прочие работы по благоустойству (монтаж металлических ограждений)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_87
+coc:WT_87 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Прочие работы по благоустройству" .
+
+
+###  http://www.w3id.org/cityont-core#WT_88
+coc:WT_88 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Прочие работы по благоустройству (восстановление кирпичной кладки приямка с оштукатуриванием и окраской)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_89
+coc:WT_89 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Прочие работы по благоустройству (демонтаж ж/б плит)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_9
+coc:WT_9 rdf:type owl:NamedIndividual ,
+                  coc:WorkType ;
+         coc:hasTitle "АВКР (усиление оконных проемов)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_90
+coc:WT_90 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "прочие работы по благоустройству (разборка ж/б конструкций)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_91
+coc:WT_91 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "прочие работы по благоустройству (разборка ж/б плит и вывоз)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_92
+coc:WT_92 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "прочие работы по благоустройству (разборка плитки тротуарной)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_93
+coc:WT_93 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Прочие работы по благоустройству (ремонт ворот)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_94
+coc:WT_94 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Прочие работы по благоустройству (ремонт кирпичной кладки с оштукатуриванием и окраской)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_95
+coc:WT_95 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Прочие работы по благоустройству (снос деревьев с корчевкой пней)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_96
+coc:WT_96 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Прочие работы по благоустройству (установка вазонов)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_97
+coc:WT_97 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Прочие работы по благоустройству (устройство набивных дорожек)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_98
+coc:WT_98 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "Прочие работы по благоустройству (устройство патрубков)" .
+
+
+###  http://www.w3id.org/cityont-core#WT_99
+coc:WT_99 rdf:type owl:NamedIndividual ,
+                   coc:WorkType ;
+          coc:hasTitle "ПСР" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

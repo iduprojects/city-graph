@@ -7,12 +7,12 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.w3id.org/cityont-core">
     <Prefix name="" IRI="http://www.w3id.org/cityont-core"/>
+    <Prefix name="coc" IRI="http://www.w3id.org/cityont-core#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="city-data-conceptual" IRI="http://www.w3id.org/cityont-core#"/>
     <Declaration>
         <Class IRI="http://vocab.gtfs.org/terms#Stop"/>
     </Declaration>
@@ -101,7 +101,22 @@
         <Class IRI="#BusinessHub"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#CadastralBlock"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CadastralDistrict"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CadastralOkrug"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#CadastralParcel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CadastreNumber"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CadastreRegister"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Cafe"/>
@@ -195,6 +210,18 @@
     </Declaration>
     <Declaration>
         <Class IRI="#FunctionalObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GK"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GKS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GSK"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GUPREP"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Garage"/>
@@ -332,10 +359,10 @@
         <Class IRI="#Oblast"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Organization_AO"/>
+        <Class IRI="#Organization_IP"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Organization_IP"/>
+        <Class IRI="#Organization_OAO"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Organization_OOO"/>
@@ -509,6 +536,12 @@
         <Class IRI="#Supermarket"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#TSG"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TSN"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#TallMultyApt"/>
     </Declaration>
     <Declaration>
@@ -554,10 +587,16 @@
         <Class IRI="#TruckVehicle"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#UK"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#UnderWorkingAgePopulation"/>
     </Declaration>
     <Declaration>
         <Class IRI="#University"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#University_Organization"/>
     </Declaration>
     <Declaration>
         <Class IRI="#UpwardWorkingAgePopulation"/>
@@ -611,6 +650,18 @@
         <ObjectProperty IRI="#hasBuildingSpecificProperties"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasCadastralBlock"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCadastralDistrict"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCadastralNumber"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCadastralOkrug"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasCoordinates"/>
     </Declaration>
     <Declaration>
@@ -629,6 +680,12 @@
         <ObjectProperty IRI="#hasNestedObject"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasOKATO"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOKTMO"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasOwner"/>
     </Declaration>
     <Declaration>
@@ -636,6 +693,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasWorkType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#includedIn"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#CentralHotWaterWoods"/>
@@ -650,6 +710,9 @@
         <DataProperty IRI="#hasApartmentsAmount"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasArchElememtsParameter"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasArea"/>
     </Declaration>
     <Declaration>
@@ -662,13 +725,10 @@
         <DataProperty IRI="#hasBack"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#hasBenchType"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="#hasBuildingDescription"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#hasCadastralNumber"/>
+        <DataProperty IRI="#hasBuildingParameter"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasCentralElectricity"/>
@@ -689,6 +749,12 @@
         <DataProperty IRI="#hasCharge"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasClassificationCode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCode"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasCommunalApartmentsAmount"/>
     </Declaration>
     <Declaration>
@@ -704,13 +770,13 @@
         <DataProperty IRI="#hasFloors"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasFunctionalParameter"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasGarbageAmount"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasHeight"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasHousingCharacteristics"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasIllumination"/>
@@ -728,6 +794,12 @@
         <DataProperty IRI="#hasLiftAmount"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasLivingObjectParameter"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMajorRenovationDate"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasMaxFloors"/>
     </Declaration>
     <Declaration>
@@ -737,10 +809,16 @@
         <DataProperty IRI="#hasModelName"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasMovableParameter"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasNotCentralGas"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasParkingArea"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPhoneCode"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasPopulationCharacteristics"/>
@@ -749,7 +827,55 @@
         <DataProperty IRI="#hasResidentNumber"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasRooms"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasRoomsCommunal"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasRoomsCommunal_2"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasRoomsCommunal_3"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasRoomsCommunal_4"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasRoomsCommunal_5"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasRoomsCommunal_6"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasRoomsCommunal_7"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasRooms_1"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasRooms_2"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasRooms_3"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasRooms_4"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasRooms_5"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasRooms_6"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasRooms_7"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasSeatsAmount"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSecondTitle"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasSocialGroupPercentage"/>
@@ -761,13 +887,28 @@
         <DataProperty IRI="#hasStoveHeating"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasStringCadastralNumber"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasStringSeries"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasStudentsCapacity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasTitle"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasUninhabitableArea"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasVIN"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasWebDomainZone"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasYearConstruct"/>
@@ -819,6 +960,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Infant"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IntraBench"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#MiddleAgeWorkingCitizens"/>
@@ -1003,8 +1147,28 @@
         <Class IRI="#CommercialObject"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#CadastralBlock"/>
+        <Class IRI="#CadastreNumber"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CadastralDistrict"/>
+        <Class IRI="#CadastreNumber"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CadastralOkrug"/>
+        <Class IRI="#CadastreNumber"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#CadastralParcel"/>
         <Class IRI="#Land"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CadastreNumber"/>
+        <Class IRI="#CadastreRegister"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CadastreRegister"/>
+        <Class IRI="#Reference"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Cafe"/>
@@ -1125,6 +1289,22 @@
     <SubClassOf>
         <Class IRI="#FillingStation"/>
         <Class IRI="http://www.opengis.net/citygml/transportation/2.0/AuxiliaryTrafficArea"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GK"/>
+        <Class IRI="#NonProfitOrganization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GKS"/>
+        <Class IRI="#NonProfitOrganization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GSK"/>
+        <Class IRI="#NonProfitOrganization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GUPREP"/>
+        <Class IRI="#StateOrganization"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Garage"/>
@@ -1303,11 +1483,11 @@
         <Class IRI="#Region"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Organization_AO"/>
+        <Class IRI="#Organization_IP"/>
         <Class IRI="#CommercialOrganization"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Organization_IP"/>
+        <Class IRI="#Organization_OAO"/>
         <Class IRI="#CommercialOrganization"/>
     </SubClassOf>
     <SubClassOf>
@@ -1531,6 +1711,14 @@
         <Class IRI="#MultifunctionalStore"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#TSG"/>
+        <Class IRI="#NonProfitOrganization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TSN"/>
+        <Class IRI="#NonProfitOrganization"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#TallMultyApt"/>
         <Class IRI="#LivingObject"/>
     </SubClassOf>
@@ -1595,12 +1783,20 @@
         <Class IRI="#MovableObject"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#UK"/>
+        <Class IRI="#NonProfitOrganization"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#UnderWorkingAgePopulation"/>
         <Class IRI="#SocialGroup"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#University"/>
         <Class IRI="#EducationalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#University_Organization"/>
+        <Class IRI="#StateOrganization"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#UpwardWorkingAgePopulation"/>
@@ -1711,6 +1907,10 @@
         <NamedIndividual IRI="#Infant"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Bench"/>
+        <NamedIndividual IRI="#IntraBench"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#WorkingAgePopulation"/>
         <NamedIndividual IRI="#MiddleAgeWorkingCitizens"/>
     </ClassAssertion>
@@ -1803,6 +2003,18 @@
         <ObjectProperty IRI="#hasBuildingSpecificProperties"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCadastralBlock"/>
+        <ObjectProperty IRI="#hasCadastralNumber"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCadastralDistrict"/>
+        <ObjectProperty IRI="#hasCadastralNumber"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCadastralOkrug"/>
+        <ObjectProperty IRI="#hasCadastralNumber"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasLand"/>
         <ObjectProperty IRI="#hasBuildingSpecificProperties"/>
     </SubObjectPropertyOf>
@@ -1835,6 +2047,22 @@
         <Class IRI="#LivingObject"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCadastralBlock"/>
+        <Class IRI="#CadastreNumber"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCadastralDistrict"/>
+        <Class IRI="#CadastreNumber"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCadastralNumber"/>
+        <Class IRI="#CadastralParcel"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCadastralOkrug"/>
+        <Class IRI="#CadastreNumber"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasCoordinates"/>
         <Class IRI="#PhysicalObject"/>
     </ObjectPropertyDomain>
@@ -1857,6 +2085,18 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasNestedObject"/>
         <Class IRI="#PhysicalObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasOKATO"/>
+        <Class IRI="#District"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasOKATO"/>
+        <Class IRI="#Region"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasOKTMO"/>
+        <Class IRI="#Municipality"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasOwner"/>
@@ -1886,6 +2126,10 @@
         <ObjectProperty IRI="#hasWorkType"/>
         <Class IRI="#MajorRenovation"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#includedIn"/>
+        <Class IRI="#Municipality"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasApartmentType"/>
         <Class IRI="#ApartmentType"/>
@@ -1893,6 +2137,22 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasBuidlingSeries"/>
         <Class IRI="#BuidlingSeries"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCadastralBlock"/>
+        <Class IRI="#CadastralBlock"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCadastralDistrict"/>
+        <Class IRI="#CadastralDistrict"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCadastralNumber"/>
+        <Class IRI="#CadastreNumber"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCadastralOkrug"/>
+        <Class IRI="#CadastralOkrug"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasCoordinates"/>
@@ -1919,6 +2179,14 @@
         <Class IRI="#PhysicalObject"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasOKATO"/>
+        <Class IRI="#OKATO"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasOKTMO"/>
+        <Class IRI="#OKTMO"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasOwner"/>
         <Class IRI="http://xmlns.com/foaf/spec/#term_Person"/>
     </ObjectPropertyRange>
@@ -1934,9 +2202,17 @@
         <ObjectProperty IRI="#hasWorkType"/>
         <Class IRI="#WorkType"/>
     </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#includedIn"/>
+        <Class IRI="#AdministrativeUnit"/>
+    </ObjectPropertyRange>
     <SubDataPropertyOf>
         <DataProperty IRI="#CentralHotWaterWoods"/>
-        <DataProperty IRI="#hasHousingCharacteristics"/>
+        <DataProperty IRI="#hasLivingObjectParameter"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasAddress"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasAgeGroupPercentage"/>
@@ -1944,7 +2220,7 @@
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasApartmentsAmount"/>
-        <DataProperty IRI="#hasHousingCharacteristics"/>
+        <DataProperty IRI="#hasLivingObjectParameter"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasAreaGeneral"/>
@@ -1952,51 +2228,83 @@
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasAutoBoilerRoom"/>
-        <DataProperty IRI="#hasHousingCharacteristics"/>
+        <DataProperty IRI="#hasLivingObjectParameter"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasBack"/>
+        <DataProperty IRI="#hasArchElememtsParameter"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasBuildingDescription"/>
+        <DataProperty IRI="#hasBuildingParameter"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasCentralElectricity"/>
-        <DataProperty IRI="#hasHousingCharacteristics"/>
+        <DataProperty IRI="#hasLivingObjectParameter"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasCentralGas"/>
-        <DataProperty IRI="#hasHousingCharacteristics"/>
+        <DataProperty IRI="#hasLivingObjectParameter"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasCentralHeating"/>
-        <DataProperty IRI="#hasHousingCharacteristics"/>
+        <DataProperty IRI="#hasLivingObjectParameter"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasCentralHotWater"/>
-        <DataProperty IRI="#hasHousingCharacteristics"/>
+        <DataProperty IRI="#hasLivingObjectParameter"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasCentralHotWaterGas"/>
-        <DataProperty IRI="#hasHousingCharacteristics"/>
+        <DataProperty IRI="#hasLivingObjectParameter"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasCharge"/>
+        <DataProperty IRI="#hasArchElememtsParameter"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasCode"/>
+        <DataProperty IRI="#hasClassificationCode"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasCommunalApartmentsAmount"/>
-        <DataProperty IRI="#hasHousingCharacteristics"/>
+        <DataProperty IRI="#hasLivingObjectParameter"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasCommunalFacilitiesArea"/>
         <DataProperty IRI="#hasArea"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
+        <DataProperty IRI="#hasDomofonAmount"/>
+        <DataProperty IRI="#hasBuildingParameter"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
         <DataProperty IRI="#hasFailureStatus"/>
-        <DataProperty IRI="#hasHousingCharacteristics"/>
+        <DataProperty IRI="#hasBuildingParameter"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasFloors"/>
+        <DataProperty IRI="#hasBuildingParameter"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasGarbageAmount"/>
-        <DataProperty IRI="#hasHousingCharacteristics"/>
+        <DataProperty IRI="#hasLivingObjectParameter"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasHeight"/>
+        <DataProperty IRI="#hasBuildingParameter"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasInhabitableArea"/>
         <DataProperty IRI="#hasArea"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
+        <DataProperty IRI="#hasLicensePlate"/>
+        <DataProperty IRI="#hasMovableParameter"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
         <DataProperty IRI="#hasLiftAmount"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+        <DataProperty IRI="#hasBuildingParameter"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasMaxFloors"/>
@@ -2007,8 +2315,12 @@
         <DataProperty IRI="#hasFloors"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
+        <DataProperty IRI="#hasModelName"/>
+        <DataProperty IRI="#hasMovableParameter"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
         <DataProperty IRI="#hasNotCentralGas"/>
-        <DataProperty IRI="#hasHousingCharacteristics"/>
+        <DataProperty IRI="#hasLivingObjectParameter"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasParkingArea"/>
@@ -2019,16 +2331,108 @@
         <DataProperty IRI="#hasPopulationCharacteristics"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
+        <DataProperty IRI="#hasRooms"/>
+        <DataProperty IRI="#hasLivingObjectParameter"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasRoomsCommunal"/>
+        <DataProperty IRI="#hasLivingObjectParameter"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasRoomsCommunal_2"/>
+        <DataProperty IRI="#hasRoomsCommunal"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasRoomsCommunal_3"/>
+        <DataProperty IRI="#hasRoomsCommunal"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasRoomsCommunal_4"/>
+        <DataProperty IRI="#hasRoomsCommunal"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasRoomsCommunal_5"/>
+        <DataProperty IRI="#hasRoomsCommunal"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasRoomsCommunal_6"/>
+        <DataProperty IRI="#hasRoomsCommunal"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasRoomsCommunal_7"/>
+        <DataProperty IRI="#hasRoomsCommunal"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasRooms_1"/>
+        <DataProperty IRI="#hasRooms"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasRooms_2"/>
+        <DataProperty IRI="#hasRooms"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasRooms_3"/>
+        <DataProperty IRI="#hasRooms"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasRooms_4"/>
+        <DataProperty IRI="#hasRooms"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasRooms_5"/>
+        <DataProperty IRI="#hasRooms"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasRooms_6"/>
+        <DataProperty IRI="#hasRooms"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasRooms_7"/>
+        <DataProperty IRI="#hasRooms"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasSeatsAmount"/>
+        <DataProperty IRI="#hasArchElememtsParameter"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
         <DataProperty IRI="#hasSocialGroupPercentage"/>
         <DataProperty IRI="#hasPopulationCharacteristics"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
+        <DataProperty IRI="#hasStairsAmount"/>
+        <DataProperty IRI="#hasBuildingParameter"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
         <DataProperty IRI="#hasStoveHeating"/>
-        <DataProperty IRI="#hasHousingCharacteristics"/>
+        <DataProperty IRI="#hasLivingObjectParameter"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasStringSeries"/>
+        <DataProperty IRI="#hasBuildingParameter"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasUninhabitableArea"/>
         <DataProperty IRI="#hasArea"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasVIN"/>
+        <DataProperty IRI="#hasMovableParameter"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasValue"/>
+        <DataProperty IRI="#hasClassificationCode"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasYearConstruct"/>
+        <DataProperty IRI="#hasBuildingParameter"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasYearProduction"/>
+        <DataProperty IRI="#hasMovableParameter"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasYearRepair"/>
+        <DataProperty IRI="#hasBuildingParameter"/>
     </SubDataPropertyOf>
     <DataPropertyDomain>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
@@ -2044,7 +2448,7 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasAgeGroupPercentage"/>
-        <Class IRI="#Building"/>
+        <Class IRI="#LivingObject"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasApartmentsAmount"/>
@@ -2057,6 +2461,10 @@
     <DataPropertyDomain>
         <DataProperty IRI="#hasApartmentsAmount"/>
         <Class IRI="#Townhouse"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasArchElememtsParameter"/>
+        <Class IRI="#AchitectureElement"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasArea"/>
@@ -2072,19 +2480,15 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasBack"/>
-        <Class IRI="#Bench"/>
+        <Class IRI="#AchitectureElement"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#hasBenchType"/>
+        <DataProperty IRI="#hasBack"/>
         <Class IRI="#Bench"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasBuildingDescription"/>
         <Class IRI="#Building"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasCadastralNumber"/>
-        <Class IRI="#AreaObject"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasCentralElectricity"/>
@@ -2108,7 +2512,23 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasCharge"/>
+        <Class IRI="#AchitectureElement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasCharge"/>
         <Class IRI="#Bench"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasClassificationCode"/>
+        <Class IRI="#Reference"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasCode"/>
+        <Class IRI="#AdministrativeUnit"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasCode"/>
+        <Class IRI="#Reference"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasCommunalApartmentsAmount"/>
@@ -2127,8 +2547,12 @@
         <Class IRI="#LivingObject"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#hasDomofonAmount"/>
+        <Class IRI="#Building"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#hasFailureStatus"/>
-        <Class IRI="#LivingObject"/>
+        <Class IRI="#Building"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasFloors"/>
@@ -2148,7 +2572,7 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasHeight"/>
-        <Class IRI="#Bench"/>
+        <Class IRI="#AchitectureElement"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasHeight"/>
@@ -2183,6 +2607,18 @@
         <Class IRI="#Building"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#hasMajorRenovationDate"/>
+        <Class IRI="#MajorRenovation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasMaxFloors"/>
+        <Class IRI="#Building"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasMinFloors"/>
+        <Class IRI="#Building"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#hasModelName"/>
         <Class IRI="#MovableObject"/>
     </DataPropertyDomain>
@@ -2195,16 +2631,68 @@
         <Class IRI="#Land"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#hasPhoneCode"/>
+        <Class IRI="#AdministrativeUnit"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#hasResidentNumber"/>
         <Class IRI="#LivingObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasRooms"/>
+        <Class IRI="#LivingObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasRoomsCommunal"/>
+        <Class IRI="#LivingObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasRoomsCommunal_2"/>
+        <Class IRI="#LivingObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasRoomsCommunal_3"/>
+        <Class IRI="#LivingObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasRoomsCommunal_4"/>
+        <Class IRI="#LivingObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasRoomsCommunal_5"/>
+        <Class IRI="#LivingObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasRoomsCommunal_6"/>
+        <Class IRI="#LivingObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasRoomsCommunal_7"/>
+        <Class IRI="#LivingObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasRooms_1"/>
+        <Class IRI="#LivingObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasRooms_2"/>
+        <Class IRI="#LivingObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSeatsAmount"/>
+        <Class IRI="#AchitectureElement"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasSeatsAmount"/>
         <Class IRI="#Bench"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#hasSecondTitle"/>
+        <Class IRI="#AdministrativeUnit"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#hasSocialGroupPercentage"/>
-        <Class IRI="#Building"/>
+        <Class IRI="#LivingObject"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasStairsAmount"/>
@@ -2215,8 +2703,28 @@
         <Class IRI="#LivingObject"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#hasStringCadastralNumber"/>
+        <Class IRI="#CadastreNumber"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasStringSeries"/>
+        <Class IRI="#Building"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#hasStudentsCapacity"/>
         <Class IRI="#EducationalObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasTitle"/>
+        <Class IRI="#AdministrativeUnit"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasTitle"/>
+        <Class IRI="#WorkType"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasTitle"/>
+        <Class IRI="http://xmlns.com/foaf/spec/#term_Organization"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasUninhabitableArea"/>
@@ -2233,6 +2741,14 @@
     <DataPropertyDomain>
         <DataProperty IRI="#hasVIN"/>
         <Class IRI="#TruckVehicle"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasValue"/>
+        <Class IRI="#Reference"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasWebDomainZone"/>
+        <Class IRI="#AdministrativeUnit"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasYearConstruct"/>
@@ -2268,11 +2784,11 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasArea"/>
-        <Datatype abbreviatedIRI="xsd:int"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasAreaGeneral"/>
-        <Datatype abbreviatedIRI="xsd:int"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasAutoBoilerRoom"/>
@@ -2283,15 +2799,7 @@
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="#hasBenchType"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
         <DataProperty IRI="#hasBuildingDescription"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasCadastralNumber"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -2319,11 +2827,19 @@
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#hasCode"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#hasCommunalApartmentsAmount"/>
         <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasCommunalFacilitiesArea"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDomofonAmount"/>
         <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -2348,7 +2864,7 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasInhabitableArea"/>
-        <Datatype abbreviatedIRI="xsd:int"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasLayerDescription"/>
@@ -2363,6 +2879,18 @@
         <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#hasMajorRenovationDate"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasMaxFloors"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasMinFloors"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#hasModelName"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
@@ -2372,15 +2900,79 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasParkingArea"/>
-        <Datatype abbreviatedIRI="xsd:int"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasResidentNumber"/>
         <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#hasRooms"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasRoomsCommunal"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasRoomsCommunal_2"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasRoomsCommunal_3"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasRoomsCommunal_4"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasRoomsCommunal_5"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasRoomsCommunal_6"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasRoomsCommunal_7"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasRooms_1"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasRooms_2"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasRooms_3"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasRooms_4"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasRooms_5"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasRooms_6"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasRooms_7"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#hasSeatsAmount"/>
         <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSecondTitle"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasSocialGroupPercentage"/>
@@ -2395,15 +2987,35 @@
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#hasStringCadastralNumber"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasStringSeries"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#hasStudentsCapacity"/>
         <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#hasTitle"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#hasUninhabitableArea"/>
-        <Datatype abbreviatedIRI="xsd:int"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasVIN"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasValue"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasWebDomainZone"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -2625,6 +3237,21 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AutonomousOblast</IRI>
+        <Literal>Автономная область</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AutonomousOkrug</IRI>
+        <Literal>Автономный округ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AutonomousOkrug_District</IRI>
+        <Literal>Автономный округ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#AutonomousOrganization</IRI>
         <Literal>АНО</Literal>
     </AnnotationAssertion>
@@ -2695,8 +3322,38 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CadastralBlock</IRI>
+        <Literal>Кадастровый квартал</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CadastralDistrict</IRI>
+        <Literal>Кадастровый район</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CadastralOkrug</IRI>
+        <Literal>Кадастровый округ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#CadastralParcel</IRI>
         <Literal>Кадастровый участок</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CadastreNumber</IRI>
+        <Literal>Кадастровый номер</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CadastreRegister</IRI>
+        <Literal>Сюда добавлять все виды кадастров (земельный, лесной и пр.)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CadastreRegister</IRI>
+        <Literal>Кадастровый реестр</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2737,6 +3394,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#ChargingStation</IRI>
         <Literal xml:lang="ru">Электрозаправка</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CharityFoundation</IRI>
+        <Literal>Благотворительный фонд</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2790,6 +3452,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Country</IRI>
+        <Literal>Страна</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#CreativeClass</IRI>
         <Literal>Творческий кружок</Literal>
     </AnnotationAssertion>
@@ -2817,6 +3484,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#DisabledSight</IRI>
         <Literal>Лица с инвалидностью по зрению</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Disctrict_City</IRI>
+        <Literal>Город районного значения</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#District</IRI>
+        <Literal>Район</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2860,6 +3537,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FederalCity</IRI>
+        <Literal>Город федерального значения</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#FederalGov</IRI>
         <Literal>Федеральный орга власти</Literal>
     </AnnotationAssertion>
@@ -2875,6 +3557,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FederalOkrug</IRI>
+        <Literal>Федеральный округ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#FillingStation</IRI>
         <Literal xml:lang="ru">Заправочная станция</Literal>
     </AnnotationAssertion>
@@ -2887,6 +3574,26 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#FunctionalObject</IRI>
         <Literal>Функциональный объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GK</IRI>
+        <Literal>ЖК</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GKS</IRI>
+        <Literal>ЖКС</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GSK</IRI>
+        <Literal>ЖСК</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GUPREP</IRI>
+        <Literal>ГУПРЭП</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2960,8 +3667,33 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#IntraBench</IRI>
+        <Literal>Встроенная скамья</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#IntracityAreas</IRI>
+        <Literal>Внутригородские территории</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#IntracityMunicipality</IRI>
+        <Literal>Внутригородские территории городов федерального значения</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Intracity_District</IRI>
+        <Literal>Внутригородские районы</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#KU_state</IRI>
         <Literal>Казенное учреждение</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Kray</IRI>
+        <Literal>Край</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3060,8 +3792,23 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MunicipalDistrict</IRI>
+        <Literal>Муниципальный район</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#MunicipalGov</IRI>
         <Literal>Муниципальный орга власти</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MunicipalOkrug</IRI>
+        <Literal>Муниципальный округ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Municipality</IRI>
+        <Literal>Муниципалитет</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3115,18 +3862,23 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Oblast</IRI>
+        <Literal>Область</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OlderRetiree</IRI>
         <Literal>Пенсионеры старших возрастов (старше 75 лет</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Organization_AO</IRI>
-        <Literal>АО</Literal>
+        <IRI>#Organization_IP</IRI>
+        <Literal>ИП</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Organization_IP</IRI>
-        <Literal>ИП</Literal>
+        <IRI>#Organization_OAO</IRI>
+        <Literal>ОАО</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3255,6 +4007,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PublicNotRegistered</IRI>
+        <Literal>Незарегистрированная общественная организация</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#PublicObject</IRI>
         <Literal>Общественный объект</Literal>
     </AnnotationAssertion>
@@ -3300,6 +4057,21 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Region</IRI>
+        <Literal>Регион</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Region_City</IRI>
+        <Literal>Город республиканского, краевого, областного подчинения</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Region_Disctrict</IRI>
+        <Literal>Район, республики, края, области, автономной области, автономного округа</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#RegionalAdministartion</IRI>
         <Literal>Администрация субъекта федерации</Literal>
     </AnnotationAssertion>
@@ -3330,6 +4102,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Republic</IRI>
+        <Literal>Республика</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Restaurant</IRI>
         <Literal>Ресторан</Literal>
     </AnnotationAssertion>
@@ -3347,6 +4124,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#RoadNetworkObject</IRI>
         <Literal>Дорожная сеть</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RuralSettlements</IRI>
+        <Literal>Сельские поселения</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3455,6 +4237,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TSG</IRI>
+        <Literal>ТСЖ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TSN</IRI>
+        <Literal>ТСН</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#TallMultyApt</IRI>
         <Literal>Высотное жилое строение</Literal>
     </AnnotationAssertion>
@@ -3550,6 +4342,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#UK</IRI>
+        <Literal>УК</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#UncoordinatedTourist</IRI>
         <Literal>Неорганизованные туристы</Literal>
     </AnnotationAssertion>
@@ -3565,13 +4362,33 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#University_Organization</IRI>
+        <Literal>Администрация Университета</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#UpwardWorkingAgePopulation</IRI>
         <Literal>Население старше трудоспособного возраста</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#UrbanSettlements</IRI>
+        <Literal>Городские поселения</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#VeterinaryHospital</IRI>
         <Literal>Ветеринарная клиника</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Village</IRI>
+        <Literal>Посёлок городского типа районного подчинения</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#VillageCouncil</IRI>
+        <Literal>Сельсовет</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3629,6 +4446,11 @@
         <Literal>имеет количество квартир</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasArchElememtsParameter</IRI>
+        <Literal>характеристики элементов благоустрйоства</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasArea</IRI>
         <Literal>Свойство будет объединять семейство для обозначения разных площадей: общая, жилых помещений, нежилых помещений, помещений, входящих в состав общего имущества</Literal>
@@ -3655,11 +4477,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasBenchType</IRI>
-        <Literal>имеет тип скамьи</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasBuidlingSeries</IRI>
         <Literal>имеет серию здания</Literal>
     </AnnotationAssertion>
@@ -3675,18 +4492,43 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasBuildingParameter</IRI>
+        <Literal>Семейство характеристик сооружений</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasBuildingParameter</IRI>
+        <Literal>характеристика сооружения</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasBuildingSpecificProperties</IRI>
         <Literal>Свойство для группировки свойств, относящихся к определённым парметрам Сооружений. Не все свойства относятся напрямую к Сооружениям, группировка сделана исключительно для целей удобства отображения</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasBuildingSpecificProperties</IRI>
-        <Literal>имеет свойства сооружения</Literal>
+        <Literal>атрибут сооружения</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCadastralBlock</IRI>
+        <Literal>кадастровый квартал</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCadastralDistrict</IRI>
+        <Literal>кадастровый район</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasCadastralNumber</IRI>
-        <Literal>имеет кадастровый номер</Literal>
+        <Literal>имеет Кадастровый номер</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCadastralOkrug</IRI>
+        <Literal>кадастровый округ</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3720,6 +4562,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasClassificationCode</IRI>
+        <Literal>используется в классификаторе</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCode</IRI>
+        <Literal>код</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasCommunalApartmentsAmount</IRI>
         <Literal>имеет количество коммунальных квартир</Literal>
     </AnnotationAssertion>
@@ -3736,7 +4588,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasCoordinates</IRI>
-        <Literal>имеет координаты</Literal>
+        <Literal>гео-координаты</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3765,6 +4617,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasFunctionalParameter</IRI>
+        <Literal>Параметр функционального объекта</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasGarbageAmount</IRI>
         <Literal>имеет количество мусоропроводов</Literal>
     </AnnotationAssertion>
@@ -3772,16 +4629,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasHeight</IRI>
         <Literal>имеет высоту</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#hasHousingCharacteristics</IRI>
-        <Literal>Семейство характеристик жилых объектов</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasHousingCharacteristics</IRI>
-        <Literal>имеет жилищные условия</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3819,9 +4666,24 @@
         <Literal>имеет количество лифтов</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasLivingObjectParameter</IRI>
+        <Literal>Семейство характеристик жилых объектов</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasLivingObjectParameter</IRI>
+        <Literal>характеристика жилого дома</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasMajorRenovation</IRI>
-        <Literal>имеет капительный ремонт</Literal>
+        <Literal>имеет капитальный ремонт</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasMajorRenovationDate</IRI>
+        <Literal>дата капитального ремонта</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -3849,6 +4711,11 @@
         <Literal>имеет модель и марку</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasMovableParameter</IRI>
+        <Literal>характеристика ТС</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasNestedObject</IRI>
         <Literal>Связывает объекты класса Физический объект c объектами класса Физический объект, которые в него входят (например, жилой дом и земельный участок, на котором он расположен)</Literal>
@@ -3862,6 +4729,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasNotCentralGas</IRI>
         <Literal>имеет не центральное газоснабжение</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasOKATO</IRI>
+        <Literal>ОКАТО</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasOKTMO</IRI>
+        <Literal>ОКТМО</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -3885,6 +4762,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasPhoneCode</IRI>
+        <Literal>телефонный код АТ ед.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasPopulationCharacteristics</IRI>
         <Literal>имеет характеристики жителей</Literal>
     </AnnotationAssertion>
@@ -3900,8 +4782,88 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasRooms</IRI>
+        <Literal>комнаты квартир</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasRoomsCommunal</IRI>
+        <Literal>комнаты коммунальных квартир</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasRoomsCommunal_2</IRI>
+        <Literal>2комн. комм. квартира</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasRoomsCommunal_3</IRI>
+        <Literal>3комн. комм. квартира</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasRoomsCommunal_4</IRI>
+        <Literal>4комн. комм. квартира</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasRoomsCommunal_5</IRI>
+        <Literal>5комн. комм. квартира</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasRoomsCommunal_6</IRI>
+        <Literal>6комн. комм. квартира</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasRoomsCommunal_7</IRI>
+        <Literal>7 комн. комм. квартира</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasRooms_1</IRI>
+        <Literal>1 комн. квартира</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasRooms_2</IRI>
+        <Literal>2 комн. квартира</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasRooms_3</IRI>
+        <Literal>3 комн. квартира</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasRooms_4</IRI>
+        <Literal>4 комн. квартира</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasRooms_5</IRI>
+        <Literal>5 комн. квартира</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasRooms_6</IRI>
+        <Literal>6 комн. квартира</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasRooms_7</IRI>
+        <Literal>7 комн. квартира</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasSeatsAmount</IRI>
         <Literal>имеет количество мест</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasSecondTitle</IRI>
+        <Literal>второе название</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3920,8 +4882,23 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasStringCadastralNumber</IRI>
+        <Literal>Кадастровый номер строкой</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasStringSeries</IRI>
+        <Literal>серия здания строкой</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasStudentsCapacity</IRI>
         <Literal>рассчитан на количество обучающихся</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasTitle</IRI>
+        <Literal>имеет название</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3932,6 +4909,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasVIN</IRI>
         <Literal>имеет VIN</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasValue</IRI>
+        <Literal>значение</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasWebDomainZone</IRI>
+        <Literal>доменная зона</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3952,6 +4939,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasYearRepair</IRI>
         <Literal>имеет год восстановления</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#includedIn</IRI>
+        <Literal>входит в</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

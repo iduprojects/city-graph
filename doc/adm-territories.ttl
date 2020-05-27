@@ -1,0 +1,262 @@
+@prefix : <http://www.w3id.org/cityont-core> .
+@prefix coc: <http://www.w3id.org/cityont-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3id.org/cityont-core> .
+
+<http://www.w3id.org/cityont-core> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3id.org/cityont-core#param
+coc:param rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.w3id.org/cityont-core#hasCoordinates
+coc:hasCoordinates rdf:type owl:ObjectProperty ;
+                   rdfs:domain coc:PhysicalObject ;
+                   rdfs:range coc:Geometry ;
+                   rdfs:comment "Кординаты объекта: геометрия в случае стационарного и местонахождение в случае движимого" ;
+                   rdfs:label "гео-координаты" .
+
+
+###  http://www.w3id.org/cityont-core#hasNestedObject
+coc:hasNestedObject rdf:type owl:ObjectProperty ;
+                    rdfs:domain coc:PhysicalObject ;
+                    rdfs:range coc:PhysicalObject ;
+                    rdfs:comment "Связывает объекты класса Физический объект c объектами класса Физический объект, которые в него входят (например, жилой дом и земельный участок, на котором он расположен)" ;
+                    rdfs:label "имеет вложенный объект" .
+
+
+###  http://www.w3id.org/cityont-core#hasOKATO
+coc:hasOKATO rdf:type owl:ObjectProperty ;
+             rdfs:domain coc:District ,
+                         coc:Region ;
+             rdfs:range coc:OKATO ;
+             rdfs:label "ОКАТО" .
+
+
+###  http://www.w3id.org/cityont-core#hasOKTMO
+coc:hasOKTMO rdf:type owl:ObjectProperty ;
+             rdfs:domain coc:Municipality ;
+             rdfs:range coc:OKTMO ;
+             rdfs:label "ОКТМО" .
+
+
+###  http://www.w3id.org/cityont-core#includedIn
+coc:includedIn rdf:type owl:ObjectProperty ;
+               rdfs:domain coc:Municipality ;
+               rdfs:range coc:AdministrativeUnit ;
+               rdfs:label "входит в" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.w3.org/2002/07/owl#topDataProperty
+owl:topDataProperty rdfs:range xsd:int .
+
+
+###  http://www.w3id.org/cityont-core#hasCode
+coc:hasCode rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain coc:AdministrativeUnit ,
+                        coc:Reference ;
+            rdfs:range xsd:string ;
+            rdfs:label "код" .
+
+
+###  http://www.w3id.org/cityont-core#hasTitle
+coc:hasTitle rdf:type owl:DatatypeProperty ;
+             rdfs:domain coc:AdministrativeUnit ;
+             rdfs:range xsd:string ;
+             rdfs:label "имеет название" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3id.org/cityont-core#AdministrativeUnit
+coc:AdministrativeUnit rdf:type owl:Class ;
+                       rdfs:subClassOf coc:Space ;
+                       rdfs:label "Административно-территориальная единица" .
+
+
+###  http://www.w3id.org/cityont-core#AreaObject
+coc:AreaObject rdf:type owl:Class ;
+               rdfs:subClassOf coc:PhysicalObject ;
+               rdfs:comment "Объект, обозначаемый площадью на карте (например, здание или парк)." ;
+               rdfs:label "Площадной объект" .
+
+
+###  http://www.w3id.org/cityont-core#AutonomousOblast
+coc:AutonomousOblast rdf:type owl:Class ;
+                     rdfs:subClassOf coc:Region .
+
+
+###  http://www.w3id.org/cityont-core#AutonomousOkrug
+coc:AutonomousOkrug rdf:type owl:Class ;
+                    rdfs:subClassOf coc:Region .
+
+
+###  http://www.w3id.org/cityont-core#AutonomousOkrug_District
+coc:AutonomousOkrug_District rdf:type owl:Class ;
+                             rdfs:subClassOf coc:District .
+
+
+###  http://www.w3id.org/cityont-core#Country
+coc:Country rdf:type owl:Class ;
+            rdfs:subClassOf coc:AdministrativeUnit .
+
+
+###  http://www.w3id.org/cityont-core#Disctrict_City
+coc:Disctrict_City rdf:type owl:Class ;
+                   rdfs:subClassOf coc:District .
+
+
+###  http://www.w3id.org/cityont-core#District
+coc:District rdf:type owl:Class ;
+             rdfs:subClassOf coc:AdministrativeUnit .
+
+
+###  http://www.w3id.org/cityont-core#FederalCity
+coc:FederalCity rdf:type owl:Class ;
+                rdfs:subClassOf coc:Region .
+
+
+###  http://www.w3id.org/cityont-core#FederalOkrug
+coc:FederalOkrug rdf:type owl:Class ;
+                 rdfs:subClassOf coc:Municipality .
+
+
+###  http://www.w3id.org/cityont-core#Geometry
+coc:Geometry rdf:type owl:Class ;
+             rdfs:label "Геометрия" .
+
+
+###  http://www.w3id.org/cityont-core#IntracityAreas
+coc:IntracityAreas rdf:type owl:Class ;
+                   rdfs:subClassOf coc:Municipality .
+
+
+###  http://www.w3id.org/cityont-core#IntracityMunicipality
+coc:IntracityMunicipality rdf:type owl:Class ;
+                          rdfs:subClassOf coc:Municipality .
+
+
+###  http://www.w3id.org/cityont-core#Intracity_District
+coc:Intracity_District rdf:type owl:Class ;
+                       rdfs:subClassOf coc:District .
+
+
+###  http://www.w3id.org/cityont-core#Kray
+coc:Kray rdf:type owl:Class ;
+         rdfs:subClassOf coc:Region .
+
+
+###  http://www.w3id.org/cityont-core#MunicipalDistrict
+coc:MunicipalDistrict rdf:type owl:Class ;
+                      rdfs:subClassOf coc:Municipality .
+
+
+###  http://www.w3id.org/cityont-core#MunicipalOkrug
+coc:MunicipalOkrug rdf:type owl:Class ;
+                   rdfs:subClassOf coc:Municipality .
+
+
+###  http://www.w3id.org/cityont-core#Municipality
+coc:Municipality rdf:type owl:Class ;
+                 rdfs:subClassOf coc:AdministrativeUnit .
+
+
+###  http://www.w3id.org/cityont-core#OKATO
+coc:OKATO rdf:type owl:Class ;
+          rdfs:subClassOf coc:Reference .
+
+
+###  http://www.w3id.org/cityont-core#OKTMO
+coc:OKTMO rdf:type owl:Class ;
+          rdfs:subClassOf coc:Reference .
+
+
+###  http://www.w3id.org/cityont-core#Oblast
+coc:Oblast rdf:type owl:Class ;
+           rdfs:subClassOf coc:Region .
+
+
+###  http://www.w3id.org/cityont-core#PhysicalObject
+coc:PhysicalObject rdf:type owl:Class ;
+                   rdfs:comment "Класс городских сущностей. Сюда помещаются конкретные физические объекты (например, здание), которые связываются с функциями (например, университет), координатами и управляющими ими организациями (например, Университет ИТМО)." ;
+                   rdfs:label "Физический объект" .
+
+
+###  http://www.w3id.org/cityont-core#Reference
+coc:Reference rdf:type owl:Class ;
+              rdfs:subClassOf coc:Service ;
+              rdfs:label "Справочник" .
+
+
+###  http://www.w3id.org/cityont-core#Region
+coc:Region rdf:type owl:Class ;
+           rdfs:subClassOf coc:AdministrativeUnit .
+
+
+###  http://www.w3id.org/cityont-core#Region_City
+coc:Region_City rdf:type owl:Class ;
+                rdfs:subClassOf coc:District .
+
+
+###  http://www.w3id.org/cityont-core#Region_Disctrict
+coc:Region_Disctrict rdf:type owl:Class ;
+                     rdfs:subClassOf coc:District .
+
+
+###  http://www.w3id.org/cityont-core#Republic
+coc:Republic rdf:type owl:Class ;
+             rdfs:subClassOf coc:Region .
+
+
+###  http://www.w3id.org/cityont-core#RuralSettlements
+coc:RuralSettlements rdf:type owl:Class ;
+                     rdfs:subClassOf coc:Municipality .
+
+
+###  http://www.w3id.org/cityont-core#Service
+coc:Service rdf:type owl:Class ;
+            rdfs:label "Служебная сущность" .
+
+
+###  http://www.w3id.org/cityont-core#Space
+coc:Space rdf:type owl:Class ;
+          rdfs:subClassOf coc:AreaObject ;
+          rdfs:comment "Площадной объект, представляющий собой участок земли (без учёта построек на нём)" ;
+          rdfs:label "Пространство" .
+
+
+###  http://www.w3id.org/cityont-core#UrbanSettlements
+coc:UrbanSettlements rdf:type owl:Class ;
+                     rdfs:subClassOf coc:Municipality .
+
+
+###  http://www.w3id.org/cityont-core#Village
+coc:Village rdf:type owl:Class ;
+            rdfs:subClassOf coc:District .
+
+
+###  http://www.w3id.org/cityont-core#VillageCouncil
+coc:VillageCouncil rdf:type owl:Class ;
+                   rdfs:subClassOf coc:District .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

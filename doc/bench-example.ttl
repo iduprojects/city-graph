@@ -1,0 +1,214 @@
+@prefix : <http://www.w3id.org/cityont-core> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix city-data-conceptual: <http://www.w3id.org/cityont-core#> .
+@base <http://www.w3id.org/cityont-core> .
+
+<http://www.w3id.org/cityont-core> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3id.org/cityont-core#param
+city-data-conceptual:param rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.w3id.org/cityont-core#hasCoordinates
+city-data-conceptual:hasCoordinates rdf:type owl:ObjectProperty ;
+                                    rdfs:domain city-data-conceptual:PhysicalObject ;
+                                    rdfs:range city-data-conceptual:Geometry ;
+                                    rdfs:comment "Кординаты объекта: геометрия в случае стационарного и местонахождение в случае движимого" ;
+                                    rdfs:label "имеет координаты" .
+
+
+###  http://www.w3id.org/cityont-core#hasFunction
+city-data-conceptual:hasFunction rdf:type owl:ObjectProperty ;
+                                 rdfs:domain city-data-conceptual:PhysicalObject ;
+                                 rdfs:range city-data-conceptual:FunctionalObject ;
+                                 rdfs:comment "Связывает объекты подклассов Физический объект с Объектами подклассов Функциональный объект" ;
+                                 rdfs:label "имеет функцию" .
+
+
+###  http://www.w3id.org/cityont-core#hasManagingOrganization
+city-data-conceptual:hasManagingOrganization rdf:type owl:ObjectProperty ;
+                                             rdfs:domain city-data-conceptual:PhysicalObject ;
+                                             rdfs:range city-data-conceptual:Organization ;
+                                             rdfs:comment "Связывает объекты класса Физический объект с объектами класса Организация (управляющая данным физическим объектом)" ;
+                                             rdfs:label "имеет управляющую организацию" .
+
+
+###  http://www.w3id.org/cityont-core#hasNestedObject
+city-data-conceptual:hasNestedObject rdf:type owl:ObjectProperty ;
+                                     rdfs:domain city-data-conceptual:PhysicalObject ;
+                                     rdfs:range city-data-conceptual:PhysicalObject ;
+                                     rdfs:comment "Связывает объекты класса Физический объект c объектами класса Физический объект, которые в него входят (например, жилой дом и земельный участок, на котором он расположен)" ;
+                                     rdfs:label "имеет вложенный объект" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.w3.org/2002/07/owl#topDataProperty
+owl:topDataProperty rdfs:range xsd:int .
+
+
+###  http://www.w3id.org/cityont-core#hasBack
+city-data-conceptual:hasBack rdf:type owl:DatatypeProperty ;
+                             rdfs:domain city-data-conceptual:Bench ;
+                             rdfs:range xsd:boolean ;
+                             rdfs:label "имеет спинку" .
+
+
+###  http://www.w3id.org/cityont-core#hasBenchType
+city-data-conceptual:hasBenchType rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain city-data-conceptual:Bench ;
+                                  rdfs:range xsd:string ;
+                                  rdfs:label "имеет тип скамьи" .
+
+
+###  http://www.w3id.org/cityont-core#hasCharge
+city-data-conceptual:hasCharge rdf:type owl:DatatypeProperty ;
+                               rdfs:domain city-data-conceptual:Bench ;
+                               rdfs:range xsd:boolean ;
+                               rdfs:label "имеет зарядку" .
+
+
+###  http://www.w3id.org/cityont-core#hasHeight
+city-data-conceptual:hasHeight rdf:type owl:DatatypeProperty ;
+                               rdfs:domain city-data-conceptual:Bench ;
+                               rdfs:range xsd:integer ;
+                               rdfs:label "имеет высоту (см)" .
+
+
+###  http://www.w3id.org/cityont-core#hasSeatsAmount
+city-data-conceptual:hasSeatsAmount rdf:type owl:DatatypeProperty ;
+                                    rdfs:domain city-data-conceptual:Bench ;
+                                    rdfs:range xsd:integer ;
+                                    rdfs:label "имеет количество мест" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3id.org/cityont-core#Agent
+city-data-conceptual:Agent rdf:type owl:Class ;
+                           rdfs:comment "Этот класс характеризует сущности, способные выполнять какие либо действия с иными сущностями. Могут иметь правоотношения как между собой, так и с другими сущностями. Например, человек может владеть недвижимостью. Организация может управлять территорией." ;
+                           rdfs:isDefinedBy "http://xmlns.com/foaf/spec/#term_Agent" ;
+                           rdfs:label "Agent"@en ,
+                                      "Агент"@ru ;
+                           city-data-conceptual:param "name" .
+
+
+###  http://www.w3id.org/cityont-core#Bench
+city-data-conceptual:Bench rdf:type owl:Class ;
+                           rdfs:subClassOf city-data-conceptual:StreetFurniture ;
+                           rdfs:label "Скамья" .
+
+
+###  http://www.w3id.org/cityont-core#FunctionalObject
+city-data-conceptual:FunctionalObject rdf:type owl:Class ;
+                                      rdfs:comment "Описание функций физического объекта" ;
+                                      rdfs:label "Функциональный объект" .
+
+
+###  http://www.w3id.org/cityont-core#Geometry
+city-data-conceptual:Geometry rdf:type owl:Class ;
+                              rdfs:label "Геометрия" .
+
+
+###  http://www.w3id.org/cityont-core#GovernmentAuthority
+city-data-conceptual:GovernmentAuthority rdf:type owl:Class ;
+                                         rdfs:subClassOf city-data-conceptual:Organization ;
+                                         rdfs:label "Государственная организация" .
+
+
+###  http://www.w3id.org/cityont-core#KU_state
+city-data-conceptual:KU_state rdf:type owl:Class ;
+                              rdfs:subClassOf city-data-conceptual:GovernmentAuthority ;
+                              rdfs:label "Казенное учреждение" .
+
+
+###  http://www.w3id.org/cityont-core#Organization
+city-data-conceptual:Organization rdf:type owl:Class ;
+                                  rdfs:subClassOf city-data-conceptual:Agent ;
+                                  rdfs:comment "The Organization class represents a kind of Agent corresponding to social instititutions such as companies, societies etc." ;
+                                  rdfs:isDefinedBy "http://xmlns.com/foaf/spec/#term_Organization" ;
+                                  rdfs:label "Organization"@en ,
+                                             "Организация"@ru .
+
+
+###  http://www.w3id.org/cityont-core#PhysicalObject
+city-data-conceptual:PhysicalObject rdf:type owl:Class ;
+                                    rdfs:comment "Класс городских сущностей. Сюда помещаются конкретные физические объекты (например, здание), которые связываются с функциями (например, университет), координатами и управляющими ими организациями (например, Университет ИТМО)." ;
+                                    rdfs:label "Физический объект" .
+
+
+###  http://www.w3id.org/cityont-core#PointObject
+city-data-conceptual:PointObject rdf:type owl:Class ;
+                                 rdfs:subClassOf city-data-conceptual:PhysicalObject ;
+                                 rdfs:label "Точечный объект" .
+
+
+###  http://www.w3id.org/cityont-core#PublicObject
+city-data-conceptual:PublicObject rdf:type owl:Class ;
+                                  rdfs:subClassOf city-data-conceptual:SocialObject ;
+                                  rdfs:label "Общественный объект" .
+
+
+###  http://www.w3id.org/cityont-core#SAF
+city-data-conceptual:SAF rdf:type owl:Class ;
+                         rdfs:subClassOf city-data-conceptual:PointObject ;
+                         rdfs:comment "Малая архитектурная форма" ;
+                         rdfs:label "МАФ" .
+
+
+###  http://www.w3id.org/cityont-core#SocialObject
+city-data-conceptual:SocialObject rdf:type owl:Class ;
+                                  rdfs:subClassOf city-data-conceptual:FunctionalObject ;
+                                  rdfs:comment "Объект, несущий функцию обеспечения населения города любыми сервисами (например, школа или музей)" ;
+                                  rdfs:label "Социальный объект" .
+
+
+###  http://www.w3id.org/cityont-core#StreetFurniture
+city-data-conceptual:StreetFurniture rdf:type owl:Class ;
+                                     rdfs:subClassOf city-data-conceptual:PublicObject ;
+                                     rdfs:label "Уличная мебель" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.w3id.org/cityont-core#Муниципальная_администрация_Коломяги
+city-data-conceptual:Муниципальная_администрация_Коломяги rdf:type owl:NamedIndividual ,
+                                                                   city-data-conceptual:KU_state .
+
+
+###  http://www.w3id.org/cityont-core#Скамья_инв_номер_1
+city-data-conceptual:Скамья_инв_номер_1 rdf:type owl:NamedIndividual ,
+                                                 city-data-conceptual:SAF ;
+                                        city-data-conceptual:hasFunction city-data-conceptual:Скамья_обыкновенная ;
+                                        city-data-conceptual:hasManagingOrganization city-data-conceptual:Муниципальная_администрация_Коломяги .
+
+
+###  http://www.w3id.org/cityont-core#Скамья_обыкновенная
+city-data-conceptual:Скамья_обыкновенная rdf:type owl:NamedIndividual ,
+                                                  city-data-conceptual:Bench ;
+                                         city-data-conceptual:hasBack "true"^^xsd:boolean ;
+                                         city-data-conceptual:hasBenchType "Переносная"^^xsd:string ;
+                                         city-data-conceptual:hasCharge "false"^^xsd:boolean ;
+                                         city-data-conceptual:hasHeight 80 ;
+                                         city-data-conceptual:hasSeatsAmount 4 .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

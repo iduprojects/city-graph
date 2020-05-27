@@ -1,0 +1,163 @@
+@prefix : <http://w3id.org/cityont> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cityont: <http://w3id.org/cityont> .
+@base <https://w3id.org/cityont> .
+
+<https://w3id.org/cityont> rdf:type owl:Ontology .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/cityont#hasFunction
+<https://w3id.org/cityont#hasFunction> rdf:type owl:ObjectProperty ;
+                                                                              rdfs:domain <https://w3id.org/cityont#PhysicalObject> ;
+                                                                              rdfs:range <https://w3id.org/cityont#FunctionalObject> .
+
+
+###  https://w3id.org/cityont#hasGeometry
+<https://w3id.org/cityont#hasGeometry> rdf:type owl:ObjectProperty ;
+                                                                              rdfs:domain <https://w3id.org/cityont#PhysicalObject> ;
+                                                                              rdfs:range <https://w3id.org/cityont#Geometry> .
+
+
+###  https://w3id.org/cityont#hasManagingOrganization
+<https://w3id.org/cityont#hasManagingOrganization> rdf:type owl:ObjectProperty ;
+                                                                                          rdfs:domain <https://w3id.org/cityont#PhysicalObject> ;
+                                                                                          rdfs:range <https://w3id.org/cityont#Organization> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/cityont#hasLicensePlate
+<https://w3id.org/cityont#hasLicensePlate> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:domain <https://w3id.org/cityont#MovableObject> ;
+                                                                 rdfs:range xsd:string ;
+                                                                 rdfs:label "имеет номер зарегистрированный" .
+
+
+###  https://w3id.org/cityont#hasModelName
+<https://w3id.org/cityont#hasModelName> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:domain <https://w3id.org/cityont#MovableObject> ;
+                                                              rdfs:range xsd:string ;
+                                                              rdfs:label "имеет модель и марку" .
+
+
+###  https://w3id.org/cityont#hasVIN
+<https://w3id.org/cityont#hasVIN> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:domain <https://w3id.org/cityont#CarVehicle> ;
+                                                        rdfs:range xsd:string ;
+                                                        rdfs:label "имеет VIN" .
+
+
+###  https://w3id.org/cityont#hasYearProduction
+<https://w3id.org/cityont#hasYearProduction> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:domain <https://w3id.org/cityont#MovableObject> ;
+                                                                   rdfs:range xsd:dateTime ;
+                                                                   rdfs:label "имеет Год производства" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/cityont#Agent
+<https://w3id.org/cityont#Agent> rdf:type owl:Class ;
+                                                                        rdfs:isDefinedBy "http://xmlns.com/foaf/spec/#term_Agent" ;
+                                                                        rdfs:label "Агент".
+
+
+###  https://w3id.org/cityont#CommercialObject
+<https://w3id.org/cityont#CommercialObject> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <https://w3id.org/cityont#SocialObject> ;
+                                                                                   rdfs:label "Коммерческий объект" .
+
+
+###  https://w3id.org/cityont#ForProfitOrganization
+<https://w3id.org/cityont#ForProfitOrganization> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf <https://w3id.org/cityont#Organization> ;
+                                                                                        rdfs:label "Коммерческая организация" .
+
+
+###  https://w3id.org/cityont#FunctionalObject
+<https://w3id.org/cityont#FunctionalObject> rdf:type owl:Class ;
+                                                                                   rdfs:comment "Описание функций физического объекта" ;
+                                                                                   rdfs:label "Функциональный объект" .
+
+
+###  https://w3id.org/cityont#Geometry
+<https://w3id.org/cityont#Geometry> rdf:type owl:Class ;
+                                                                           rdfs:label "Геометрия" ;
+                                                                           <https://w3id.org/cityont#param> "coordinates" .
+
+
+###  https://w3id.org/cityont#MovableObject
+<https://w3id.org/cityont#MovableObject> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <https://w3id.org/cityont#PhysicalObject> ;
+                                                                                rdfs:label "Движимый объект" .
+
+
+###  https://w3id.org/cityont#Organization
+<https://w3id.org/cityont#Organization> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <https://w3id.org/cityont#Agent> ;
+                                                                               rdfs:isDefinedBy "http://xmlns.com/foaf/spec/#term_Organization" ;
+                                                                               rdfs:label "Организация".
+
+
+###  https://w3id.org/cityont#PhysicalObject
+<https://w3id.org/cityont#PhysicalObject> rdf:type owl:Class ;
+                                                                                 rdfs:comment "Класс городских сущностей. Сюда помещаются конкретные физические объекты (например, здание), которые связываются с функциями (например, университет), координатами и управляющими ими организациями (например, Университет ИТМО)." ;
+                                                                                 rdfs:label "Физический объект" ;
+                                                                                 <https://w3id.org/cityont#param> "Geometry" .
+
+
+###  https://w3id.org/cityont#SocialObject
+<https://w3id.org/cityont#SocialObject> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <https://w3id.org/cityont#FunctionalObject> ;
+                                                                               rdfs:comment "Объект, несущий функцию обеспечения населения города любыми сервисами (например, школа или музей)" ;
+                                                                               rdfs:label "Социальный объект" .
+
+
+###  https://w3id.org/cityont#CarVehicle
+<https://w3id.org/cityont#CarVehicle> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <https://w3id.org/cityont#MovableObject> ;
+                                                            rdfs:label "Легковой автомобиль" .
+
+
+###  https://w3id.org/cityont#OOO
+<https://w3id.org/cityont#OOO> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <https://w3id.org/cityont#ForProfitOrganization> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/cityont#Taxi
+<https://w3id.org/cityont#Taxi> rdf:type owl:NamedIndividual ,
+                                                               <https://w3id.org/cityont#CommercialObject> .
+
+
+###  https://w3id.org/cityont#Машина_Джеймса_Бонда
+<https://w3id.org/cityont#Машина_Джеймса_Бонда> rdf:type owl:NamedIndividual ,
+                                                                               <https://w3id.org/cityont#CarVehicle> ;
+                                                                      <https://w3id.org/cityont#hasFunction> <https://w3id.org/cityont#Taxi> ;
+                                                                      <https://w3id.org/cityont#hasManagingOrganization> <https://w3id.org/cityont#ООО_Супер_такси> ;
+                                                                      <https://w3id.org/cityont#hasLicensePlate> "P 000 XC 178" ;
+                                                                      <https://w3id.org/cityont#hasModelName> "BMW x5" ;
+                                                                      <https://w3id.org/cityont#hasYearProduction> 2000 .
+
+
+###  https://w3id.org/cityont#ООО_Супер_такси
+<https://w3id.org/cityont#ООО_Супер_такси> rdf:type owl:NamedIndividual ,
+                                                                          <https://w3id.org/cityont#OOO> .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,334 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3id.org/cityont-core"
+     xml:base="http://www.w3id.org/cityont-core"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:city-data-conceptual="http://www.w3id.org/cityont-core#">
+    <owl:Ontology rdf:about="http://www.w3id.org/cityont-core"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3id.org/cityont-core#param -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3id.org/cityont-core#param"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3id.org/cityont-core#hasCoordinates -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/cityont-core#hasCoordinates">
+        <rdfs:domain rdf:resource="http://www.w3id.org/cityont-core#PhysicalObject"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/cityont-core#Geometry"/>
+        <rdfs:comment>Кординаты объекта: геометрия в случае стационарного и местонахождение в случае движимого</rdfs:comment>
+        <rdfs:label>имеет координаты</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/cityont-core#hasFunction -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/cityont-core#hasFunction">
+        <rdfs:domain rdf:resource="http://www.w3id.org/cityont-core#PhysicalObject"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/cityont-core#FunctionalObject"/>
+        <rdfs:comment>Связывает объекты подклассов Физический объект с Объектами подклассов Функциональный объект</rdfs:comment>
+        <rdfs:label>имеет функцию</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/cityont-core#hasManagingOrganization -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/cityont-core#hasManagingOrganization">
+        <rdfs:domain rdf:resource="http://www.w3id.org/cityont-core#PhysicalObject"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/cityont-core#Organization"/>
+        <rdfs:comment>Связывает объекты класса Физический объект с объектами класса Организация (управляющая данным физическим объектом)</rdfs:comment>
+        <rdfs:label>имеет управляющую организацию</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3id.org/cityont-core#hasNestedObject -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/cityont-core#hasNestedObject">
+        <rdfs:domain rdf:resource="http://www.w3id.org/cityont-core#PhysicalObject"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/cityont-core#PhysicalObject"/>
+        <rdfs:comment>Связывает объекты класса Физический объект c объектами класса Физический объект, которые в него входят (например, жилой дом и земельный участок, на котором он расположен)</rdfs:comment>
+        <rdfs:label>имеет вложенный объект</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topDataProperty">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3id.org/cityont-core#hasBack -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/cityont-core#hasBack">
+        <rdfs:domain rdf:resource="http://www.w3id.org/cityont-core#Bench"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label>имеет спинку</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/cityont-core#hasBenchType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/cityont-core#hasBenchType">
+        <rdfs:domain rdf:resource="http://www.w3id.org/cityont-core#Bench"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>имеет тип скамьи</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/cityont-core#hasCharge -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/cityont-core#hasCharge">
+        <rdfs:domain rdf:resource="http://www.w3id.org/cityont-core#Bench"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label>имеет зарядку</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/cityont-core#hasHeight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/cityont-core#hasHeight">
+        <rdfs:domain rdf:resource="http://www.w3id.org/cityont-core#Bench"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>имеет высоту (см)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3id.org/cityont-core#hasSeatsAmount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3id.org/cityont-core#hasSeatsAmount">
+        <rdfs:domain rdf:resource="http://www.w3id.org/cityont-core#Bench"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>имеет количество мест</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3id.org/cityont-core#Agent -->
+
+    <owl:Class rdf:about="http://www.w3id.org/cityont-core#Agent">
+        <rdfs:comment>Этот класс характеризует сущности, способные выполнять какие либо действия с иными сущностями. Могут иметь правоотношения как между собой, так и с другими сущностями. Например, человек может владеть недвижимостью. Организация может управлять территорией.</rdfs:comment>
+        <rdfs:isDefinedBy>http://xmlns.com/foaf/spec/#term_Agent</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Agent</rdfs:label>
+        <rdfs:label xml:lang="ru">Агент</rdfs:label>
+        <city-data-conceptual:param>name</city-data-conceptual:param>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/cityont-core#Bench -->
+
+    <owl:Class rdf:about="http://www.w3id.org/cityont-core#Bench">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/cityont-core#StreetFurniture"/>
+        <rdfs:label>Скамья</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/cityont-core#FunctionalObject -->
+
+    <owl:Class rdf:about="http://www.w3id.org/cityont-core#FunctionalObject">
+        <rdfs:comment>Описание функций физического объекта</rdfs:comment>
+        <rdfs:label>Функциональный объект</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/cityont-core#Geometry -->
+
+    <owl:Class rdf:about="http://www.w3id.org/cityont-core#Geometry">
+        <rdfs:label>Геометрия</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/cityont-core#GovernmentAuthority -->
+
+    <owl:Class rdf:about="http://www.w3id.org/cityont-core#GovernmentAuthority">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/cityont-core#Organization"/>
+        <rdfs:label>Государственная организация</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/cityont-core#KU_state -->
+
+    <owl:Class rdf:about="http://www.w3id.org/cityont-core#KU_state">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/cityont-core#GovernmentAuthority"/>
+        <rdfs:label>Казенное учреждение</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/cityont-core#Organization -->
+
+    <owl:Class rdf:about="http://www.w3id.org/cityont-core#Organization">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/cityont-core#Agent"/>
+        <rdfs:comment>The Organization class represents a kind of Agent corresponding to social instititutions such as companies, societies etc.</rdfs:comment>
+        <rdfs:isDefinedBy>http://xmlns.com/foaf/spec/#term_Organization</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Organization</rdfs:label>
+        <rdfs:label xml:lang="ru">Организация</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/cityont-core#PhysicalObject -->
+
+    <owl:Class rdf:about="http://www.w3id.org/cityont-core#PhysicalObject">
+        <rdfs:comment>Класс городских сущностей. Сюда помещаются конкретные физические объекты (например, здание), которые связываются с функциями (например, университет), координатами и управляющими ими организациями (например, Университет ИТМО).</rdfs:comment>
+        <rdfs:label>Физический объект</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/cityont-core#PointObject -->
+
+    <owl:Class rdf:about="http://www.w3id.org/cityont-core#PointObject">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/cityont-core#PhysicalObject"/>
+        <rdfs:label>Точечный объект</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/cityont-core#PublicObject -->
+
+    <owl:Class rdf:about="http://www.w3id.org/cityont-core#PublicObject">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/cityont-core#SocialObject"/>
+        <rdfs:label>Общественный объект</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/cityont-core#SAF -->
+
+    <owl:Class rdf:about="http://www.w3id.org/cityont-core#SAF">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/cityont-core#PointObject"/>
+        <rdfs:comment>Малая архитектурная форма</rdfs:comment>
+        <rdfs:label>МАФ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/cityont-core#SocialObject -->
+
+    <owl:Class rdf:about="http://www.w3id.org/cityont-core#SocialObject">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/cityont-core#FunctionalObject"/>
+        <rdfs:comment>Объект, несущий функцию обеспечения населения города любыми сервисами (например, школа или музей)</rdfs:comment>
+        <rdfs:label>Социальный объект</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/cityont-core#StreetFurniture -->
+
+    <owl:Class rdf:about="http://www.w3id.org/cityont-core#StreetFurniture">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/cityont-core#PublicObject"/>
+        <rdfs:label>Уличная мебель</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3id.org/cityont-core#Муниципальная_администрация_Коломяги -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/cityont-core#Муниципальная_администрация_Коломяги">
+        <rdf:type rdf:resource="http://www.w3id.org/cityont-core#KU_state"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/cityont-core#Скамья_инв_номер_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/cityont-core#Скамья_инв_номер_1">
+        <rdf:type rdf:resource="http://www.w3id.org/cityont-core#SAF"/>
+        <city-data-conceptual:hasFunction rdf:resource="http://www.w3id.org/cityont-core#Скамья_обыкновенная"/>
+        <city-data-conceptual:hasManagingOrganization rdf:resource="http://www.w3id.org/cityont-core#Муниципальная_администрация_Коломяги"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3id.org/cityont-core#Скамья_обыкновенная -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3id.org/cityont-core#Скамья_обыкновенная">
+        <rdf:type rdf:resource="http://www.w3id.org/cityont-core#Bench"/>
+        <city-data-conceptual:hasBack rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</city-data-conceptual:hasBack>
+        <city-data-conceptual:hasBenchType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Переносная</city-data-conceptual:hasBenchType>
+        <city-data-conceptual:hasCharge rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</city-data-conceptual:hasCharge>
+        <city-data-conceptual:hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</city-data-conceptual:hasHeight>
+        <city-data-conceptual:hasSeatsAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</city-data-conceptual:hasSeatsAmount>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

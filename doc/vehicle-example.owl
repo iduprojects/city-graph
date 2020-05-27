@@ -1,0 +1,313 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://w3id.org/cityont"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://w3id.org/cityont">
+    <Prefix name="" IRI="http://w3id.org/cityont"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="cityont" IRI="http://w3id.org/cityont"/>
+    <Declaration>
+        <Class IRI="#Agent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CarVehicle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CommercialObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ForProfitOrganization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FunctionalObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Geometry"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MovableObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OOO"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Organization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhysicalObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SocialObject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFunction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasGeometry"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasManagingOrganization"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLicensePlate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasModelName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasVIN"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasYearProduction"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Taxi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Машина_Джеймса_Бонда"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ООО_Супер_такси"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#param"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#CarVehicle"/>
+        <Class IRI="#MovableObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CommercialObject"/>
+        <Class IRI="#SocialObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ForProfitOrganization"/>
+        <Class IRI="#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MovableObject"/>
+        <Class IRI="#PhysicalObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OOO"/>
+        <Class IRI="#ForProfitOrganization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Organization"/>
+        <Class IRI="#Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SocialObject"/>
+        <Class IRI="#FunctionalObject"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#CommercialObject"/>
+        <NamedIndividual IRI="#Taxi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CarVehicle"/>
+        <NamedIndividual IRI="#Машина_Джеймса_Бонда"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OOO"/>
+        <NamedIndividual IRI="#ООО_Супер_такси"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFunction"/>
+        <NamedIndividual IRI="#Машина_Джеймса_Бонда"/>
+        <NamedIndividual IRI="#Taxi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasManagingOrganization"/>
+        <NamedIndividual IRI="#Машина_Джеймса_Бонда"/>
+        <NamedIndividual IRI="#ООО_Супер_такси"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasLicensePlate"/>
+        <NamedIndividual IRI="#Машина_Джеймса_Бонда"/>
+        <Literal>P 000 XC 178</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasModelName"/>
+        <NamedIndividual IRI="#Машина_Джеймса_Бонда"/>
+        <Literal>BMW x5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasYearProduction"/>
+        <NamedIndividual IRI="#Машина_Джеймса_Бонда"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2000</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasFunction"/>
+        <Class IRI="#PhysicalObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasGeometry"/>
+        <Class IRI="#PhysicalObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasManagingOrganization"/>
+        <Class IRI="#PhysicalObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasFunction"/>
+        <Class IRI="#FunctionalObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasGeometry"/>
+        <Class IRI="#Geometry"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasManagingOrganization"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasLicensePlate"/>
+        <Class IRI="#MovableObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasModelName"/>
+        <Class IRI="#MovableObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasVIN"/>
+        <Class IRI="#CarVehicle"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasYearProduction"/>
+        <Class IRI="#MovableObject"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasLicensePlate"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasModelName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasVIN"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasYearProduction"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Agent</IRI>
+        <Literal>http://xmlns.com/foaf/spec/#term_Agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Agent</IRI>
+        <Literal>Агент</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CarVehicle</IRI>
+        <Literal>Легковой автомобиль</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CommercialObject</IRI>
+        <Literal>Коммерческий объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ForProfitOrganization</IRI>
+        <Literal>Коммерческая организация</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#FunctionalObject</IRI>
+        <Literal>Описание функций физического объекта</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FunctionalObject</IRI>
+        <Literal>Функциональный объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Geometry</IRI>
+        <Literal>Геометрия</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#param"/>
+        <IRI>#Geometry</IRI>
+        <Literal>coordinates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MovableObject</IRI>
+        <Literal>Движимый объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Organization</IRI>
+        <Literal>http://xmlns.com/foaf/spec/#term_Organization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Organization</IRI>
+        <Literal>Организация</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PhysicalObject</IRI>
+        <Literal>Класс городских сущностей. Сюда помещаются конкретные физические объекты (например, здание), которые связываются с функциями (например, университет), координатами и управляющими ими организациями (например, Университет ИТМО).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PhysicalObject</IRI>
+        <Literal>Физический объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#param"/>
+        <IRI>#PhysicalObject</IRI>
+        <Literal>Geometry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SocialObject</IRI>
+        <Literal>Объект, несущий функцию обеспечения населения города любыми сервисами (например, школа или музей)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SocialObject</IRI>
+        <Literal>Социальный объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasLicensePlate</IRI>
+        <Literal>имеет номер зарегистрированный</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasModelName</IRI>
+        <Literal>имеет модель и марку</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasVIN</IRI>
+        <Literal>имеет VIN</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasYearProduction</IRI>
+        <Literal>имеет Год производства</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

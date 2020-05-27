@@ -1,0 +1,349 @@
+@prefix : <http://www.w3id.org/cityont-core> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3id.org/cityont-core> .
+
+<http://www.w3id.org/cityont-core> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3id.org/cityont-core#param
+:param rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.w3id.org/cityont-core#hasCadastralBlock
+:hasCadastralBlock rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :hasCadastralNumber ;
+                   rdfs:domain :CadastreNumber ;
+                   rdfs:range :CadastralBlock ;
+                   rdfs:label "кадастровый квартал" .
+
+
+###  http://www.w3id.org/cityont-core#hasCadastralDistrict
+:hasCadastralDistrict rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :hasCadastralNumber ;
+                      rdfs:domain :CadastreNumber ;
+                      rdfs:range :CadastralDistrict ;
+                      rdfs:label "кадастровый район" .
+
+
+###  http://www.w3id.org/cityont-core#hasCadastralNumber
+:hasCadastralNumber rdf:type owl:ObjectProperty ;
+                    rdfs:domain :CadastralParcel ;
+                    rdfs:range :CadastreNumber ;
+                    rdfs:label "имеет Кадастровый номер" .
+
+
+###  http://www.w3id.org/cityont-core#hasCadastralOkrug
+:hasCadastralOkrug rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :hasCadastralNumber ;
+                   rdfs:domain :CadastreNumber ;
+                   rdfs:range :CadastralOkrug ;
+                   rdfs:label "кадастровый округ" .
+
+
+###  http://www.w3id.org/cityont-core#hasLand
+:hasLand rdf:type owl:ObjectProperty ;
+         rdfs:domain :Building ;
+         rdfs:range :Space ;
+         rdfs:label "расположено на земельном участке" .
+
+
+###  http://www.w3id.org/cityont-core#hasNestedObject
+:hasNestedObject rdf:type owl:ObjectProperty ;
+                 rdfs:domain :PhysicalObject ;
+                 rdfs:range :PhysicalObject ;
+                 rdfs:comment "Связывает объекты класса Физический объект c объектами класса Физический объект, которые в него входят (например, жилой дом и земельный участок, на котором он расположен)" ;
+                 rdfs:label "имеет вложенный объект" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.w3.org/2002/07/owl#topDataProperty
+owl:topDataProperty rdfs:domain :Building ;
+                    rdfs:range xsd:int .
+
+
+###  http://www.w3id.org/cityont-core#hasFullCadastralNumber
+:hasFullCadastralNumber rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :CadastreNumber ;
+                        rdfs:range xsd:string ;
+                        rdfs:label "кадастровый номер (полный)" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3id.org/cityont-core#AreaObject
+:AreaObject rdf:type owl:Class ;
+            rdfs:subClassOf :PhysicalObject ;
+            rdfs:comment "Объект, обозначаемый площадью на карте (например, здание или парк)." ;
+            rdfs:label "Площадной объект" .
+
+
+###  http://www.w3id.org/cityont-core#Building
+:Building rdf:type owl:Class ;
+          rdfs:subClassOf :AreaObject ;
+          rdfs:comment "Площадной объект, представляющий собой постройку" ;
+          rdfs:label "Сооружение" .
+
+
+###  http://www.w3id.org/cityont-core#CadastralBlock
+:CadastralBlock rdf:type owl:Class ;
+                rdfs:subClassOf :CadastreNumber ;
+                rdfs:label "Кадастровый квартал" .
+
+
+###  http://www.w3id.org/cityont-core#CadastralDistrict
+:CadastralDistrict rdf:type owl:Class ;
+                   rdfs:subClassOf :CadastreNumber ;
+                   rdfs:label "Кадастровый район" .
+
+
+###  http://www.w3id.org/cityont-core#CadastralOkrug
+:CadastralOkrug rdf:type owl:Class ;
+                rdfs:subClassOf :CadastreNumber ;
+                rdfs:label "Кадастровый округ" .
+
+
+###  http://www.w3id.org/cityont-core#CadastralParcel
+:CadastralParcel rdf:type owl:Class ;
+                 rdfs:subClassOf :Land ;
+                 rdfs:label "Кадастровый участок" .
+
+
+###  http://www.w3id.org/cityont-core#CadastreNumber
+:CadastreNumber rdf:type owl:Class ;
+                rdfs:subClassOf :CadastreRegister ;
+                rdfs:label "Кадастровый номер" .
+
+
+###  http://www.w3id.org/cityont-core#CadastreRegister
+:CadastreRegister rdf:type owl:Class ;
+                  rdfs:subClassOf :Reference ;
+                  rdfs:comment "Сюда добавлять все виды кадастров (земельный, лесной и пр.)" ;
+                  rdfs:label "Кадастровый реестр" .
+
+
+###  http://www.w3id.org/cityont-core#Land
+:Land rdf:type owl:Class ;
+      rdfs:subClassOf :Space ;
+      rdfs:label "Земельный участок" .
+
+
+###  http://www.w3id.org/cityont-core#PhysicalObject
+:PhysicalObject rdf:type owl:Class ;
+                rdfs:comment "Класс городских сущностей. Сюда помещаются конкретные физические объекты (например, здание), которые связываются с функциями (например, университет), координатами и управляющими ими организациями (например, Университет ИТМО)." ;
+                rdfs:label "Физический объект" .
+
+
+###  http://www.w3id.org/cityont-core#Reference
+:Reference rdf:type owl:Class ;
+           rdfs:subClassOf :Service ;
+           rdfs:label "Справочник" .
+
+
+###  http://www.w3id.org/cityont-core#Service
+:Service rdf:type owl:Class ;
+         rdfs:label "Служебная сущность" .
+
+
+###  http://www.w3id.org/cityont-core#Space
+:Space rdf:type owl:Class ;
+       rdfs:subClassOf :AreaObject ;
+       rdfs:comment "Площадной объект, представляющий собой участок земли (без учёта построек на нём)" ;
+       rdfs:label "Пространство" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.w3id.org/cityont-core#Bicyclers
+:Bicyclers rdf:type owl:NamedIndividual ;
+           rdfs:label "Велосипедисты" .
+
+
+###  http://www.w3id.org/cityont-core#BusinessTourist
+:BusinessTourist rdf:type owl:NamedIndividual ;
+                 rdfs:label "Приезжие по рабочим вопросам" .
+
+
+###  http://www.w3id.org/cityont-core#CarOwner
+:CarOwner rdf:type owl:NamedIndividual ;
+          rdfs:label "Автовладельцы" .
+
+
+###  http://www.w3id.org/cityont-core#CitizensWithEarlyChildhood
+:CitizensWithEarlyChildhood rdf:type owl:NamedIndividual ;
+                            rdfs:label "Горожане с детьми до-детсадовского возраста (от 1 до 3 лет)" .
+
+
+###  http://www.w3id.org/cityont-core#CitizensWithInfant
+:CitizensWithInfant rdf:type owl:NamedIndividual ;
+                    rdfs:label "Горожане с младенцами (от 0 до 1 года)" .
+
+
+###  http://www.w3id.org/cityont-core#CitizensWithPreschooler
+:CitizensWithPreschooler rdf:type owl:NamedIndividual ;
+                         rdfs:label "Горожане с детьми дошкольного возраста (от 3 до 7 лет)" .
+
+
+###  http://www.w3id.org/cityont-core#CitizensWithPrimarySchoolAge
+:CitizensWithPrimarySchoolAge rdf:type owl:NamedIndividual ;
+                              rdfs:label "Горожане с детьми младшего школьного возраста (от 7 до 11 лет)" .
+
+
+###  http://www.w3id.org/cityont-core#DisabledMovement
+:DisabledMovement rdf:type owl:NamedIndividual ;
+                  rdfs:label "Лица с ограниченными возможностями передвижения" .
+
+
+###  http://www.w3id.org/cityont-core#DisabledSight
+:DisabledSight rdf:type owl:NamedIndividual ;
+               rdfs:label "Лица с инвалидностью по зрению" .
+
+
+###  http://www.w3id.org/cityont-core#EarlyChildhood
+:EarlyChildhood rdf:type owl:NamedIndividual ;
+                rdfs:label "Дети до-детсадовского возраста (раннее детство от 1 до 3 лет)" .
+
+
+###  http://www.w3id.org/cityont-core#ElderlyWorkingCitizens
+:ElderlyWorkingCitizens rdf:type owl:NamedIndividual ;
+                        rdfs:label "Работающие горожане предпенсионного и пенсионного возраста (61-70 лет)" .
+
+
+###  http://www.w3id.org/cityont-core#EventTourist
+:EventTourist rdf:type owl:NamedIndividual ;
+              rdfs:label "Приезжие к мероприятиям" .
+
+
+###  http://www.w3id.org/cityont-core#HealthyLifestyleCitizens
+:HealthyLifestyleCitizens rdf:type owl:NamedIndividual ;
+                          rdfs:label "Горожане, ведущие здоровый образ жизни" .
+
+
+###  http://www.w3id.org/cityont-core#Infant
+:Infant rdf:type owl:NamedIndividual ;
+        rdfs:label "Младенцы (от 0 до 1 года)" .
+
+
+###  http://www.w3id.org/cityont-core#MiddleAgeWorkingCitizens
+:MiddleAgeWorkingCitizens rdf:type owl:NamedIndividual ;
+                          rdfs:label "Работающие горожане среднего возраста (от 31 до 40 лет)" .
+
+
+###  http://www.w3id.org/cityont-core#MigrantWorker
+:MigrantWorker rdf:type owl:NamedIndividual ;
+               rdfs:label "Трудовые мигранты" .
+
+
+###  http://www.w3id.org/cityont-core#NoHealthyLifestyleCitizens
+:NoHealthyLifestyleCitizens rdf:type owl:NamedIndividual ;
+                            rdfs:label "Горожане, не ведущие здоровый образ жизни" .
+
+
+###  http://www.w3id.org/cityont-core#OlderRetiree
+:OlderRetiree rdf:type owl:NamedIndividual ;
+              rdfs:label "Пенсионеры старших возрастов (старше 75 лет" .
+
+
+###  http://www.w3id.org/cityont-core#PetOwner
+:PetOwner rdf:type owl:NamedIndividual ;
+          rdfs:label "Владельцы домашних животных" .
+
+
+###  http://www.w3id.org/cityont-core#Pregnant
+:Pregnant rdf:type owl:NamedIndividual ;
+          rdfs:label "Беременные женщины" .
+
+
+###  http://www.w3id.org/cityont-core#Preschooler
+:Preschooler rdf:type owl:NamedIndividual ;
+             rdfs:label "Дети дошкольного возраста (от 3 до 7 лет)" .
+
+
+###  http://www.w3id.org/cityont-core#PrimarySchoolAge
+:PrimarySchoolAge rdf:type owl:NamedIndividual ;
+                  rdfs:label "Дети младшего школьного возраста (от 7 до 11 лет)" .
+
+
+###  http://www.w3id.org/cityont-core#PublicTransportUser
+:PublicTransportUser rdf:type owl:NamedIndividual ;
+                     rdfs:label "Пользователи общественного транспорта" .
+
+
+###  http://www.w3id.org/cityont-core#Religious
+:Religious rdf:type owl:NamedIndividual ;
+           rdfs:label "Верующие" .
+
+
+###  http://www.w3id.org/cityont-core#SelfEmployedCitizens
+:SelfEmployedCitizens rdf:type owl:NamedIndividual ;
+                      rdfs:label "Самозанятые горожане" .
+
+
+###  http://www.w3id.org/cityont-core#SeniorWorkingCitizens
+:SeniorWorkingCitizens rdf:type owl:NamedIndividual ;
+                       rdfs:label "Работающие горожане старшего возраста (от 41 до 60 лет)" .
+
+
+###  http://www.w3id.org/cityont-core#Student
+:Student rdf:type owl:NamedIndividual ;
+         rdfs:label "Студенты и учащиеся" .
+
+
+###  http://www.w3id.org/cityont-core#Teenager
+:Teenager rdf:type owl:NamedIndividual ;
+          rdfs:label "Подростки старшего возраста (от 15 до 18 лет)" .
+
+
+###  http://www.w3id.org/cityont-core#TemporarilyStayingCitizens
+:TemporarilyStayingCitizens rdf:type owl:NamedIndividual ;
+                            rdfs:label "Горожане, временно пребывающие в городе" .
+
+
+###  http://www.w3id.org/cityont-core#TouristInGroup
+:TouristInGroup rdf:type owl:NamedIndividual ;
+                rdfs:label "Туристы в составе организованных групп" .
+
+
+###  http://www.w3id.org/cityont-core#Tween
+:Tween rdf:type owl:NamedIndividual ;
+       rdfs:label "Подростки младшего возраста (от 12 до 15 лет)" .
+
+
+###  http://www.w3id.org/cityont-core#UncoordinatedTourist
+:UncoordinatedTourist rdf:type owl:NamedIndividual ;
+                      rdfs:label "Неорганизованные туристы" .
+
+
+###  http://www.w3id.org/cityont-core#WasteSortingCitizens
+:WasteSortingCitizens rdf:type owl:NamedIndividual ;
+                      rdfs:label "Горожане, ведущие раздельный сбор мусора" .
+
+
+###  http://www.w3id.org/cityont-core#YoungRetiree
+:YoungRetiree rdf:type owl:NamedIndividual ;
+              rdfs:label "Молодые пенсионеры (65 - 75 лет)" .
+
+
+###  http://www.w3id.org/cityont-core#YoungWorkingCitizens
+:YoungWorkingCitizens rdf:type owl:NamedIndividual ;
+                      rdfs:label "Молодые работающие горожане (до 30 лет)" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
