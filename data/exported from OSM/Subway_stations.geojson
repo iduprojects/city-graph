@@ -1,0 +1,2875 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-ide",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2020-03-30T11:03:02Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "relation/2030640",
+        "addr:city": "Санкт-Петербург",
+        "addr:country": "RU",
+        "addr:housenumber": "116 к1",
+        "addr:postcode": "195267",
+        "addr:street": "Гражданский проспект",
+        "building": "yes",
+        "building:levels": "2",
+        "name": "Гражданский проспект",
+        "public_transport": "station",
+        "railway": "subway_entrance",
+        "station": "subway",
+        "subway": "yes",
+        "type": "multipolygon"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              30.4182866,
+              60.0352509
+            ],
+            [
+              30.4181836,
+              60.0351309
+            ],
+            [
+              30.4180463,
+              60.035088
+            ],
+            [
+              30.4179862,
+              60.0350848
+            ],
+            [
+              30.4179385,
+              60.0350314
+            ],
+            [
+              30.4178538,
+              60.0349186
+            ],
+            [
+              30.4178997,
+              60.0349099
+            ],
+            [
+              30.4178537,
+              60.0348451
+            ],
+            [
+              30.4179675,
+              60.0348177
+            ],
+            [
+              30.4178936,
+              60.034732
+            ],
+            [
+              30.4181321,
+              60.0346828
+            ],
+            [
+              30.418197,
+              60.0347652
+            ],
+            [
+              30.418338,
+              60.0347537
+            ],
+            [
+              30.4183669,
+              60.0347835
+            ],
+            [
+              30.418381,
+              60.034798
+            ],
+            [
+              30.4184623,
+              60.0348162
+            ],
+            [
+              30.4184479,
+              60.0348653
+            ],
+            [
+              30.41849,
+              60.0349089
+            ],
+            [
+              30.4185208,
+              60.0349408
+            ],
+            [
+              30.4185452,
+              60.0349686
+            ],
+            [
+              30.4185273,
+              60.0349788
+            ],
+            [
+              30.4185191,
+              60.0350287
+            ],
+            [
+              30.418465,
+              60.0350479
+            ],
+            [
+              30.4184702,
+              60.0350784
+            ],
+            [
+              30.4185612,
+              60.0351995
+            ],
+            [
+              30.418422,
+              60.0352255
+            ],
+            [
+              30.4183255,
+              60.0352436
+            ],
+            [
+              30.4182866,
+              60.0352509
+            ]
+          ]
+        ]
+      },
+      "id": "relation/2030640"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "relation/2601777",
+        "addr:city": "Санкт-Петербург",
+        "addr:country": "RU",
+        "addr:housenumber": "21",
+        "addr:postcode": "194044",
+        "addr:street": "улица Смолячкова",
+        "building": "yes",
+        "building:levels": "1",
+        "name": "Выборгская",
+        "public_transport": "station",
+        "railway": "subway_entrance",
+        "station": "subway",
+        "subway": "yes",
+        "type": "multipolygon"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              30.3474968,
+              59.971183
+            ],
+            [
+              30.347456,
+              59.9712554
+            ],
+            [
+              30.3471605,
+              59.9712138
+            ],
+            [
+              30.3469474,
+              59.9711838
+            ],
+            [
+              30.3470702,
+              59.9709657
+            ],
+            [
+              30.3471105,
+              59.970894
+            ],
+            [
+              30.3471495,
+              59.9708246
+            ],
+            [
+              30.3473939,
+              59.9708591
+            ],
+            [
+              30.3473702,
+              59.9709012
+            ],
+            [
+              30.3476799,
+              59.9709448
+            ],
+            [
+              30.3475977,
+              59.9710908
+            ],
+            [
+              30.3475423,
+              59.9711894
+            ],
+            [
+              30.3474968,
+              59.971183
+            ]
+          ]
+        ]
+      },
+      "id": "relation/2601777"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/23032622",
+        "addr:city": "Санкт-Петербург",
+        "addr:country": "RU",
+        "addr:housenumber": "19 к1",
+        "addr:postcode": "195220",
+        "addr:street": "проспект Науки",
+        "building": "yes",
+        "name": "Академическая",
+        "public_transport": "station",
+        "railway": "subway_entrance",
+        "station": "subway",
+        "subway": "yes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              30.396286,
+              60.0127183
+            ],
+            [
+              30.3962436,
+              60.0127839
+            ],
+            [
+              30.3962075,
+              60.0128397
+            ],
+            [
+              30.3961791,
+              60.0128972
+            ],
+            [
+              30.3962149,
+              60.012936
+            ],
+            [
+              30.3960104,
+              60.0129871
+            ],
+            [
+              30.3959713,
+              60.0129501
+            ],
+            [
+              30.3958418,
+              60.0129838
+            ],
+            [
+              30.3956732,
+              60.0128196
+            ],
+            [
+              30.3957054,
+              60.012774
+            ],
+            [
+              30.3955937,
+              60.0127517
+            ],
+            [
+              30.3956644,
+              60.0126503
+            ],
+            [
+              30.395769,
+              60.0126685
+            ],
+            [
+              30.3957984,
+              60.0126323
+            ],
+            [
+              30.3960165,
+              60.0125749
+            ],
+            [
+              30.395993,
+              60.01255
+            ],
+            [
+              30.3961665,
+              60.0125044
+            ],
+            [
+              30.3963671,
+              60.0126946
+            ],
+            [
+              30.396286,
+              60.0127183
+            ]
+          ]
+        ]
+      },
+      "id": "way/23032622"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/52111190",
+        "addr:housenumber": "71",
+        "addr:street": "Московский проспект",
+        "building": "yes",
+        "public_transport": "station",
+        "railway": "subway_entrance",
+        "station": "subway",
+        "subway": "yes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              30.3173732,
+              59.9061576
+            ],
+            [
+              30.3173795,
+              59.9060112
+            ],
+            [
+              30.3177384,
+              59.906015
+            ],
+            [
+              30.3177323,
+              59.9061595
+            ],
+            [
+              30.3177878,
+              59.9062013
+            ],
+            [
+              30.3178165,
+              59.9062501
+            ],
+            [
+              30.3178174,
+              59.906287
+            ],
+            [
+              30.3178014,
+              59.906323
+            ],
+            [
+              30.3177599,
+              59.9063633
+            ],
+            [
+              30.3176975,
+              59.9063962
+            ],
+            [
+              30.3176193,
+              59.906419
+            ],
+            [
+              30.3175842,
+              59.9063806
+            ],
+            [
+              30.3175236,
+              59.9063896
+            ],
+            [
+              30.3174604,
+              59.9063906
+            ],
+            [
+              30.3173987,
+              59.9063834
+            ],
+            [
+              30.3173428,
+              59.9063685
+            ],
+            [
+              30.3172963,
+              59.906347
+            ],
+            [
+              30.3172623,
+              59.9063203
+            ],
+            [
+              30.3172431,
+              59.90629
+            ],
+            [
+              30.3172399,
+              59.9062584
+            ],
+            [
+              30.317253,
+              59.9062273
+            ],
+            [
+              30.3172815,
+              59.906199
+            ],
+            [
+              30.3173234,
+              59.9061752
+            ],
+            [
+              30.3173732,
+              59.9061576
+            ]
+          ]
+        ]
+      },
+      "id": "way/52111190"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/591585501",
+        "building": "yes",
+        "building:levels": "1",
+        "public_transport": "station",
+        "railway": "subway_entrance",
+        "station": "subway",
+        "subway": "yes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              30.2022786,
+              59.9883603
+            ],
+            [
+              30.2021955,
+              59.9881875
+            ],
+            [
+              30.2025047,
+              59.9881504
+            ],
+            [
+              30.2025877,
+              59.9883231
+            ],
+            [
+              30.2024158,
+              59.9883438
+            ],
+            [
+              30.2022786,
+              59.9883603
+            ]
+          ]
+        ]
+      },
+      "id": "way/591585501"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/591585506",
+        "building": "yes",
+        "building:levels": "1",
+        "public_transport": "station",
+        "railway": "subway_entrance",
+        "station": "subway",
+        "subway": "yes"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              30.2028822,
+              59.9882855
+            ],
+            [
+              30.2028001,
+              59.9881127
+            ],
+            [
+              30.2030751,
+              59.98808
+            ],
+            [
+              30.2030781,
+              59.9880863
+            ],
+            [
+              30.2031086,
+              59.9881505
+            ],
+            [
+              30.2031572,
+              59.9882529
+            ],
+            [
+              30.2028822,
+              59.9882855
+            ]
+          ]
+        ]
+      },
+      "id": "way/591585506"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/268479754",
+        "colour": "blue",
+        "name": "Петроградская",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "05:35-00:28",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3114486,
+          59.9662687
+        ]
+      },
+      "id": "node/268479754"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/309943041",
+        "colour": "orange",
+        "name": "Улица Дыбенко",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "00:00-00:05,05:35-24:00",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.4832161,
+          59.9072677
+        ]
+      },
+      "id": "node/309943041"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/316828146",
+        "barrier": "turnstile",
+        "colour": "orange",
+        "fee": "yes",
+        "name": "Площадь Александра Невского 2",
+        "name:de": "Ploschtschad Alexandra Newskogo 2",
+        "name:ru": "Площадь Александра Невского 2",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 07:00-20:00",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.383664,
+          59.9236734
+        ]
+      },
+      "id": "node/316828146"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/318455877",
+        "colour": "red",
+        "entrance": "entrance",
+        "name": "Площадь Восстания - 1",
+        "name:de": "Ploschtschad Wosstanija - 1",
+        "name:en": "Ploshchad Vosstaniya - 1",
+        "name:fi": "Ploštšad Vosstanija - 1",
+        "name:ru": "Площадь Восстания - 1",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:40-00:25",
+        "operator": "Петербургский метрополитен",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3608521,
+          59.9315668
+        ]
+      },
+      "id": "node/318455877"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/348143207",
+        "barrier": "turnstile",
+        "colour": "green",
+        "fee": "yes",
+        "name": "Приморская",
+        "name:de": "Primorskaja",
+        "network": "Петербургский метрополитен",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.23472,
+          59.9484813
+        ]
+      },
+      "id": "node/348143207"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/348148610",
+        "colour": "red",
+        "entrance": "main",
+        "fee": "yes",
+        "name": "Чернышевская",
+        "name:de": "Tschernyschewskaja",
+        "name:en": "Chernyshevskaya",
+        "name:fi": "Tšernyševskaja",
+        "name:ru": "Чернышевская",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:38-00:25",
+        "operator": "Петербургский метрополитен",
+        "railway": "subway_entrance",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3595223,
+          59.9445053
+        ]
+      },
+      "id": "node/348148610"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/348149695",
+        "colour": "red",
+        "entrance": "main",
+        "name": "Гражданский проспект",
+        "name:ru": "Гражданский проспект",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:30-00:44",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.418422,
+          60.0352255
+        ]
+      },
+      "id": "node/348149695"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/413927289",
+        "colour": "blue",
+        "entrance": "main",
+        "name": "Электросила",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "00:00-00:35,05:40-24:00",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3189413,
+          59.8791296
+        ]
+      },
+      "id": "node/413927289"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/573384918",
+        "colour": "blue",
+        "name": "Невский проспект - 1",
+        "name:de": "Newski Prospekt - 1",
+        "name:fr": "Nevski Prospekt - 1",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 07:00-23:00",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3298619,
+          59.9343131
+        ]
+      },
+      "id": "node/573384918"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/664073014",
+        "colour": "blue",
+        "entrance": "main",
+        "name": "Фрунзенская",
+        "name:de": "Frunsenskaja",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "00:00-00:30,05:45-24:00",
+        "operator": "Петербургский метрополитен",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3178014,
+          59.906323
+        ]
+      },
+      "id": "node/664073014"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/666934478",
+        "colour": "blue",
+        "name": "Звёздная",
+        "name:de": "Swjosdnaja",
+        "name:en": "Zvyozdnaya",
+        "name:fi": "Zvjozdnaja",
+        "name:ru": "Звёздная",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:31-00:45",
+        "operator": "Петербургский метрополитен",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3490211,
+          59.8332615
+        ]
+      },
+      "id": "node/666934478"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/667330910",
+        "colour": "blue",
+        "entrance": "main",
+        "name": "Озерки",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:41-00:41",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3216793,
+          60.0372407
+        ]
+      },
+      "id": "node/667330910"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/667333214",
+        "colour": "blue",
+        "entrance": "main",
+        "name": "Московские ворота",
+        "name:ru": "Московские ворота",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "00:00-00:33,05:43-24:00",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3179891,
+          59.8917404
+        ]
+      },
+      "id": "node/667333214"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/698657807",
+        "colour": "blue",
+        "name": "Проспект Просвещения",
+        "network": "Петербургский метрополитен",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3324383,
+          60.0516336
+        ]
+      },
+      "id": "node/698657807"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/698657809",
+        "colour": "blue",
+        "name": "Проспект Просвещения",
+        "network": "Петербургский метрополитен",
+        "railway": "subway_entrance",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3328442,
+          60.0515594
+        ]
+      },
+      "id": "node/698657809"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/763045997",
+        "colour": "blue",
+        "entrance": "main",
+        "name": "Сенная площадь",
+        "name:de": "Sennaja Ploschtschad",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:36-00:26",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3203667,
+          59.9271707
+        ]
+      },
+      "id": "node/763045997"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/836617887",
+        "barrier": "turnstile",
+        "colour": "orange",
+        "fee": "yes",
+        "name": "Достоевская",
+        "name:de": "Dostojewskaja",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 07:00-20:00",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.346316,
+          59.9283386
+        ]
+      },
+      "id": "node/836617887"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/836617898",
+        "barrier": "turnstile",
+        "colour": "orange",
+        "fee": "yes",
+        "name": "Лиговский проспект",
+        "name:de": "Ligowski-Prospekt",
+        "name:ru": "Лиговский проспект",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:40-00:17",
+        "railway": "subway_entrance",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3549725,
+          59.9209171
+        ]
+      },
+      "id": "node/836617898"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/836617905",
+        "colour": "orange",
+        "name": "Ладожская",
+        "name:de": "Ladoschskaja",
+        "name:ru": "Ладожская",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:40-00:20",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.4390651,
+          59.9326802
+        ]
+      },
+      "id": "node/836617905"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/836617908",
+        "colour": "red",
+        "name": "Владимирская",
+        "name:de": "Wladimirskaja",
+        "name:en": "Vladimirskaya",
+        "name:fi": "Vladimirskaja",
+        "name:ru": "Владимирская",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:38-00:26",
+        "operator": "Петербургский метрополитен",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3480054,
+          59.9276475
+        ]
+      },
+      "id": "node/836617908"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/946973292",
+        "colour": "green",
+        "name": "Обухово",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:37-00:33",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.4579949,
+          59.8485711
+        ]
+      },
+      "id": "node/946973292"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/950308631",
+        "colour": "red",
+        "entrance": "main",
+        "name": "Пушкинская",
+        "name:de": "Puschkinskaja",
+        "name:en": "Pushkinskaya",
+        "name:fi": "Puškinskaja",
+        "name:ru": "Пушкинская",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:38-00:28",
+        "operator": "Петербургский метрополитен",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.329955,
+          59.9204473
+        ]
+      },
+      "id": "node/950308631"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/990212252",
+        "barrier": "door",
+        "colour": "blue",
+        "entrance": "main",
+        "name": "Горьковская",
+        "name:de": "Gorkowskaja",
+        "name:en": "Gor'kovskaya",
+        "name:ru": "Горьковская",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:37-05:26",
+        "operator": "Петербургский метрополитен",
+        "railway": "subway_entrance",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3185793,
+          59.9563347
+        ]
+      },
+      "id": "node/990212252"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1109163066",
+        "colour": "red",
+        "name": "Площадь Восстания - 2",
+        "name:de": "Ploschtschad Wosstanija - 2",
+        "name:ru": "Площадь Восстания - 2",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:40-00:25",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3619648,
+          59.9293603
+        ]
+      },
+      "id": "node/1109163066"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1109163125",
+        "colour": "red",
+        "name": "Площадь Восстания - 2",
+        "name:de": "Ploschtschad Wosstanija - 2",
+        "name:en": "Ploshchad Vosstaniya - 2",
+        "name:fi": "Ploštšad Vosstanija - 2",
+        "name:ru": "Площадь Восстания - 2",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:40-00:25",
+        "operator": "Петербургский метрополитен",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3609937,
+          59.9292776
+        ]
+      },
+      "id": "node/1109163125"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1109163128",
+        "colour": "green",
+        "name": "Маяковская",
+        "name:de": "Majakowskaja",
+        "name:en": "Mayakovskaya",
+        "name:fi": "Majakovskaja",
+        "name:ru": "Маяковская",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:37-00:25",
+        "operator": "Петербургский метрополитен",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3551861,
+          59.9313751
+        ]
+      },
+      "id": "node/1109163128"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1119799048",
+        "colour": "purple",
+        "entrance": "main",
+        "name": "Звенигородская",
+        "name:de": "Swenigorodskaja",
+        "name:ru": "Звенигородская",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:40-00:23",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3355533,
+          59.92255
+        ]
+      },
+      "id": "node/1119799048"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1132515960",
+        "colour": "blue",
+        "name": "Пионерская",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:45-00:35",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2965184,
+          60.0023103
+        ]
+      },
+      "id": "node/1132515960"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1138170258",
+        "access": "yes",
+        "colour": "blue",
+        "name": "Удельная",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "00:00-00:38,05:43-24:00",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.315639,
+          60.0168122
+        ]
+      },
+      "id": "node/1138170258"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1138170281",
+        "access": "yes",
+        "colour": "blue",
+        "name": "Удельная",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "00:00-00:38,05:43-24:00",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3153305,
+          60.0167318
+        ]
+      },
+      "id": "node/1138170281"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1172985005",
+        "colour": "orange",
+        "name": "Ладожская",
+        "name:de": "Ladoschskaja",
+        "name:ru": "Ладожская",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:40-00:20",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.4397372,
+          59.9324731
+        ]
+      },
+      "id": "node/1172985005"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1397865573",
+        "colour": "red",
+        "name": "Выборгская",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 00:00-00:30,05:45-24:00",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3486247,
+          59.9712379
+        ]
+      },
+      "id": "node/1397865573"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1426965001",
+        "colour": "red",
+        "layer": "-1",
+        "name": "Выборгская",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 00:00-00:30,05:45-24:00",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3476197,
+          59.9711991
+        ]
+      },
+      "id": "node/1426965001"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1426965006",
+        "colour": "red",
+        "name": "Выборгская",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 00:00-00:30,05:45-24:00",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3482368,
+          59.9721037
+        ]
+      },
+      "id": "node/1426965006"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1426965009",
+        "colour": "red",
+        "name": "Выборгская",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 00:00-00:30,05:45-24:00",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3507819,
+          59.9724933
+        ]
+      },
+      "id": "node/1426965009"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1427002108",
+        "colour": "red",
+        "name": "Выборгская",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 00:00-00:30,05:45-24:00",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3471605,
+          59.9712138
+        ]
+      },
+      "id": "node/1427002108"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1478166564",
+        "colour": "blue",
+        "name": "Парк Победы",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:37-00:37",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3215504,
+          59.8663302
+        ]
+      },
+      "id": "node/1478166564"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1479478805",
+        "colour": "orange",
+        "name": "Проспект Большевиков",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "00:00-00:23,05:37-24:00",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.4670319,
+          59.9196409
+        ]
+      },
+      "id": "node/1479478805"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1508561575",
+        "colour": "red",
+        "entrance": "yes",
+        "name": "Площадь Ленина - 2",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:35-22:00",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3550987,
+          59.9585394
+        ]
+      },
+      "id": "node/1508561575"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1645794192",
+        "colour": "purple",
+        "entrance": "main",
+        "name": "Обводный канал",
+        "name:de": "Obvodny Kanal",
+        "name:en": "Obvodny Kanal",
+        "name:ru": "Обводный канал",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:35-00:24",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3495192,
+          59.9143393
+        ]
+      },
+      "id": "node/1645794192"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1646568762",
+        "colour": "blue",
+        "entrance": "yes",
+        "name": "Чёрная речка",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:45-00:32",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3007945,
+          59.9855993
+        ]
+      },
+      "id": "node/1646568762"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1652691240",
+        "colour": "green",
+        "entrance": "yes",
+        "name": "Площадь Александра Невского 1",
+        "name:ru": "Площадь Александра Невского 1",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:32-00:23",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.385375,
+          59.9242358
+        ]
+      },
+      "id": "node/1652691240"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1669404531",
+        "colour": "purple",
+        "name": "Старая Деревня",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:37-00:30",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2548193,
+          59.9895694
+        ]
+      },
+      "id": "node/1669404531"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1669412330",
+        "colour": "blue",
+        "name": "Пионерская",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:45-00:35",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2963845,
+          60.0026646
+        ]
+      },
+      "id": "node/1669412330"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1669544278",
+        "colour": "green",
+        "name": "Рыбацкое",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:35-00:05",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.5009373,
+          59.8307491
+        ]
+      },
+      "id": "node/1669544278"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1720800877",
+        "colour": "blue",
+        "layer": "-1",
+        "name": "Петроградская",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "05:35-00:28",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3114167,
+          59.9663032
+        ]
+      },
+      "id": "node/1720800877"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1735167407",
+        "colour": "red",
+        "name": "Автово",
+        "name:de": "Awtowo",
+        "name:en": "Avtovo",
+        "name:fi": "Avtovo",
+        "name:ru": "Автово",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:30-00:42",
+        "operator": "Петербургский метрополитен",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2611952,
+          59.8672945
+        ]
+      },
+      "id": "node/1735167407"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1735167424",
+        "barrier": "turnstile",
+        "colour": "red",
+        "entrance": "yes",
+        "fee": "yes",
+        "name": "Балтийская",
+        "name:de": "Baltijskaja",
+        "name:en": "Baltiyskaya",
+        "name:fi": "Baltijskaja",
+        "name:ru": "Балтийская",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:36-00:33",
+        "operator": "Петербургский метрополитен",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2997962,
+          59.9074233
+        ]
+      },
+      "id": "node/1735167424"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1735167440",
+        "colour": "red",
+        "name": "Нарвская",
+        "name:de": "Narwskaja",
+        "name:en": "Narvskaya",
+        "name:fi": "Narvskaja",
+        "name:ru": "Нарвская",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:36-00:36",
+        "operator": "Петербургский метрополитен",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2745693,
+          59.9011136
+        ]
+      },
+      "id": "node/1735167440"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1735235519",
+        "colour": "red",
+        "name": "Площадь Ленина - 1",
+        "name:de": "Ploschtschad Lenina - 1",
+        "name:en": "Ploschad' Lenina - 1",
+        "name:fi": "Ploštšad Lenina - 1",
+        "name:ru": "Площадь Ленина - 1",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:35-00:28",
+        "operator": "Петербургский метрополитен",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3556161,
+          59.955603
+        ]
+      },
+      "id": "node/1735235519"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1876375508",
+        "colour": "blue",
+        "name": "Купчино",
+        "name:ru": "Купчино",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:30-00:00",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3759895,
+          59.8293092
+        ]
+      },
+      "id": "node/1876375508"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1876375630",
+        "colour": "blue",
+        "name": "Купчино",
+        "name:ru": "Купчино",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:30-00:00",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.375611,
+          59.8300725
+        ]
+      },
+      "id": "node/1876375630"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1933529453",
+        "colour": "purple",
+        "name": "Чкаловская",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:35-00:24",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2917982,
+          59.9610269
+        ]
+      },
+      "id": "node/1933529453"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1984329786",
+        "colour": "green",
+        "entrance": "main",
+        "name": "Пролетарская",
+        "name:de": "Proletarskaja",
+        "name:en": "Proletarskaya",
+        "name:fi": "Proletarskaja",
+        "name:ru": "Пролетарская",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:35-00:30",
+        "operator": "Петербургский метрополитен",
+        "railway": "subway_entrance",
+        "station": "subway",
+        "transport": "subway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.4703369,
+          59.8650428
+        ]
+      },
+      "id": "node/1984329786"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2029434689",
+        "colour": "purple",
+        "name": "Спортивная - 1",
+        "name:de": "Sportiwnaja - 1",
+        "name:ru": "Спортивная - 1",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:36-00:21",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2912006,
+          59.9518089
+        ]
+      },
+      "id": "node/2029434689"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2036851521",
+        "colour": "red",
+        "name": "Площадь Мужества",
+        "name:de": "Ploschtschad Muschestwa",
+        "name:en": "Ploschad' Muzhestva",
+        "name:fi": "Ploštšad Mužestva",
+        "name:ru": "Площадь Мужества",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:40-00:37",
+        "operator": "Петербургский метрополитен",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3661991,
+          59.9995992
+        ]
+      },
+      "id": "node/2036851521"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2036865230",
+        "colour": "red",
+        "name": "Академическая",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:35-00:40",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3962075,
+          60.0128397
+        ]
+      },
+      "id": "node/2036865230"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2045866983",
+        "colour": "green",
+        "entrance": "main",
+        "name": "Василеостровская",
+        "name:de": "Wassileostrowskaja",
+        "name:ru": "Василеостровская",
+        "network": "Петербургский метрополитен",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2784374,
+          59.9426599
+        ]
+      },
+      "id": "node/2045866983"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2050425920",
+        "barrier": "gate",
+        "colour": "purple",
+        "name": "Комендантский проспект",
+        "name:ru": "Комендантский проспект",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:36-00:03",
+        "railway": "subway_entrance",
+        "subway_entrance": "main_entrance",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2585973,
+          60.0085291
+        ]
+      },
+      "id": "node/2050425920"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2050425928",
+        "barrier": "gate",
+        "colour": "purple",
+        "name": "Комендантский проспект",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:36-00:03",
+        "railway": "subway_entrance",
+        "subway_entrance": "secondary_entrance",
+        "wheelchair": "designated"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2585015,
+          60.0085202
+        ]
+      },
+      "id": "node/2050425928"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2056804599",
+        "colour": "purple",
+        "name": "Садовая",
+        "name:de": "Sadowaja",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:36-00:19",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3179886,
+          59.9269104
+        ]
+      },
+      "id": "node/2056804599"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2061520399",
+        "colour": "red",
+        "door": "yes",
+        "name": "Политехническая",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:37-00:39",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3707461,
+          60.0087677
+        ]
+      },
+      "id": "node/2061520399"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2061520416",
+        "colour": "red",
+        "name": "Политехническая",
+        "name:ru": "Политехническая",
+        "network": "Петербургский метрополитен",
+        "operator": "Петербургский метрополитен",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3705449,
+          60.0089749
+        ]
+      },
+      "id": "node/2061520416"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2079490033",
+        "colour": "green",
+        "name": "Ломоносовская",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "00:00-00:27,05:33-24:00",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.4420191,
+          59.8774403
+        ]
+      },
+      "id": "node/2079490033"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2087808191",
+        "colour": "purple",
+        "name": "Бухарестская",
+        "name:ru": "Бухарестская",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:37-00:29",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3692821,
+          59.8842604
+        ]
+      },
+      "id": "node/2087808191"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2087808197",
+        "colour": "purple",
+        "entrance": "entrance",
+        "name": "Международная",
+        "name:ru": "Международная",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:35-00:02",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3792179,
+          59.8704619
+        ]
+      },
+      "id": "node/2087808197"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2087808212",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3791277,
+          59.8704303
+        ]
+      },
+      "id": "node/2087808212"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2112794338",
+        "colour": "red",
+        "entrance": "main",
+        "name": "Кировский завод",
+        "name:de": "Kirowski Sawod",
+        "name:en": "Kirovskiy Zavod",
+        "name:fi": "Kirovski zavod",
+        "name:ru": "Кировский завод",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:30-00:40",
+        "operator": "Петербургский метрополитен",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2615495,
+          59.8796705
+        ]
+      },
+      "id": "node/2112794338"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2124487499",
+        "colour": "blue",
+        "layer": "-1",
+        "name": "Московская-1",
+        "name:ru": "Московская-1",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "6:30-22:00",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3223184,
+          59.8530239
+        ]
+      },
+      "id": "node/2124487499"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2124487500",
+        "colour": "blue",
+        "layer": "-1",
+        "name": "Московская-2",
+        "name:ru": "Московская-2",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "5:35-0:41",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3224467,
+          59.8497733
+        ]
+      },
+      "id": "node/2124487500"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2302967363",
+        "colour": "orange",
+        "layer": "-1",
+        "name": "Новочеркасская",
+        "name:de": "Nowotscherkasskaja",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:39-00:19",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.4114001,
+          59.9288559
+        ]
+      },
+      "id": "node/2302967363"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2302983912",
+        "barrier": "gate",
+        "layer": "-1",
+        "name": "Проспект Ветеранов - 1",
+        "name:de": "Prospekt Weteranow - 1",
+        "name:en": "Prospekt Veteranov - 1",
+        "name:fi": "Prospekt Veteranov - 1",
+        "name:ru": "Проспект Ветеранов - 1",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 06:30-22:00",
+        "operator": "Петербургский метрополитен",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2539909,
+          59.8418797
+        ]
+      },
+      "id": "node/2302983912"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2302983924",
+        "barrier": "gate",
+        "colour": "red",
+        "layer": "-1",
+        "name": "Проспект Ветеранов - 2",
+        "name:de": "Prospekt Weteranow - 2",
+        "name:en": "Prospekt Veteranov - 2",
+        "name:fi": "Prospekt Veteranov - 2",
+        "name:ru": "Проспект Ветеранов - 2",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:38-00:00",
+        "operator": "Петербургский метрополитен",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2501653,
+          59.8420155
+        ]
+      },
+      "id": "node/2302983924"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2303004112",
+        "layer": "-1",
+        "name": "Ленинский проспект - 1",
+        "name:de": "Leninski-Prospekt - 1",
+        "name:en": "Leninskiy Prospekt - 1",
+        "name:fi": "Leninski Prospekt - 1",
+        "name:ru": "Ленинский проспект - 1",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:40-00:45",
+        "operator": "Петербургский метрополитен",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.268386,
+          59.8516314
+        ]
+      },
+      "id": "node/2303004112"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2303004120",
+        "colour": "red",
+        "layer": "-1",
+        "name": "Ленинский проспект - 2",
+        "name:de": "Leninski-Prospekt - 2",
+        "name:en": "Leninskiy Prospekt - 2",
+        "name:fi": "Leninski Prospekt - 2",
+        "name:ru": "Ленинский проспект - 2",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 06:30-22:00",
+        "operator": "Петербургский метрополитен",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2683864,
+          59.8497147
+        ]
+      },
+      "id": "node/2303004120"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2526495851",
+        "colour": "orange",
+        "entrance": "main",
+        "name": "Спасская",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:38-00:08",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3197126,
+          59.9268927
+        ]
+      },
+      "id": "node/2526495851"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2856638108",
+        "colour": "green",
+        "entrance": "main",
+        "name": "Елизаровская",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "00:00-24:00,05:38-24:00",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.4237947,
+          59.896585
+        ]
+      },
+      "id": "node/2856638108"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3543391970",
+        "colour": "red",
+        "name": "Лесная",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:42-00:33",
+        "railway": "subway_entrance",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3440494,
+          59.9849194
+        ]
+      },
+      "id": "node/3543391970"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3566595776",
+        "barrier": "gate",
+        "colour": "purple",
+        "door": "hinged",
+        "name": "Спортивная-2",
+        "name:de": "Sportiwnaja-2",
+        "name:ru": "Спортивная-2",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:34-00:17",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2833497,
+          59.9480084
+        ]
+      },
+      "id": "node/3566595776"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4060185664",
+        "colour": "green",
+        "name": "Маяковская",
+        "name:de": "Majakowskaja",
+        "name:en": "Mayakovskaya",
+        "name:fi": "Majakovskaja",
+        "name:ru": "Маяковская",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:37-00:25",
+        "operator": "Петербургский метрополитен",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3548785,
+          59.9315834
+        ]
+      },
+      "id": "node/4060185664"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4189476668",
+        "colour": "red",
+        "colour1": "red",
+        "colour2": "blue",
+        "name": "Технологический институт - 1",
+        "name:de": "Technologitscheski Institut",
+        "name:en": "Teknologicheskiy Institut",
+        "name:fi": "Tehnologitšeski Institut",
+        "name:ru": "Технологический институт",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "00:00-00:28,05:40-24:00",
+        "operator": "Петербургский метрополитен",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3184604,
+          59.9162567
+        ]
+      },
+      "id": "node/4189476668"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4486084294",
+        "colour": "purple",
+        "hour_off": "0:27",
+        "hour_on": "5:42",
+        "name": "Крестовский остров",
+        "name:de": "Kreuzinsel",
+        "name:en": "Krestovsky Ostrov",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:42-00:27",
+        "railway": "subway_entrance",
+        "wikidata": "Q2711654",
+        "wikipedia": "ru:Крестовский остров (станция метро)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2593129,
+          59.9716552
+        ]
+      },
+      "id": "node/4486084294"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5385958208",
+        "entrance": "yes",
+        "opening_hours": "Mo-Su 00:00-00:30,05:45-24:00",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3471105,
+          59.970894
+        ]
+      },
+      "id": "node/5385958208"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5464314995",
+        "barrier": "turnstile",
+        "colour": "purple",
+        "fee": "yes",
+        "name": "Адмиралтейская",
+        "name:fr": "Admiralteïskaïa",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:38-00:15",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3150824,
+          59.9360553
+        ]
+      },
+      "id": "node/5464314995"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628361759",
+        "colour": "green",
+        "name": "Гостиный двор",
+        "name:de": "Gostiny Dwor",
+        "name:fr": "Gostiny Dvor",
+        "name:ru": "Гостиный двор",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:38-00:28",
+        "operator": "Петербургский метрополитен",
+        "railway": "subway_entrance",
+        "transport": "subway",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3338701,
+          59.9340588
+        ]
+      },
+      "id": "node/5628361759"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628361779",
+        "colour": "green",
+        "name": "Гостиный двор",
+        "name:de": "Gostiny Dwor",
+        "name:fr": "Gostiny Dvor",
+        "name:ru": "Гостиный двор",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:38-00:28",
+        "operator": "Петербургский метрополитен",
+        "railway": "subway_entrance",
+        "transport": "subway",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.333254,
+          59.9335859
+        ]
+      },
+      "id": "node/5628361779"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628616544",
+        "colour": "green",
+        "name": "Площадь Александра Невского 1",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:32-00:23",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3855497,
+          59.9243485
+        ]
+      },
+      "id": "node/5628616544"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5638408166",
+        "name": "Новокрестовская - 1",
+        "name:en": "Novokrestovskaya - 1",
+        "name:ru": "Новокрестовская - 1",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2119289,
+          59.9727198
+        ]
+      },
+      "id": "node/5638408166"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5638408167",
+        "name": "Новокрестовская - 2",
+        "name:en": "Novokrestovskaya - 2",
+        "name:ru": "Новокрестовская - 2",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2118726,
+          59.9712405
+        ]
+      },
+      "id": "node/5638408167"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5647636715",
+        "name": "Беговая",
+        "name:ru": "Беговая",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.203038,
+          59.9882647
+        ]
+      },
+      "id": "node/5647636715"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5647636717",
+        "name": "Беговая",
+        "name:ru": "Беговая",
+        "railway": "subway_entrance",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2024158,
+          59.9883438
+        ]
+      },
+      "id": "node/5647636717"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6190780853",
+        "barrier": "gate",
+        "colour": "blue",
+        "entrance": "yes",
+        "fee": "yes",
+        "name": "Невский проспект - 2",
+        "name:de": "Newski Prospekt - 2",
+        "name:ru": "Невский проспект - 2",
+        "name:zh": "涅瓦大街-2",
+        "network": "Петербургский метрополитен",
+        "opening_hours": "Mo-Su 05:36-00:28",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.327091,
+          59.9354984
+        ]
+      },
+      "id": "node/6190780853"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6848736367",
+        "barrier": "gate",
+        "colour": "purple",
+        "name": "Проспект Славы - 2",
+        "name:ru": "Проспект Славы - 2",
+        "network": "Петербургский метрополитен",
+        "operator": "Петербургский метрополитен",
+        "railway": "subway_entrance",
+        "transport": "subway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.397394,
+          59.8547701
+        ]
+      },
+      "id": "node/6848736367"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6848741005",
+        "barrier": "gate",
+        "colour": "purple",
+        "name": "Проспект Славы - 1",
+        "name:ru": "Проспект Славы - 1",
+        "network": "Петербургский метрополитен",
+        "operator": "Петербургский метрополитен",
+        "railway": "subway_entrance",
+        "transport": "subway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3938715,
+          59.8582059
+        ]
+      },
+      "id": "node/6848741005"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6851511621",
+        "barrier": "gate",
+        "name": "Дунайская - 2",
+        "name:ru": "Дунайская - 2",
+        "network": "Петербургский метрополитен",
+        "railway": "subway_entrance",
+        "ref": "2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.4116579,
+          59.839319
+        ]
+      },
+      "id": "node/6851511621"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6851511631",
+        "barrier": "gate",
+        "name": "Дунайская - 1",
+        "name:ru": "Дунайская - 1",
+        "network": "Петербургский метрополитен",
+        "railway": "subway_entrance",
+        "ref": "1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.4103347,
+          59.8406244
+        ]
+      },
+      "id": "node/6851511631"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6852588329",
+        "name": "Проспект Ветеранов",
+        "railway": "subway_entrance",
+        "ref": "3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2542947,
+          59.8416752
+        ]
+      },
+      "id": "node/6852588329"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6852588330",
+        "name": "Проспект Ветеранов",
+        "railway": "subway_entrance",
+        "ref": "4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2536323,
+          59.8417077
+        ]
+      },
+      "id": "node/6852588330"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6852588331",
+        "name": "Проспект Ветеранов",
+        "railway": "subway_entrance",
+        "ref": "2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2536046,
+          59.8415173
+        ]
+      },
+      "id": "node/6852588331"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6852588332",
+        "name": "Проспект Ветеранов",
+        "railway": "subway_entrance",
+        "ref": "1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2542639,
+          59.8414802
+        ]
+      },
+      "id": "node/6852588332"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6852588333",
+        "name": "Проспект Ветеранов",
+        "railway": "subway_entrance",
+        "ref": "8"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.250274,
+          59.8418222
+        ]
+      },
+      "id": "node/6852588333"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6852588334",
+        "name": "Проспект Ветеранов",
+        "railway": "subway_entrance",
+        "ref": "7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2497533,
+          59.8418903
+        ]
+      },
+      "id": "node/6852588334"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6852588335",
+        "name": "Проспект Ветеранов",
+        "railway": "subway_entrance",
+        "ref": "6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2504804,
+          59.8422123
+        ]
+      },
+      "id": "node/6852588335"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6852588336",
+        "name": "Проспект Ветеранов",
+        "railway": "subway_entrance",
+        "ref": "5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2498206,
+          59.8422957
+        ]
+      },
+      "id": "node/6852588336"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6852633076",
+        "name": "Ленинский проспект",
+        "railway": "subway_entrance",
+        "ref": "7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2690261,
+          59.8496141
+        ]
+      },
+      "id": "node/6852633076"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6852633077",
+        "name": "Ленинский проспект",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2690332,
+          59.8497866
+        ]
+      },
+      "id": "node/6852633077"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6852633078",
+        "name": "Ленинский проспект",
+        "railway": "subway_entrance",
+        "ref": "6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.267676,
+          59.8497994
+        ]
+      },
+      "id": "node/6852633078"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6852633079",
+        "name": "Ленинский проспект",
+        "railway": "subway_entrance",
+        "ref": "5"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.267676,
+          59.8495895
+        ]
+      },
+      "id": "node/6852633079"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6852633080",
+        "name": "Ленинский проспект",
+        "railway": "subway_entrance",
+        "ref": "4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2694376,
+          59.8516799
+        ]
+      },
+      "id": "node/6852633080"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6852633081",
+        "name": "Ленинский проспект",
+        "railway": "subway_entrance",
+        "ref": "2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2670067,
+          59.8516784
+        ]
+      },
+      "id": "node/6852633081"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6852633082",
+        "name": "Ленинский проспект",
+        "railway": "subway_entrance",
+        "ref": "1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2670405,
+          59.852042
+        ]
+      },
+      "id": "node/6852633082"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6852633083",
+        "name": "Ленинский проспект",
+        "railway": "subway_entrance",
+        "ref": "3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2696964,
+          59.8520296
+        ]
+      },
+      "id": "node/6852633083"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6915725498",
+        "name": "Волковская",
+        "railway": "subway_entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3581226,
+          59.8960395
+        ]
+      },
+      "id": "node/6915725498"
+    }
+  ]
+}
