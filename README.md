@@ -1,3 +1,7 @@
-City ontology.
+City knowledge graph (ontology).
 
-More details here: https://inxaoc.github.io/digitalmodel/index-ru.html
+Main version in /main.
+
+See wiki for doc.
+
+Old doc here: https://inxaoc.github.io/digitalmodel/index-ru.html
