@@ -1166,9 +1166,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AD_G0101_8E -->
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AD_G_0101_8E -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AD_G0101_8E">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AD_G_0101_8E">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AssessmentDay"/>
         <hasDay rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Рабочий_день"/>
         <hasUsageValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasUsageValue>
@@ -1176,9 +1176,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AD_G0101_8F -->
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AD_G_0101_8F -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AD_G0101_8F">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AD_G_0101_8F">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AssessmentDay"/>
         <hasDay rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Выходной_день"/>
         <hasUsageValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasUsageValue>
@@ -1186,16 +1186,16 @@
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#A_G0101_8 -->
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#A_G_0101_8 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#A_G0101_8">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#A_G_0101_8">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Assessment"/>
         <hasCollaboration rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OnePerOne"/>
-        <hasDayAssessment rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AD_G0101_8E"/>
-        <hasDayAssessment rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AD_G0101_8F"/>
+        <hasDayAssessment rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AD_G_0101_8E"/>
+        <hasDayAssessment rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AD_G_0101_8F"/>
         <hasGroup rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#G_0101"/>
         <hasIntensity rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#EveryDay"/>
-        <hasOCE rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Жильё"/>
+        <hasOCE rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE_жильё"/>
         <hasD1Minutes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasD1Minutes>
         <hasD2Minutes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasD2Minutes>
         <hasD3Minutes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasD3Minutes>
@@ -1238,7 +1238,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#G_0101">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#G_01"/>
-        <hasAssessment rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#A_G0101_8"/>
+        <hasAssessment rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#A_G_0101_8"/>
         <hasValueFunction rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#G_0101_VF01"/>
         <hasValueStructure rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#G_0101_VS01"/>
         <hasValueStructure rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#G_0101_VS02"/>
