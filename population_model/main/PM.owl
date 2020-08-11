@@ -43,21 +43,20 @@
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasDayAssessment -->
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasDay -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasDayAssessment">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasAssessment"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AssessmentGroup"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasDay">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#topObjAssessmentProperty"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#DayPattern"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasDiversity -->
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasDayAssessment -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasDiversity">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#topObjAssessmentProperty"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Diversity"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasDayAssessment">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasAssessment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#DayPattern"/>
     </owl:ObjectProperty>
     
 
@@ -65,8 +64,16 @@
     <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasGroup -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasGroup">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AssessmentGroup"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Group"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasIntensity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasIntensity">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#topObjAssessmentProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AssessmentIntensity"/>
     </owl:ObjectProperty>
     
 
@@ -74,7 +81,6 @@
     <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasOCE -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasOCE">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AssessmentGroup"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE"/>
     </owl:ObjectProperty>
     
@@ -84,6 +90,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasPower">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#topObjAssessmentProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Мощность"/>
     </owl:ObjectProperty>
     
 
@@ -116,24 +123,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#находится_в -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#находится_в">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Территориальный_уровень"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#проживает_в -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#проживает_в">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Group"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Территориальный_уровень"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -149,7 +138,16 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasD1">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#topDataAssessmentProperty"/>
-        <rdfs:label>Требования к транспортной доступности на личном транспорте</rdfs:label>
+        <rdfs:comment>Требования к транспортной доступности на личном транспорте</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasD1Minutes -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasD1Minutes">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#inMinutes"/>
+        <rdfs:comment>Требования к транспортной доступности на общественном транспорте (в минутах)</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -158,7 +156,16 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasD2">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#topDataAssessmentProperty"/>
-        <rdfs:label>Требования к транспортной доступности на общественном транспорте</rdfs:label>
+        <rdfs:comment>Требования к транспортной доступности на общественном транспорте</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasD2Minutes -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasD2Minutes">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#inMinutes"/>
+        <rdfs:comment>Требования к транспортной доступности на личном транспорте (в минутах)</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -167,7 +174,25 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasD3">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#topDataAssessmentProperty"/>
-        <rdfs:label>Требования к доступности</rdfs:label>
+        <rdfs:comment>Требования к доступности</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasD3Minutes -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasD3Minutes">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#inMinutes"/>
+        <rdfs:comment>Требования к доступности (в минутах)</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasDiversity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasDiversity">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#topDataAssessmentProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
 
@@ -192,20 +217,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasIntensity -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasIntensity">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#topDataAssessmentProperty"/>
-        <rdfs:label>оценка интенсивности использования</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasOCEFuctionValue -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasOCEFuctionValue">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#topDataGroupAssessmentProperty"/>
-        <rdfs:label>значимость (функций)</rdfs:label>
+        <rdfs:comment>значимость отдельных функций (в категориях) в ценностной структуре (актуально для уровня всей группы/ситуации)</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -214,7 +230,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasPC">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#topDataAssessmentProperty"/>
-        <rdfs:label>физический комфорт</rdfs:label>
+        <rdfs:comment>физический комфорт</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -223,7 +239,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasSafety">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#topDataAssessmentProperty"/>
-        <rdfs:label>оценка безопасности</rdfs:label>
+        <rdfs:comment>оценка безопасности</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -232,7 +248,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasSignificance">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#topDataAssessmentProperty"/>
-        <rdfs:label>оценка значимости</rdfs:label>
+        <rdfs:comment>оценка значимости</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -251,7 +267,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasTopOCEQuality">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#topDataGroupAssessmentProperty"/>
-        <rdfs:label>качество</rdfs:label>
+        <rdfs:comment>качество в ценностной структуре (актуально для уровня всей группы/ситуации)</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -260,7 +276,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasTopOCESecure">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#topDataGroupAssessmentProperty"/>
-        <rdfs:label>обеспеченность</rdfs:label>
+        <rdfs:comment>обеспеченность в ценностной структуре (актуально для уровня всей группы/ситуации)</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -269,7 +285,9 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasTopOCEValue">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#topDataGroupAssessmentProperty"/>
-        <rdfs:label>значимость</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ValueStructure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>значимость в ценностной структуре (актуально для уровня всей группы/ситуации)</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -278,7 +296,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasUsageValue">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#topDataDayProperty"/>
-        <rdfs:label>оценка вероятности использования</rdfs:label>
+        <rdfs:comment>оценка вероятности использования</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -287,7 +305,23 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasVC">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#topDataAssessmentProperty"/>
-        <rdfs:label>визуальный комфорт</rdfs:label>
+        <rdfs:comment>визуальный комфорт</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#hasValue"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#inMinutes -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#inMinutes">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#topDataAssessmentProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>в минутах</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -343,17 +377,25 @@
     <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Assessment -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Assessment">
-        <rdfs:comment>Класс для отражения значений ячеек.</rdfs:comment>
         <rdfs:label>Характеристика услуги</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AssessmentGroup -->
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AssessmentDay -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AssessmentGroup">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Assessment"/>
-        <rdfs:label>Оценка для группы населения</rdfs:label>
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AssessmentDay">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Service"/>
+        <rdfs:label>Оценка вероятности использования</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AssessmentIntensity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AssessmentIntensity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Service"/>
+        <rdfs:label>Интенсивность использования</rdfs:label>
     </owl:Class>
     
 
@@ -362,6 +404,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#CelebrationDay">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#DayPattern"/>
+        <rdfs:label>Праздник</rdfs:label>
     </owl:Class>
     
 
@@ -370,7 +413,9 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Collaboration">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Service"/>
-        <rdfs:comment>Характеристика, определяющая многообразие услуг в одном месте.</rdfs:comment>
+        <rdfs:comment>Характеристика, определяющая многообразие услуг в одном месте. Возможны только 3 значения (используйте соответствующие индивиды: 
+1) когда только одна услуга (отдельно стоящих магазин), 2) когда небольшое многообразие есть, это небольшие ТЦ, 3) центр типа Меги или ТРЦ ТРК, когда много разного есть</rdfs:comment>
+        <rdfs:label>Коллаборационность</rdfs:label>
     </owl:Class>
     
 
@@ -380,15 +425,6 @@
     <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#DayPattern">
         <rdfs:comment>Нужно определить подклассы, так как сейчас они потенциально пересекаются. Например, Корпоратив и Новый год &quot;Праздничные&quot; в разном смысле - первый локально, а второй в общем по стране. Вариант разрешения неоднозначности: в класс Праздничный день вносить общероссийские праздники (Новый год, 9-е мая), в класс Выходной день - их выражения в трудовом законодательстве, в класс Особенный - личные, в том числе корпоративные, события.</rdfs:comment>
         <rdfs:label>Паттерн дневной активности</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Diversity -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Diversity">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Service"/>
-        <rdfs:comment>Характеристика, определяющая многообразие одной услуги в разных местах.</rdfs:comment>
     </owl:Class>
     
 
@@ -779,6 +815,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#RegularDay">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#DayPattern"/>
+        <rdfs:label>Обычный день</rdfs:label>
     </owl:Class>
     
 
@@ -961,20 +998,30 @@
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#SituationAssessment -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#SituationAssessment">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Assessment"/>
-        <rdfs:label>Оценка для ситуации</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#SpecialDay -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#SpecialDay">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#DayPattern"/>
         <rdfs:comment>Подклассы частично совпадают с подклассами Жизненной ситуации. Такие помечены суффиксом _день.</rdfs:comment>
+        <rdfs:label>Особенный день</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ValueFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ValueFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Service"/>
+        <rdfs:label>Значимость функций инфраструктуры</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ValueStructure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ValueStructure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Service"/>
+        <rdfs:label>Элемент ценностной структуры</rdfs:label>
     </owl:Class>
     
 
@@ -987,14 +1034,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Большое_многообразие -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Большое_многообразие">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Collaboration"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Встреча_компанией -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Встреча_компанией">
@@ -1003,143 +1042,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Город -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Город">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Территориальный_уровень"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#День_рождения -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#День_рождения">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#CelebrationDay"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Дом -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Дом">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Территориальный_уровень"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Доступность -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Доступность">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Service"/>
-        <rdfs:comment>В минутах. Класс должен включать объекты, образованные связью Услуги и Социальной группы (с определённым коэффициентом).</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Значимость -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Значимость">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Service"/>
-        <rdfs:comment>Класс должен включать объекты, образованные связью Услуги и Ценности.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Значимость_базовой_инфраструктуры -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Значимость_базовой_инфраструктуры">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Значимость_инфрастркутур"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Значимость_инфрастркутур -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Значимость_инфрастркутур">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Значимость"/>
-        <rdfs:comment>Значимость объектов первого уровня для определённых социальных групп.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Значимость_инфраструктуры_досуга -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Значимость_инфраструктуры_досуга">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Значимость_инфрастркутур"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Значимость_инфраструктуры_обслуживания_населения -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Значимость_инфраструктуры_обслуживания_населения">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Значимость_инфрастркутур"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Значимость_мест_приложения_труда -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Значимость_мест_приложения_труда">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Значимость_инфрастркутур"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Значимость_объектов_инфраструктуры -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Значимость_объектов_инфраструктуры">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Значимость"/>
-        <rdfs:comment>Значимость объектов третьего уровня для определённых социальных групп.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Значимость_социальной_инфраструктуры -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Значимость_социальной_инфраструктуры">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Значимость_инфрастркутур"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Значимость_специализированной_инфраструктуры -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Значимость_специализированной_инфраструктуры">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Значимость_инфрастркутур"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Значимость_транспортной_инфраструктуры -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Значимость_транспортной_инфраструктуры">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Значимость_инфрастркутур"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Значимость_туристической_инфраструктуры -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Значимость_туристической_инфраструктуры">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Значимость_инфрастркутур"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Значимость_функций_инфраструктур -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Значимость_функций_инфраструктур">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Значимость"/>
-        <rdfs:comment>Значимость объектов второго уровня (объединённых в функции) для определённых социальных групп.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Квартал -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Квартал">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Территориальный_уровень"/>
     </owl:Class>
     
 
@@ -1160,52 +1066,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Малый_единичный_бизнес -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Малый_единичный_бизнес">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Мощность"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Мощность -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Мощность">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Service"/>
         <rdfs:comment>Лёгкость получения услуги для большого количества желающих или величину потока клиентов, которую услуга способна обработать. Класс должен включать объекты, образованные связью Услуги и Социальной группы (с определённым коэффициентом).</rdfs:comment>
-        <rdfs:comment>Нужно разъяснение по классу: может пересекаться с классом Коллаборационность (например, чем отличается Мощный центр притяжения от Большое многообразие).</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Мощные_центры_притяжения -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Мощные_центры_притяжения">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Мощность"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Муниципальное_образование -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Муниципальное_образование">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Территориальный_уровень"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Небольшое_многообразие -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Небольшое_многообразие">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Collaboration"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Небольшой_сетевой_бизнес -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Небольшой_сетевой_бизнес">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Мощность"/>
     </owl:Class>
     
 
@@ -1214,22 +1079,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Новый_год">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#CelebrationDay"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Одна_услуга_в_одном_месте -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Одна_услуга_в_одном_месте">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Collaboration"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Пешая_доступность -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Пешая_доступность">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Доступность"/>
     </owl:Class>
     
 
@@ -1254,14 +1103,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Похороны_день">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#SpecialDay"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Район -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Район">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Территориальный_уровень"/>
     </owl:Class>
     
 
@@ -1306,39 +1147,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Территориальный_уровень -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Территориальный_уровень">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Service"/>
-        <rdfs:comment>Возможно, должен быть разделён на Место проживания и Точка оказания услуги. Либо это характеристики, с которыми можно связаться свойствами.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Транспортная_доступность_на_личном_транспорте -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Транспортная_доступность_на_личном_транспорте">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Доступность"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Транспортная_доступность_на_общественном_транспорте -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Транспортная_доступность_на_общественном_транспорте">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Доступность"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Транспортная_доступность_на_служебном_транспорте -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Транспортная_доступность_на_служебном_транспорте">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Доступность"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Экологичный_досуг -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Экологичный_досуг">
@@ -1358,28 +1166,70 @@
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#G0101_8 -->
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AD_G0101_8E -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#G0101_8">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AssessmentGroup"/>
-        <hasCollaboration rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Большое_многообразие"/>
-        <hasDayAssessment rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Выходной_день"/>
-        <hasGroup rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#G_0101"/>
-        <hasOCE rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Жильё"/>
-        <hasIntensity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</hasIntensity>
-        <hasSignificance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasSignificance>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AD_G0101_8E">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AssessmentDay"/>
+        <hasDay rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Рабочий_день"/>
         <hasUsageValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasUsageValue>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#G0101value_104 -->
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AD_G0101_8F -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#G0101value_104">
-        <hasValueStructure rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0101"/>
-        <hasTopOCEQuality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasTopOCEQuality>
-        <hasTopOCESecure rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasTopOCESecure>
-        <hasTopOCEValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasTopOCEValue>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AD_G0101_8F">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AssessmentDay"/>
+        <hasDay rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Выходной_день"/>
+        <hasUsageValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasUsageValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#A_G0101_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#A_G0101_8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Assessment"/>
+        <hasCollaboration rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OnePerOne"/>
+        <hasDayAssessment rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AD_G0101_8E"/>
+        <hasDayAssessment rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AD_G0101_8F"/>
+        <hasGroup rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#G_0101"/>
+        <hasIntensity rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#EveryDay"/>
+        <hasOCE rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Жильё"/>
+        <hasD1Minutes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasD1Minutes>
+        <hasD2Minutes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasD2Minutes>
+        <hasD3Minutes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasD3Minutes>
+        <hasSignificance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasSignificance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#BigAttractionCenter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#BigAttractionCenter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Мощность"/>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasValue>
+        <rdfs:label>Мощные центры притяжения</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#BigDiversity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#BigDiversity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Collaboration"/>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasValue>
+        <rdfs:label>Большое многообразие</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#EveryDay -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#EveryDay">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AssessmentIntensity"/>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</hasValue>
+        <rdfs:label>Ежедневно</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1388,9 +1238,45 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#G_0101">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#G_01"/>
+        <hasAssessment rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#A_G0101_8"/>
+        <hasValueFunction rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#G_0101_VF01"/>
+        <hasValueStructure rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#G_0101_VS01"/>
+        <hasValueStructure rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#G_0101_VS02"/>
         <hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasEndDate>
         <hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasStartDate>
         <rdfs:label>Младенцы</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#G_0101_VF01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#G_0101_VF01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ValueFunction"/>
+        <hasOCE rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Жильё"/>
+        <hasOCEFuctionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasOCEFuctionValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#G_0101_VS01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#G_0101_VS01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ValueStructure"/>
+        <hasOCE rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0101"/>
+        <hasTopOCEQuality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasTopOCEQuality>
+        <hasTopOCESecure rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasTopOCESecure>
+        <hasTopOCEValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasTopOCEValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#G_0101_VS02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#G_0101_VS02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ValueStructure"/>
+        <hasOCE rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0102"/>
+        <hasTopOCEValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasTopOCEValue>
     </owl:NamedIndividual>
     
 
@@ -1753,6 +1639,26 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#G_0711">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#G_07"/>
         <rdfs:label>Беременные женщины</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#MediumNetworkBusiness -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#MediumNetworkBusiness">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Мощность"/>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasValue>
+        <rdfs:label>Небольшой сетевой бизнес</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Monthly -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Monthly">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AssessmentIntensity"/>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasValue>
+        <rdfs:label>Ежемесячно</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2531,18 +2437,78 @@
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0101 -->
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OnePerOne -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0101">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE_0101"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OnePerOne">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Collaboration"/>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasValue>
+        <rdfs:label>Одна услуга в одном месте</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Большое_многообразие -->
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OnePerYear -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Большое_многообразие">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OnePerYear">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AssessmentIntensity"/>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasValue>
+        <rdfs:label>Раз в год</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#SeveralTimesPerYear -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#SeveralTimesPerYear">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AssessmentIntensity"/>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasValue>
+        <rdfs:label>Несколько раз в год</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#SmallBusiness -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#SmallBusiness">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Мощность"/>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasValue>
+        <rdfs:label>Малый единичный бизнес</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#SmallDiversity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#SmallDiversity">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Collaboration"/>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasValue>
+        <rdfs:label>Небольшое многообразие</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Weekly -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Weekly">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#AssessmentIntensity"/>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</hasValue>
+        <rdfs:label>Еженедельно</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0101 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0101">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE_01"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0102 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0102">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE_02"/>
     </owl:NamedIndividual>
     
 
@@ -2582,34 +2548,6 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#9-е_мая">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#CelebrationDay"/>
     </owl:NamedIndividual>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // General axioms
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Малый_единичный_бизнес"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Мощные_центры_притяжения"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Небольшой_сетевой_бизнес"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Пешая_доступность"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Транспортная_доступность_на_личном_транспорте"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Транспортная_доступность_на_общественном_транспорте"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Транспортная_доступность_на_служебном_транспорте"/>
-        </owl:members>
-    </rdf:Description>
 </rdf:RDF>
 
 
