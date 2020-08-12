@@ -1026,131 +1026,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Алые_паруса -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Алые_паруса">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#CelebrationDay"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Встреча_компанией -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Встреча_компанией">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#SpecialDay"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#День_рождения -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#День_рождения">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#CelebrationDay"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Корпоратив -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Корпоратив">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#CelebrationDay"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Культурный_досуг -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Культурный_досуг">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#SpecialDay"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Мощность -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Мощность">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Service"/>
         <rdfs:comment>Лёгкость получения услуги для большого количества желающих или величину потока клиентов, которую услуга способна обработать. Класс должен включать объекты, образованные связью Услуги и Социальной группы (с определённым коэффициентом).</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Новый_год -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Новый_год">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#CelebrationDay"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Получение_государственных_услуг -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Получение_государственных_услуг">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#SpecialDay"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Получение_медицинских_услуг -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Получение_медицинских_услуг">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#SpecialDay"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Похороны_день -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Похороны_день">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#SpecialDay"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Религиозный_праздник -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Религиозный_праздник">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#CelebrationDay"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Роды_день -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Роды_день">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#SpecialDay"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Свадьба_день -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Свадьба_день">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#SpecialDay"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Свидание_день -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Свидание_день">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#SpecialDay"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Спортивный_досуг -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Спортивный_досуг">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#SpecialDay"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Экологичный_досуг -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Экологичный_досуг">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#SpecialDay"/>
     </owl:Class>
     
 
@@ -1275,7 +1155,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#G_0101_VS02">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ValueStructure"/>
-        <hasOCE rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0102"/>
         <hasTopOCEValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasTopOCEValue>
     </owl:NamedIndividual>
     
@@ -2497,6 +2376,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0101 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0101">
@@ -2508,7 +2395,263 @@
     <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0102 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0102">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE_01"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0201 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0201">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE_02"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0202 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0202">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE_02"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0203 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0203">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE_02"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0204 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0204">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE_02"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_03 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_03">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0301 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0301">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE_03"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0302 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0302">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE_03"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_04 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_04">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0401 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0401">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE_04"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0402 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0402">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE_04"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0403 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0403">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE_04"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0404 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0404">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE_04"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0405 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0405">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE_04"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_05 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_05">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0501 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0501">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE_05"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0502 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0502">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE_05"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0503 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0503">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE_05"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0504 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0504">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE_05"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0505 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0505">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE_05"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_06 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_06">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0601 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0601">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE_06"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0602 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0602">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE_06"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0603 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0603">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE_06"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_07 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_07">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0701 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0701">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE_07"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0702 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0702">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE_07"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0703 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0703">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE_07"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_08 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_08">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0801 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#ex_OCE_0801">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#OCE_08"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Алые_паруса -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Алые_паруса">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#CelebrationDay"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Встреча_компанией -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Встреча_компанией">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#SpecialDay"/>
     </owl:NamedIndividual>
     
 
@@ -2521,9 +2664,65 @@
     
 
 
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#День_рождения -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#День_рождения">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#CelebrationDay"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Жильё -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Жильё"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Корпоратив -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Корпоратив">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#CelebrationDay"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Культурный_досуг -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Культурный_досуг">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#SpecialDay"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Новый_год -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Новый_год">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#CelebrationDay"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Получение_государственных_услуг -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Получение_государственных_услуг">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#SpecialDay"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Получение_медицинских_услуг -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Получение_медицинских_услуг">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#SpecialDay"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Похороны_день -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Похороны_день">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#SpecialDay"/>
+    </owl:NamedIndividual>
     
 
 
@@ -2538,6 +2737,54 @@
     <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Развод -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Развод">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#SpecialDay"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Религиозный_праздник -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Религиозный_праздник">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#CelebrationDay"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Роды_день -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Роды_день">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#SpecialDay"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Свадьба_день -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Свадьба_день">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#SpecialDay"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Свидание_день -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Свидание_день">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#SpecialDay"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Спортивный_досуг -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Спортивный_досуг">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#SpecialDay"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Экологичный_досуг -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#Экологичный_досуг">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2020/6/untitled-ontology-235#SpecialDay"/>
     </owl:NamedIndividual>
     
