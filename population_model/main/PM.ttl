@@ -1,0 +1,1454 @@
+@prefix : <http://citygraph.onti.actcognitive.org/population#> .
+@prefix pm: <http://citygraph.onti.actcognitive.org/population#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://citygraph.onti.actcognitive.org/population> .
+
+<http://citygraph.onti.actcognitive.org/population> rdf:type owl:Ontology ;
+                                                     rdfs:comment "Вторая версия онтологии для поддержки вычисления оценки обеспеченности. По сравнению с первой версией более сфокусирована на данных, содержащихся в таблицах Модели_востребованности_сервисов, заполненных экпертами. Цель: предоставить возможность импорта этих данных в онтологию. Идейная основа: схема Модель востребованности сервисов." .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://citygraph.onti.actcognitive.org/population#hasAssessment
+pm:hasAssessment rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf pm:topObjGroupProperty ;
+                 rdfs:domain pm:Group ,
+                             pm:Situation ;
+                 rdfs:range pm:Assessment .
+
+
+###  http://citygraph.onti.actcognitive.org/population#hasCollaboration
+pm:hasCollaboration rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf pm:topObjAssessmentProperty ;
+                    rdfs:range pm:Collaboration .
+
+
+###  http://citygraph.onti.actcognitive.org/population#hasDay
+pm:hasDay rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf pm:topObjAssessmentProperty ;
+          rdfs:range pm:DayPattern .
+
+
+###  http://citygraph.onti.actcognitive.org/population#hasDayAssessment
+pm:hasDayAssessment rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf pm:hasAssessment ;
+                    rdfs:range pm:DayPattern .
+
+
+###  http://citygraph.onti.actcognitive.org/population#hasGroup
+pm:hasGroup rdf:type owl:ObjectProperty ;
+            rdfs:range pm:Group .
+
+
+###  http://citygraph.onti.actcognitive.org/population#hasIntensity
+pm:hasIntensity rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf pm:topObjAssessmentProperty ;
+                rdfs:range pm:AssessmentIntensity .
+
+
+###  http://citygraph.onti.actcognitive.org/population#hasOCE
+pm:hasOCE rdf:type owl:ObjectProperty ;
+          rdfs:range pm:OCE .
+
+
+###  http://citygraph.onti.actcognitive.org/population#hasPower
+pm:hasPower rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf pm:topObjAssessmentProperty ;
+            rdfs:range pm:Мощность .
+
+
+###  http://citygraph.onti.actcognitive.org/population#hasValueFunction
+pm:hasValueFunction rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf pm:topObjGroupProperty .
+
+
+###  http://citygraph.onti.actcognitive.org/population#hasValueStructure
+pm:hasValueStructure rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf pm:topObjGroupProperty .
+
+
+###  http://citygraph.onti.actcognitive.org/population#topObjAssessmentProperty
+pm:topObjAssessmentProperty rdf:type owl:ObjectProperty .
+
+
+###  http://citygraph.onti.actcognitive.org/population#topObjGroupProperty
+pm:topObjGroupProperty rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://citygraph.onti.actcognitive.org/population#hasD1
+pm:hasD1 rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf pm:topDataAssessmentProperty ;
+         rdfs:comment "Требования к транспортной доступности на личном транспорте" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#hasD1Minutes
+pm:hasD1Minutes rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf pm:inMinutes ;
+                rdfs:comment "Требования к транспортной доступности на общественном транспорте (в минутах)" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#hasD2
+pm:hasD2 rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf pm:topDataAssessmentProperty ;
+         rdfs:comment "Требования к транспортной доступности на общественном транспорте" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#hasD2Minutes
+pm:hasD2Minutes rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf pm:inMinutes ;
+                rdfs:comment "Требования к транспортной доступности на личном транспорте (в минутах)" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#hasD3
+pm:hasD3 rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf pm:topDataAssessmentProperty ;
+         rdfs:comment "Требования к доступности" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#hasD3Minutes
+pm:hasD3Minutes rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf pm:inMinutes ;
+                rdfs:comment "Требования к доступности (в минутах)" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#hasDiversity
+pm:hasDiversity rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf pm:topDataAssessmentProperty ;
+                rdfs:range xsd:int .
+
+
+###  http://citygraph.onti.actcognitive.org/population#hasEndDate
+pm:hasEndDate rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf pm:topDataGroupProperty ;
+              rdfs:domain pm:Group ;
+              rdfs:range xsd:integer .
+
+
+###  http://citygraph.onti.actcognitive.org/population#hasIncome
+pm:hasIncome rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf pm:topDataGroupProperty ;
+             rdfs:domain pm:Group ;
+             rdfs:range xsd:integer .
+
+
+###  http://citygraph.onti.actcognitive.org/population#hasOCEFuctionValue
+pm:hasOCEFuctionValue rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf pm:topDataGroupAssessmentProperty ;
+                      rdfs:comment "значимость отдельных функций (в категориях) в ценностной структуре (актуально для уровня всей группы/ситуации)" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#hasPC
+pm:hasPC rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf pm:topDataAssessmentProperty ;
+         rdfs:comment "физический комфорт" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#hasSafety
+pm:hasSafety rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf pm:topDataAssessmentProperty ;
+             rdfs:comment "оценка безопасности" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#hasSignificance
+pm:hasSignificance rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf pm:topDataAssessmentProperty ;
+                   rdfs:comment "оценка значимости" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#hasStartDate
+pm:hasStartDate rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf pm:topDataGroupProperty ;
+                rdfs:domain pm:Group ;
+                rdfs:range xsd:integer .
+
+
+###  http://citygraph.onti.actcognitive.org/population#hasTopOCEQuality
+pm:hasTopOCEQuality rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf pm:topDataGroupAssessmentProperty ;
+                    rdfs:comment "качество в ценностной структуре (актуально для уровня всей группы/ситуации)" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#hasTopOCESecure
+pm:hasTopOCESecure rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf pm:topDataGroupAssessmentProperty ;
+                   rdfs:comment "обеспеченность в ценностной структуре (актуально для уровня всей группы/ситуации)" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#hasTopOCEValue
+pm:hasTopOCEValue rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf pm:topDataGroupAssessmentProperty ;
+                  rdfs:domain pm:ValueStructure ;
+                  rdfs:range xsd:float ;
+                  rdfs:comment "значимость в ценностной структуре (актуально для уровня всей группы/ситуации)" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#hasUsageValue
+pm:hasUsageValue rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf pm:topDataDayProperty ;
+                 rdfs:comment "оценка вероятности использования" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#hasVC
+pm:hasVC rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf pm:topDataAssessmentProperty ;
+         rdfs:comment "визуальный комфорт" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#hasValue
+pm:hasValue rdf:type owl:DatatypeProperty .
+
+
+###  http://citygraph.onti.actcognitive.org/population#inMinutes
+pm:inMinutes rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf pm:topDataAssessmentProperty ;
+             rdfs:range xsd:float ;
+             rdfs:comment "в минутах" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#isPensioner
+pm:isPensioner rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf pm:topDataGroupProperty ;
+               rdfs:domain pm:Group ;
+               rdfs:range xsd:boolean .
+
+
+###  http://citygraph.onti.actcognitive.org/population#topDataAssessmentProperty
+pm:topDataAssessmentProperty rdf:type owl:DatatypeProperty .
+
+
+###  http://citygraph.onti.actcognitive.org/population#topDataDayProperty
+pm:topDataDayProperty rdf:type owl:DatatypeProperty .
+
+
+###  http://citygraph.onti.actcognitive.org/population#topDataGroupAssessmentProperty
+pm:topDataGroupAssessmentProperty rdf:type owl:DatatypeProperty .
+
+
+###  http://citygraph.onti.actcognitive.org/population#topDataGroupProperty
+pm:topDataGroupProperty rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty ;
+                        rdfs:domain pm:Group .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://citygraph.onti.actcognitive.org/population#Assessment
+pm:Assessment rdf:type owl:Class ;
+              rdfs:label "Характеристика услуги" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#AssessmentDay
+pm:AssessmentDay rdf:type owl:Class ;
+                 rdfs:subClassOf pm:Service ;
+                 rdfs:label "Оценка вероятности использования" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#AssessmentIntensity
+pm:AssessmentIntensity rdf:type owl:Class ;
+                       rdfs:subClassOf pm:Service ;
+                       rdfs:label "Интенсивность использования" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#CelebrationDay
+pm:CelebrationDay rdf:type owl:Class ;
+                  rdfs:subClassOf pm:DayPattern ;
+                  rdfs:label "Праздник" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#Collaboration
+pm:Collaboration rdf:type owl:Class ;
+                 rdfs:subClassOf pm:Service ;
+                 rdfs:comment """Характеристика, определяющая многообразие услуг в одном месте. Возможны только 3 значения (используйте соответствующие индивиды: 
+1) когда только одна услуга (отдельно стоящих магазин), 2) когда небольшое многообразие есть, это небольшие ТЦ, 3) центр типа Меги или ТРЦ ТРК, когда много разного есть""" ;
+                 rdfs:label "Коллаборационность" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#DayPattern
+pm:DayPattern rdf:type owl:Class ;
+              rdfs:comment "Нужно определить подклассы, так как сейчас они потенциально пересекаются. Например, Корпоратив и Новый год \"Праздничные\" в разном смысле - первый локально, а второй в общем по стране. Вариант разрешения неоднозначности: в класс Праздничный день вносить общероссийские праздники (Новый год, 9-е мая), в класс Выходной день - их выражения в трудовом законодательстве, в класс Особенный - личные, в том числе корпоративные, события." ;
+              rdfs:label "Паттерн дневной активности" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_01
+pm:G_01 rdf:type owl:Class ;
+        rdfs:subClassOf pm:Group ;
+        rdfs:label "Моложе трудоспособного возраста" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_02
+pm:G_02 rdf:type owl:Class ;
+        rdfs:subClassOf pm:Group ;
+        rdfs:label "Трудоспособное население" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_03
+pm:G_03 rdf:type owl:Class ;
+        rdfs:subClassOf pm:Group ;
+        rdfs:label "Старше трудоспобоного населения" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_04
+pm:G_04 rdf:type owl:Class ;
+        rdfs:subClassOf pm:Group ;
+        rdfs:label "Горожане с детьми" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_05
+pm:G_05 rdf:type owl:Class ;
+        rdfs:subClassOf pm:Group ;
+        rdfs:label "Люди с ограниченными возможностями" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_06
+pm:G_06 rdf:type owl:Class ;
+        rdfs:subClassOf pm:Group ;
+        rdfs:label "Туристы" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_07
+pm:G_07 rdf:type owl:Class ;
+        rdfs:subClassOf pm:Group ;
+        rdfs:comment "Состояния с длительным временем пребывания" ;
+        rdfs:label "Индивидуальные группы горожан" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#Group
+pm:Group rdf:type owl:Class ;
+         rdfs:comment "Добавить подгруппы экземплярами в подклассы Социальной группы с одноимённого листа в таблице. При этом возрастные характеристики вносить не в название экземпляра, а связывать с ними data property hasStartDate и hasEndDate." ,
+                      "Один из подклассов данной группы - Индивидуальные группы горожан - определён как \"Состояния с длительным временем пребывания\". Возможно, эту характеристику стоит расширить на весь класс Социальная группа - это отделит его от класса Жизненная ситуация." ;
+         rdfs:label "Социальная группа" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE
+pm:OCE rdf:type owl:Class ;
+       rdfs:comment "Должны быть добавлены соответствующие подклассы второго и третьего уровня из столбца Объект городской среды в таблице. Должны быть добавлены экземпялры, соответствующие названию класса (punning)." ,
+                    """Они же услуги и сервисы. Подклассы первого уровня - это обобщение до объектов инфраструктуры (столбец Категория в таблице), второго уровня - до объектов, выполняющих определённую функцию (столбец Функция,  нужно добавлять классам префикс объект_), третьего уровня - Объект (соответствующий столбец).
+Для возможности импорта оценок на каждом уровне используется punning, то есть, в каждом классе есть экземпляр с таким же названием.""" ;
+       rdfs:label "Объект городской среды" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_01
+pm:OCE_01 rdf:type owl:Class ;
+          rdfs:subClassOf pm:OCE ;
+          rdfs:label "Объект базовой инфраструктуры" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_0101
+pm:OCE_0101 rdf:type owl:Class ;
+            rdfs:subClassOf pm:OCE_01 ;
+            rdfs:label "Жильё" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_0102
+pm:OCE_0102 rdf:type owl:Class ;
+            rdfs:subClassOf pm:OCE_01 ;
+            rdfs:label "Перемещение по городу" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_02
+pm:OCE_02 rdf:type owl:Class ;
+          rdfs:subClassOf pm:OCE ;
+          rdfs:label "Объект социальной инфраструктуры" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_0201
+pm:OCE_0201 rdf:type owl:Class ;
+            rdfs:subClassOf pm:OCE_02 ;
+            rdfs:label "Образование" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_0202
+pm:OCE_0202 rdf:type owl:Class ;
+            rdfs:subClassOf pm:OCE_02 ;
+            rdfs:label "Здравоохранение" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_0203
+pm:OCE_0203 rdf:type owl:Class ;
+            rdfs:subClassOf pm:OCE_02 ;
+            rdfs:label "Социальное обслуживание" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_0204
+pm:OCE_0204 rdf:type owl:Class ;
+            rdfs:subClassOf pm:OCE_02 ;
+            rdfs:label "Похоронные услуги" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_03
+pm:OCE_03 rdf:type owl:Class ;
+          rdfs:subClassOf pm:OCE ;
+          rdfs:label "Объект транспортной инфраструктуры" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_0301
+pm:OCE_0301 rdf:type owl:Class ;
+            rdfs:subClassOf pm:OCE_03 ;
+            rdfs:label "Общественный транспорт" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_0302
+pm:OCE_0302 rdf:type owl:Class ;
+            rdfs:subClassOf pm:OCE_03 ;
+            rdfs:label "Личный транспорт" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_04
+pm:OCE_04 rdf:type owl:Class ;
+          rdfs:subClassOf pm:OCE ;
+          rdfs:label "Объект инфраструктуры обслуживания населения" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_0401
+pm:OCE_0401 rdf:type owl:Class ;
+            rdfs:subClassOf pm:OCE_04 ;
+            rdfs:label "Уход за собой" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_0402
+pm:OCE_0402 rdf:type owl:Class ;
+            rdfs:subClassOf pm:OCE_04 ;
+            rdfs:label "Продовольствие" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_0403
+pm:OCE_0403 rdf:type owl:Class ;
+            rdfs:subClassOf pm:OCE_04 ;
+            rdfs:label "Финансы" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_0404
+pm:OCE_0404 rdf:type owl:Class ;
+            rdfs:subClassOf pm:OCE_04 ;
+            rdfs:label "Хозяйственные товары" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_0405
+pm:OCE_0405 rdf:type owl:Class ;
+            rdfs:subClassOf pm:OCE_04 ;
+            rdfs:label "Питомцы" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_05
+pm:OCE_05 rdf:type owl:Class ;
+          rdfs:subClassOf pm:OCE ;
+          rdfs:label "Объект инфраструктуры досуга" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_0501
+pm:OCE_0501 rdf:type owl:Class ;
+            rdfs:subClassOf pm:OCE_05 ;
+            rdfs:label "Третье место" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_0502
+pm:OCE_0502 rdf:type owl:Class ;
+            rdfs:subClassOf pm:OCE_05 ;
+            rdfs:label "Культурный досуг" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_0503
+pm:OCE_0503 rdf:type owl:Class ;
+            rdfs:subClassOf pm:OCE_05 ;
+            rdfs:label "Спортивный досуг" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_0504
+pm:OCE_0504 rdf:type owl:Class ;
+            rdfs:subClassOf pm:OCE_05 ;
+            rdfs:label "Развлечения" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_0505
+pm:OCE_0505 rdf:type owl:Class ;
+            rdfs:subClassOf pm:OCE_05 ;
+            rdfs:label "Отдых" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_06
+pm:OCE_06 rdf:type owl:Class ;
+          rdfs:subClassOf pm:OCE ;
+          rdfs:label "Объект туристической инфраструктуры" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_0601
+pm:OCE_0601 rdf:type owl:Class ;
+            rdfs:subClassOf pm:OCE_06 ;
+            rdfs:label "Товары для туристов" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_0602
+pm:OCE_0602 rdf:type owl:Class ;
+            rdfs:subClassOf pm:OCE_06 ;
+            rdfs:label "Достопримечательности" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_0603
+pm:OCE_0603 rdf:type owl:Class ;
+            rdfs:subClassOf pm:OCE_06 ;
+            rdfs:label "Точки притяжения" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_07
+pm:OCE_07 rdf:type owl:Class ;
+          rdfs:subClassOf pm:OCE ;
+          rdfs:label "Места приложения труда" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_0701
+pm:OCE_0701 rdf:type owl:Class ;
+            rdfs:subClassOf pm:OCE_07 ;
+            rdfs:label "Офис" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_0702
+pm:OCE_0702 rdf:type owl:Class ;
+            rdfs:subClassOf pm:OCE_07 ;
+            rdfs:label "Пост-офис" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_0703
+pm:OCE_0703 rdf:type owl:Class ;
+            rdfs:subClassOf pm:OCE_07 ;
+            rdfs:label "Промышленность" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_08
+pm:OCE_08 rdf:type owl:Class ;
+          rdfs:subClassOf pm:OCE ;
+          rdfs:label "Объект специализированной инфраструктуры" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_0801
+pm:OCE_0801 rdf:type owl:Class ;
+            rdfs:subClassOf pm:OCE_08 ;
+            rdfs:label "Другое" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#RegularDay
+pm:RegularDay rdf:type owl:Class ;
+              rdfs:subClassOf pm:DayPattern ;
+              rdfs:label "Обычный день" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#Service
+pm:Service rdf:type owl:Class .
+
+
+###  http://citygraph.onti.actcognitive.org/population#Situation
+pm:Situation rdf:type owl:Class ;
+             rdfs:comment "Подклассы частично совпадают с подклассами Особенного дня. Такие помечены суффиксом _ситуация." ,
+                          "Состояния с коротким временем пребывания." ;
+             rdfs:label "Жизненная ситуация" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#SpecialDay
+pm:SpecialDay rdf:type owl:Class ;
+              rdfs:subClassOf pm:DayPattern ;
+              rdfs:comment "Подклассы частично совпадают с подклассами Жизненной ситуации. Такие помечены суффиксом _день." ;
+              rdfs:label "Особенный день" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#ValueFunction
+pm:ValueFunction rdf:type owl:Class ;
+                 rdfs:subClassOf pm:Service ;
+                 rdfs:label "Значимость функций инфраструктуры" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#ValueStructure
+pm:ValueStructure rdf:type owl:Class ;
+                  rdfs:subClassOf pm:Service ;
+                  rdfs:label "Элемент ценностной структуры" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#Мощность
+pm:Мощность rdf:type owl:Class ;
+            rdfs:subClassOf pm:Service ;
+            rdfs:comment "Лёгкость получения услуги для большого количества желающих или величину потока клиентов, которую услуга способна обработать. Класс должен включать объекты, образованные связью Услуги и Социальной группы (с определённым коэффициентом)." .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+
+
+###  http://citygraph.onti.actcognitive.org/population#BigAttractionCenter
+pm:BigAttractionCenter rdf:type owl:NamedIndividual ,
+                                pm:Мощность ;
+                       pm:hasValue 3 ;
+                       rdfs:label "Мощные центры притяжения" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#BigDiversity
+pm:BigDiversity rdf:type owl:NamedIndividual ,
+                         pm:Collaboration ;
+                pm:hasValue 3 ;
+                rdfs:label "Большое многообразие" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#EveryDay
+pm:EveryDay rdf:type owl:NamedIndividual ,
+                     pm:AssessmentIntensity ;
+            pm:hasValue 10 ;
+            rdfs:label "Ежедневно" .
+
+
+
+
+
+
+
+
+
+###  http://citygraph.onti.actcognitive.org/population#MediumNetworkBusiness
+pm:MediumNetworkBusiness rdf:type owl:NamedIndividual ,
+                                  pm:Мощность ;
+                         pm:hasValue 2 ;
+                         rdfs:label "Небольшой сетевой бизнес" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#Monthly
+pm:Monthly rdf:type owl:NamedIndividual ,
+                    pm:AssessmentIntensity ;
+           pm:hasValue 5 ;
+           rdfs:label "Ежемесячно" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_автозаправка
+pm:OCE_автозаправка rdf:type owl:NamedIndividual ,
+                             pm:OCE_0302 ;
+                    rdfs:label "Автозаправки" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_автомагазин
+pm:OCE_автомагазин rdf:type owl:NamedIndividual ,
+                            pm:OCE_0404 ;
+                   rdfs:label "Автомагазины" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_автопарковка
+pm:OCE_автопарковка rdf:type owl:NamedIndividual ,
+                             pm:OCE_0302 ;
+                    rdfs:label "Автопарковки" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_автостоянка
+pm:OCE_автостоянка rdf:type owl:NamedIndividual ,
+                            pm:OCE_0301 ;
+                   rdfs:label "Автостоянки" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_аптека
+pm:OCE_аптека rdf:type owl:NamedIndividual ,
+                       pm:OCE_0202 ;
+              rdfs:label "Аптеки" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_арх_сооружение
+pm:OCE_арх_сооружение rdf:type owl:NamedIndividual ,
+                               pm:OCE_0602 ;
+                      rdfs:label "Архитектурные сооружения и ансамбли" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_банк
+pm:OCE_банк rdf:type owl:NamedIndividual ,
+                     pm:OCE_0403 ;
+            rdfs:label "Отделения банков" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_банкомат
+pm:OCE_банкомат rdf:type owl:NamedIndividual ,
+                         pm:OCE_0403 ;
+                rdfs:label "Банкоматы" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_баня
+pm:OCE_баня rdf:type owl:NamedIndividual ,
+                     pm:OCE_0401 ;
+            rdfs:label "Бани" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_баня2
+pm:OCE_баня2 rdf:type owl:NamedIndividual ,
+                      pm:OCE_0501 ;
+             rdfs:label "Бани" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_бар
+pm:OCE_бар rdf:type owl:NamedIndividual ,
+                    pm:OCE_0504 ;
+           rdfs:label "Бар" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_бассейн
+pm:OCE_бассейн rdf:type owl:NamedIndividual ,
+                        pm:OCE_0503 ;
+               rdfs:label "Бассейны" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_библиотека
+pm:OCE_библиотека rdf:type owl:NamedIndividual ,
+                           pm:OCE_0502 ;
+                  rdfs:label "Библиотеки" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_бизнес_центр
+pm:OCE_бизнес_центр rdf:type owl:NamedIndividual ,
+                             pm:OCE_0701 ;
+                    rdfs:label "Бизнес-центры" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_бильярд
+pm:OCE_бильярд rdf:type owl:NamedIndividual ,
+                        pm:OCE_0504 ;
+               rdfs:label "Боулинг, бильярд" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_больница
+pm:OCE_больница rdf:type owl:NamedIndividual ,
+                         pm:OCE_0202 ;
+                rdfs:label "Больница" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_булочная
+pm:OCE_булочная rdf:type owl:NamedIndividual ,
+                         pm:OCE_0402 ;
+                rdfs:label "Продовольствие: булочная" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_ветклиника
+pm:OCE_ветклиника rdf:type owl:NamedIndividual ,
+                           pm:OCE_0405 ;
+                  rdfs:label "Ветеренарные клиники" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_видовая_точка
+pm:OCE_видовая_точка rdf:type owl:NamedIndividual ,
+                              pm:OCE_0603 ;
+                     rdfs:label "Видовые точки" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_вуз
+pm:OCE_вуз rdf:type owl:NamedIndividual ,
+                    pm:OCE_0201 ;
+           rdfs:label "Учреждения высшего профессионального образования" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_гипермаркет
+pm:OCE_гипермаркет rdf:type owl:NamedIndividual ,
+                            pm:OCE_0402 ;
+                   rdfs:label "Гипермаркет" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_двор
+pm:OCE_двор rdf:type owl:NamedIndividual ,
+                     pm:OCE_0102 ;
+            rdfs:label "Дворы (междомовое пространство)" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_детский_сад
+pm:OCE_детский_сад rdf:type owl:NamedIndividual ,
+                            pm:OCE_0201 ;
+                   rdfs:label "Детские сады" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_диспансер
+pm:OCE_диспансер rdf:type owl:NamedIndividual ,
+                          pm:OCE_0202 ;
+                 rdfs:label "Здравоохранение: Диспансеры" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_жильё
+pm:OCE_жильё rdf:type owl:NamedIndividual ,
+                      pm:OCE_0101 ;
+             rdfs:label "Жилье (жилые дома)" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_зоомагазин
+pm:OCE_зоомагазин rdf:type owl:NamedIndividual ,
+                           pm:OCE_0405 ;
+                  rdfs:label "Зоомагазин" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_зоопарк
+pm:OCE_зоопарк rdf:type owl:NamedIndividual ,
+                        pm:OCE_0502 ;
+               rdfs:label "Зоопарк" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_игровая_площадка
+pm:OCE_игровая_площадка rdf:type owl:NamedIndividual ,
+                                 pm:OCE_0501 ;
+                        rdfs:label "Игровые площадки" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_иогв
+pm:OCE_иогв rdf:type owl:NamedIndividual ,
+                     pm:OCE_0801 ;
+            rdfs:label "ИОГВ" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_кафе
+pm:OCE_кафе rdf:type owl:NamedIndividual ,
+                     pm:OCE_0504 ;
+            rdfs:label "Кафе" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_кинотеатр
+pm:OCE_кинотеатр rdf:type owl:NamedIndividual ,
+                          pm:OCE_0504 ;
+                 rdfs:label "Кинотеатры" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_кладбище
+pm:OCE_кладбище rdf:type owl:NamedIndividual ,
+                         pm:OCE_0204 ;
+                rdfs:label "Кладбища" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_клиника
+pm:OCE_клиника rdf:type owl:NamedIndividual ,
+                        pm:OCE_0202 ;
+               rdfs:label "Клиника" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_клуб
+pm:OCE_клуб rdf:type owl:NamedIndividual ,
+                     pm:OCE_0504 ;
+            rdfs:label "Клуб" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_коворкинг
+pm:OCE_коворкинг rdf:type owl:NamedIndividual ,
+                          pm:OCE_0702 ;
+                 rdfs:label "Коворкинги" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_колледж
+pm:OCE_колледж rdf:type owl:NamedIndividual ,
+                        pm:OCE_0201 ;
+               rdfs:label "Колледжи" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_концертный_зал
+pm:OCE_концертный_зал rdf:type owl:NamedIndividual ,
+                               pm:OCE_0502 ;
+                      rdfs:label "Концертные залы" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_креативное_пространство
+pm:OCE_креативное_пространство rdf:type owl:NamedIndividual ,
+                                        pm:OCE_0702 ;
+                               rdfs:label "Креативные пространства" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_крематорий
+pm:OCE_крематорий rdf:type owl:NamedIndividual ,
+                           pm:OCE_0204 ;
+                  rdfs:label "Крематории" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_кружок
+pm:OCE_кружок rdf:type owl:NamedIndividual ,
+                       pm:OCE_0502 ;
+              rdfs:label "Творческие кружки" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_культурное_наследие
+pm:OCE_культурное_наследие rdf:type owl:NamedIndividual ,
+                                    pm:OCE_0602 ;
+                           rdfs:label "Объекты культурного наследия" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_магазин
+pm:OCE_магазин rdf:type owl:NamedIndividual ,
+                        pm:OCE_0402 ;
+               rdfs:label "Продовольствие: магазин" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_магазин_подарков
+pm:OCE_магазин_подарков rdf:type owl:NamedIndividual ,
+                                 pm:OCE_0404 ;
+                        rdfs:label "Магазины подарков" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_магазин_сувениров
+pm:OCE_магазин_сувениров rdf:type owl:NamedIndividual ,
+                                  pm:OCE_0601 ;
+                         rdfs:label "Магазины сувениров" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_магазин_электроники
+pm:OCE_магазин_электроники rdf:type owl:NamedIndividual ,
+                                    pm:OCE_0404 ;
+                           rdfs:label "Бытовая техника, электроника" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_медцентр
+pm:OCE_медцентр rdf:type owl:NamedIndividual ,
+                         pm:OCE_0202 ;
+                rdfs:label "Медицинский центр" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_морг
+pm:OCE_морг rdf:type owl:NamedIndividual ,
+                     pm:OCE_0204 ;
+            rdfs:label "Морги" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_музей
+pm:OCE_музей rdf:type owl:NamedIndividual ,
+                      pm:OCE_0502 ;
+             rdfs:label "Музеи" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_муниципальное
+pm:OCE_муниципальное rdf:type owl:NamedIndividual ,
+                              pm:OCE_0801 ;
+                     rdfs:label "Муниципальные советы и Администрации МО" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_остановка
+pm:OCE_остановка rdf:type owl:NamedIndividual ,
+                          pm:OCE_0301 ;
+                 rdfs:label "Остановки общественного транспорта" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_паб
+pm:OCE_паб rdf:type owl:NamedIndividual ,
+                    pm:OCE_0504 ;
+           rdfs:label "Паб" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_памятник
+pm:OCE_памятник rdf:type owl:NamedIndividual ,
+                         pm:OCE_0602 ;
+                rdfs:label "Памятники" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_памятное_место
+pm:OCE_памятное_место rdf:type owl:NamedIndividual ,
+                               pm:OCE_0603 ;
+                      rdfs:label "Памятные места" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_пешеходный_переход
+pm:OCE_пешеходный_переход rdf:type owl:NamedIndividual ,
+                                   pm:OCE_0102 ;
+                          rdfs:label "Пешеходные переходы" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_пляж
+pm:OCE_пляж rdf:type owl:NamedIndividual ,
+                     pm:OCE_0505 ;
+            rdfs:label "Пляж" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_поликлиника
+pm:OCE_поликлиника rdf:type owl:NamedIndividual ,
+                            pm:OCE_0202 ;
+                   rdfs:label "Поликлиника" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_полиция
+pm:OCE_полиция rdf:type owl:NamedIndividual ,
+                        pm:OCE_0801 ;
+               rdfs:label "Отделения полиции" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_промышленость
+pm:OCE_промышленость rdf:type owl:NamedIndividual ,
+                              pm:OCE_0703 ;
+                     rdfs:label "Промышленные организации" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_пту
+pm:OCE_пту rdf:type owl:NamedIndividual ,
+                    pm:OCE_0201 ;
+           rdfs:label "Учреждения среднего профессионального образования" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_рекреационная_зона
+pm:OCE_рекреационная_зона rdf:type owl:NamedIndividual ,
+                                   pm:OCE_0501 ;
+                          rdfs:label "Рекреационные зоны" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_ресторан
+pm:OCE_ресторан rdf:type owl:NamedIndividual ,
+                         pm:OCE_0504 ;
+                rdfs:label "Ресторан" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_роддом
+pm:OCE_роддом rdf:type owl:NamedIndividual ,
+                       pm:OCE_0202 ;
+              rdfs:label "Роддом" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_рынок
+pm:OCE_рынок rdf:type owl:NamedIndividual ,
+                      pm:OCE_0402 ;
+             rdfs:label "Продовольствие: рынок" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_салон
+pm:OCE_салон rdf:type owl:NamedIndividual ,
+                      pm:OCE_0401 ;
+             rdfs:label "Салоны красоты, парикмахерские" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_событие
+pm:OCE_событие rdf:type owl:NamedIndividual ,
+                        pm:OCE_0504 ;
+               rdfs:label "События и мероприятия" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_событие2
+pm:OCE_событие2 rdf:type owl:NamedIndividual ,
+                         pm:OCE_0603 ;
+                rdfs:label "События и мероприятия" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_спа
+pm:OCE_спа rdf:type owl:NamedIndividual ,
+                    pm:OCE_0505 ;
+           rdfs:label "Спа-салон" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_спорт_объект
+pm:OCE_спорт_объект rdf:type owl:NamedIndividual ,
+                             pm:OCE_0503 ;
+                    rdfs:label "Спортивные объекты" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_спорт_парк
+pm:OCE_спорт_парк rdf:type owl:NamedIndividual ,
+                           pm:OCE_0503 ;
+                  rdfs:label "Спортивные парки" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_спорт_площадка
+pm:OCE_спорт_площадка rdf:type owl:NamedIndividual ,
+                               pm:OCE_0503 ;
+                      rdfs:label "Спортивные площадки" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_спорт_секция
+pm:OCE_спорт_секция rdf:type owl:NamedIndividual ,
+                             pm:OCE_0503 ;
+                    rdfs:label "Спортивные секции" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_станция_метро
+pm:OCE_станция_метро rdf:type owl:NamedIndividual ,
+                              pm:OCE_0301 ;
+                     rdfs:label "Станции метро" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_стоматология
+pm:OCE_стоматология rdf:type owl:NamedIndividual ,
+                             pm:OCE_0202 ;
+                    rdfs:label "Стоматология" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_суд
+pm:OCE_суд rdf:type owl:NamedIndividual ,
+                    pm:OCE_0801 ;
+           rdfs:label "Суд" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_театр
+pm:OCE_театр rdf:type owl:NamedIndividual ,
+                      pm:OCE_0502 ;
+             rdfs:label "Театры" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_трц
+pm:OCE_трц rdf:type owl:NamedIndividual ,
+                    pm:OCE_0504 ;
+           rdfs:label "Торгово-развлекательные центры" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_тюрьма
+pm:OCE_тюрьма rdf:type owl:NamedIndividual ,
+                       pm:OCE_0801 ;
+              rdfs:label "Тюрьма" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_улица
+pm:OCE_улица rdf:type owl:NamedIndividual ,
+                      pm:OCE_0102 ;
+             rdfs:label "Улицы" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_фастфуд
+pm:OCE_фастфуд rdf:type owl:NamedIndividual ,
+                        pm:OCE_0504 ;
+               rdfs:label "Фастфуд" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_хозтовары
+pm:OCE_хозтовары rdf:type owl:NamedIndividual ,
+                          pm:OCE_0404 ;
+                 rdfs:label "Хозяйственные и строительные магазины" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_храм
+pm:OCE_храм rdf:type owl:NamedIndividual ,
+                     pm:OCE_0501 ;
+            rdfs:label "Религиозные организации, храмы" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_цент_соцуслуг
+pm:OCE_цент_соцуслуг rdf:type owl:NamedIndividual ,
+                              pm:OCE_0203 ;
+                     rdfs:label "Центры оказания социальных услуг населению" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_центр_госуслуг
+pm:OCE_центр_госуслуг rdf:type owl:NamedIndividual ,
+                               pm:OCE_0203 ;
+                      rdfs:label "Центры оказания государственных и муниципальных услуг" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_центр_занятости
+pm:OCE_центр_занятости rdf:type owl:NamedIndividual ,
+                                pm:OCE_0203 ;
+                       rdfs:label "Центры труда и занятости" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_школа
+pm:OCE_школа rdf:type owl:NamedIndividual ,
+                      pm:OCE_0201 ;
+             rdfs:label "Школы" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OCE_электрозаправка
+pm:OCE_электрозаправка rdf:type owl:NamedIndividual ,
+                                pm:OCE_0302 ;
+                       rdfs:label "Электрозаправки" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OnePerOne
+pm:OnePerOne rdf:type owl:NamedIndividual ,
+                      pm:Collaboration ;
+             pm:hasValue 1 ;
+             rdfs:label "Одна услуга в одном месте" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#OnePerYear
+pm:OnePerYear rdf:type owl:NamedIndividual ,
+                       pm:AssessmentIntensity ;
+              pm:hasValue 1 ;
+              rdfs:label "Раз в год" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#SeveralTimesPerYear
+pm:SeveralTimesPerYear rdf:type owl:NamedIndividual ,
+                                pm:AssessmentIntensity ;
+                       pm:hasValue 3 ;
+                       rdfs:label "Несколько раз в год" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#SmallBusiness
+pm:SmallBusiness rdf:type owl:NamedIndividual ,
+                          pm:Мощность ;
+                 pm:hasValue 1 ;
+                 rdfs:label "Малый единичный бизнес" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#SmallDiversity
+pm:SmallDiversity rdf:type owl:NamedIndividual ,
+                           pm:Collaboration ;
+                  pm:hasValue 2 ;
+                  rdfs:label "Небольшое многообразие" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#Weekly
+pm:Weekly rdf:type owl:NamedIndividual ,
+                   pm:AssessmentIntensity ;
+          pm:hasValue 8 ;
+          rdfs:label "Еженедельно" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#ex_OCE_01
+pm:ex_OCE_01 rdf:type owl:NamedIndividual ,
+                      pm:OCE .
+
+
+###  http://citygraph.onti.actcognitive.org/population#ex_OCE_0101
+pm:ex_OCE_0101 rdf:type owl:NamedIndividual ,
+                        pm:OCE_01 .
+
+
+###  http://citygraph.onti.actcognitive.org/population#ex_OCE_0102
+pm:ex_OCE_0102 rdf:type owl:NamedIndividual ,
+                        pm:OCE_01 .
+
+
+###  http://citygraph.onti.actcognitive.org/population#ex_OCE_02
+pm:ex_OCE_02 rdf:type owl:NamedIndividual ,
+                      pm:OCE .
+
+
+###  http://citygraph.onti.actcognitive.org/population#ex_OCE_0201
+pm:ex_OCE_0201 rdf:type owl:NamedIndividual ,
+                        pm:OCE_02 .
+
+
+###  http://citygraph.onti.actcognitive.org/population#ex_OCE_0202
+pm:ex_OCE_0202 rdf:type owl:NamedIndividual ,
+                        pm:OCE_02 .
+
+
+###  http://citygraph.onti.actcognitive.org/population#ex_OCE_0203
+pm:ex_OCE_0203 rdf:type owl:NamedIndividual ,
+                        pm:OCE_02 .
+
+
+
+
+###  http://citygraph.onti.actcognitive.org/population#ex_OCE_0204
+pm:ex_OCE_0204 rdf:type owl:NamedIndividual ,
+                        pm:OCE_02 .
+
+
+###  http://citygraph.onti.actcognitive.org/population#ex_OCE_03
+pm:ex_OCE_03 rdf:type owl:NamedIndividual ,
+                      pm:OCE .
+
+
+###  http://citygraph.onti.actcognitive.org/population#ex_OCE_0301
+pm:ex_OCE_0301 rdf:type owl:NamedIndividual ,
+                        pm:OCE_03 .
+
+
+###  http://citygraph.onti.actcognitive.org/population#ex_OCE_0302
+pm:ex_OCE_0302 rdf:type owl:NamedIndividual ,
+                        pm:OCE_03 .
+
+
+###  http://citygraph.onti.actcognitive.org/population#ex_OCE_04
+pm:ex_OCE_04 rdf:type owl:NamedIndividual ,
+                      pm:OCE .
+
+
+###  http://citygraph.onti.actcognitive.org/population#ex_OCE_0401
+pm:ex_OCE_0401 rdf:type owl:NamedIndividual ,
+                        pm:OCE_04 .
+
+
+###  http://citygraph.onti.actcognitive.org/population#ex_OCE_0402
+pm:ex_OCE_0402 rdf:type owl:NamedIndividual ,
+                        pm:OCE_04 .
+
+
+###  http://citygraph.onti.actcognitive.org/population#ex_OCE_0403
+pm:ex_OCE_0403 rdf:type owl:NamedIndividual ,
+                        pm:OCE_04 .
+
+
+###  http://citygraph.onti.actcognitive.org/population#ex_OCE_0404
+pm:ex_OCE_0404 rdf:type owl:NamedIndividual ,
+                        pm:OCE_04 .
+
+
+###  http://citygraph.onti.actcognitive.org/population#ex_OCE_0405
+pm:ex_OCE_0405 rdf:type owl:NamedIndividual ,
+                        pm:OCE_04 .
+
+
+###  http://citygraph.onti.actcognitive.org/population#ex_OCE_05
+pm:ex_OCE_05 rdf:type owl:NamedIndividual ,
+                      pm:OCE .
+
+
+###  http://citygraph.onti.actcognitive.org/population#ex_OCE_0501
+pm:ex_OCE_0501 rdf:type owl:NamedIndividual ,
+                        pm:OCE_05 .
+
+
+###  http://citygraph.onti.actcognitive.org/population#ex_OCE_0502
+pm:ex_OCE_0502 rdf:type owl:NamedIndividual ,
+                        pm:OCE_05 .
+
+
+###  http://citygraph.onti.actcognitive.org/population#ex_OCE_0503
+pm:ex_OCE_0503 rdf:type owl:NamedIndividual ,
+                        pm:OCE_05 .
+
+
+###  http://citygraph.onti.actcognitive.org/population#ex_OCE_0504
+pm:ex_OCE_0504 rdf:type owl:NamedIndividual ,
+                        pm:OCE_05 .
+
+
+###  http://citygraph.onti.actcognitive.org/population#ex_OCE_0505
+pm:ex_OCE_0505 rdf:type owl:NamedIndividual ,
+                        pm:OCE_05 .
+
+
+###  http://citygraph.onti.actcognitive.org/population#ex_OCE_06
+pm:ex_OCE_06 rdf:type owl:NamedIndividual ,
+                      pm:OCE .
+
+
+###  http://citygraph.onti.actcognitive.org/population#ex_OCE_0601
+pm:ex_OCE_0601 rdf:type owl:NamedIndividual ,
+                        pm:OCE_06 .
+
+
+###  http://citygraph.onti.actcognitive.org/population#ex_OCE_0602
+pm:ex_OCE_0602 rdf:type owl:NamedIndividual ,
+                        pm:OCE_06 .
+
+
+###  http://citygraph.onti.actcognitive.org/population#ex_OCE_0603
+pm:ex_OCE_0603 rdf:type owl:NamedIndividual ,
+                        pm:OCE_06 .
+
+
+###  http://citygraph.onti.actcognitive.org/population#ex_OCE_07
+pm:ex_OCE_07 rdf:type owl:NamedIndividual ,
+                      pm:OCE .
+
+
+###  http://citygraph.onti.actcognitive.org/population#ex_OCE_0701
+pm:ex_OCE_0701 rdf:type owl:NamedIndividual ,
+                        pm:OCE_07 .
+
+
+###  http://citygraph.onti.actcognitive.org/population#ex_OCE_0702
+pm:ex_OCE_0702 rdf:type owl:NamedIndividual ,
+                        pm:OCE_07 .
+
+
+###  http://citygraph.onti.actcognitive.org/population#ex_OCE_0703
+pm:ex_OCE_0703 rdf:type owl:NamedIndividual ,
+                        pm:OCE_07 .
+
+
+###  http://citygraph.onti.actcognitive.org/population#ex_OCE_08
+pm:ex_OCE_08 rdf:type owl:NamedIndividual ,
+                      pm:OCE .
+
+
+###  http://citygraph.onti.actcognitive.org/population#ex_OCE_0801
+pm:ex_OCE_0801 rdf:type owl:NamedIndividual ,
+                        pm:OCE_08 .
+
+
+###  http://citygraph.onti.actcognitive.org/population#Алые_паруса
+pm:Алые_паруса rdf:type owl:NamedIndividual ,
+                        pm:CelebrationDay .
+
+
+###  http://citygraph.onti.actcognitive.org/population#Встреча_компанией
+pm:Встреча_компанией rdf:type owl:NamedIndividual ,
+                              pm:SpecialDay .
+
+
+###  http://citygraph.onti.actcognitive.org/population#Выходной_день
+pm:Выходной_день rdf:type owl:NamedIndividual ,
+                          pm:RegularDay .
+
+
+###  http://citygraph.onti.actcognitive.org/population#День_рождения
+pm:День_рождения rdf:type owl:NamedIndividual ,
+                          pm:CelebrationDay .
+
+
+###  http://citygraph.onti.actcognitive.org/population#Жильё
+pm:Жильё rdf:type owl:NamedIndividual .
+
+
+###  http://citygraph.onti.actcognitive.org/population#Корпоратив
+pm:Корпоратив rdf:type owl:NamedIndividual ,
+                       pm:CelebrationDay .
+
+
+###  http://citygraph.onti.actcognitive.org/population#Культурный_досуг
+pm:Культурный_досуг rdf:type owl:NamedIndividual ,
+                             pm:SpecialDay .
+
+
+###  http://citygraph.onti.actcognitive.org/population#Новый_год
+pm:Новый_год rdf:type owl:NamedIndividual ,
+                      pm:CelebrationDay .
+
+
+###  http://citygraph.onti.actcognitive.org/population#Получение_государственных_услуг
+pm:Получение_государственных_услуг rdf:type owl:NamedIndividual ,
+                                            pm:SpecialDay .
+
+
+###  http://citygraph.onti.actcognitive.org/population#Получение_медицинских_услуг
+pm:Получение_медицинских_услуг rdf:type owl:NamedIndividual ,
+                                        pm:SpecialDay .
+
+
+###  http://citygraph.onti.actcognitive.org/population#Похороны_день
+pm:Похороны_день rdf:type owl:NamedIndividual ,
+                          pm:SpecialDay .
+
+
+###  http://citygraph.onti.actcognitive.org/population#Рабочий_день
+pm:Рабочий_день rdf:type owl:NamedIndividual ,
+                         pm:RegularDay .
+
+
+###  http://citygraph.onti.actcognitive.org/population#Развод
+pm:Развод rdf:type owl:NamedIndividual ,
+                   pm:SpecialDay .
+
+
+###  http://citygraph.onti.actcognitive.org/population#Религиозный_праздник
+pm:Религиозный_праздник rdf:type owl:NamedIndividual ,
+                                 pm:CelebrationDay .
+
+
+###  http://citygraph.onti.actcognitive.org/population#Роды_день
+pm:Роды_день rdf:type owl:NamedIndividual ,
+                      pm:SpecialDay .
+
+
+###  http://citygraph.onti.actcognitive.org/population#Свадьба_день
+pm:Свадьба_день rdf:type owl:NamedIndividual ,
+                         pm:SpecialDay .
+
+
+###  http://citygraph.onti.actcognitive.org/population#Свидание_день
+pm:Свидание_день rdf:type owl:NamedIndividual ,
+                          pm:SpecialDay .
+
+
+###  http://citygraph.onti.actcognitive.org/population#Спортивный_досуг
+pm:Спортивный_досуг rdf:type owl:NamedIndividual ,
+                             pm:SpecialDay .
+
+
+###  http://citygraph.onti.actcognitive.org/population#Экологичный_досуг
+pm:Экологичный_досуг rdf:type owl:NamedIndividual ,
+                              pm:SpecialDay .
+
+
+###  http://citygraph.onti.actcognitive.org/population#9-е_мая
+<http://citygraph.onti.actcognitive.org/population#9-е_мая> rdf:type owl:NamedIndividual ,
+                                                                     pm:CelebrationDay .
+
+                                                                     
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
