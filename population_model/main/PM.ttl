@@ -1449,6 +1449,376 @@ pm:Экологичный_досуг rdf:type owl:NamedIndividual ,
 <http://citygraph.onti.actcognitive.org/population#9-е_мая> rdf:type owl:NamedIndividual ,
                                                                      pm:CelebrationDay .
 
-                                                                     
+  ###  http://citygraph.onti.actcognitive.org/population#G_0101
+pm:G_0101 rdf:type owl:NamedIndividual,
+                    pm:G_01 ;
+pm:hasStartDate 0 ;
+pm:hasEndDate 1 ;
+rdfs:label "Младенцы" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0102
+pm:G_0102 rdf:type owl:NamedIndividual,
+                    pm:G_01 ;
+pm:hasStartDate 1 ;
+pm:hasEndDate 3 ;
+rdfs:label "Дети до-детскадовского возраста" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0103
+pm:G_0103 rdf:type owl:NamedIndividual,
+                    pm:G_01 ;
+pm:hasStartDate 3 ;
+pm:hasEndDate 7 ;
+rdfs:label "Дети до-дошкольного возраста" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0104
+pm:G_0104 rdf:type owl:NamedIndividual,
+                    pm:G_01 ;
+pm:hasStartDate 7 ;
+pm:hasEndDate 11 ;
+rdfs:label "Дети младшего школьного возраста" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0105
+pm:G_0105 rdf:type owl:NamedIndividual,
+                    pm:G_01 ;
+pm:hasStartDate 12 ;
+pm:hasEndDate 15 ;
+rdfs:label "Подростки младшего возраста" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0106
+pm:G_0106 rdf:type owl:NamedIndividual,
+                    pm:G_01 ;
+pm:hasStartDate 16 ;
+pm:hasEndDate 18 ;
+rdfs:label "Подростки старшего возраста" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0201
+pm:G_0201 rdf:type owl:NamedIndividual,
+                    pm:G_02 ;
+rdfs:label "Студенты и учащиеся" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0202
+pm:G_0202 rdf:type owl:NamedIndividual,
+                    pm:G_02 ;
+pm:hasStartDate 18 ;
+pm:hasEndDate 30 ;
+rdfs:label "Молодые работающие горожане" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0203
+pm:G_0203 rdf:type owl:NamedIndividual,
+                    pm:G_02 ;
+pm:hasStartDate 30 ;
+pm:hasEndDate 40 ;
+rdfs:label "Работающие горожане среднего возраста" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0204
+pm:G_0204 rdf:type owl:NamedIndividual,
+                    pm:G_02 ;
+pm:hasStartDate 40 ;
+pm:hasEndDate 60 ;
+rdfs:label "Работающие горожане старшего возраста" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0205
+pm:G_0205 rdf:type owl:NamedIndividual,
+                    pm:G_02 ;
+pm:hasStartDate 60 ;
+pm:hasEndDate 70 ;
+rdfs:label "Работающие горожане предпенсионного и пенсионного возраста" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0206
+pm:G_0206 rdf:type owl:NamedIndividual,
+                    pm:G_02 ;
+rdfs:label "Самозанятые горожане" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0207
+pm:G_0207 rdf:type owl:NamedIndividual,
+                    pm:G_02 ;
+rdfs:label "Горожане, ведущие активный образ жизни" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0208
+pm:G_0208 rdf:type owl:NamedIndividual,
+                    pm:G_02 ;
+rdfs:label "Горожане, временно пребывающие в городе" .
+
+
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0301
+pm:G_0301 rdf:type owl:NamedIndividual,
+                    pm:G_03 ;
+pm:hasStartDate 60 ;
+pm:hasEndDate 75 ;
+pm:isPensioner "true"^^xsd:boolean ;
+rdfs:label "Молодые пенсионеры" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0302
+pm:G_0302 rdf:type owl:NamedIndividual,
+                    pm:G_03 ;
+pm:isPensioner "true"^^xsd:boolean ;
+rdfs:label "Работающие пенсионеры" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0303
+pm:G_0303 rdf:type owl:NamedIndividual,
+                    pm:G_03 ;
+pm:hasStartDate 75 ;
+pm:isPensioner "true"^^xsd:boolean ;
+rdfs:label "Пенсионеры старших возрастов" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0401
+pm:G_0401 rdf:type owl:NamedIndividual,
+                    pm:G_04 ;
+rdfs:label "Горожане с младенцами" .
+
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0402
+pm:G_0402 rdf:type owl:NamedIndividual,
+                    pm:G_04 ;
+rdfs:label "Горожане с детьми до-детсадовского возраста" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0403
+pm:G_0403 rdf:type owl:NamedIndividual,
+                    pm:G_04 ;
+rdfs:label "Горожане с детьми дошкольного возраста" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0404
+pm:G_0404 rdf:type owl:NamedIndividual,
+                    pm:G_04 ;
+rdfs:label "Горожане с детьми младшего школьного возраста" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0405
+pm:G_0405 rdf:type owl:NamedIndividual,
+                    pm:G_04 ;
+rdfs:label "Горожане с подростками" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0501
+pm:G_0501 rdf:type owl:NamedIndividual,
+                    pm:G_05 ;
+rdfs:label "Лица с инвалидностью по зрению" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0502
+pm:G_0502 rdf:type owl:NamedIndividual,
+                    pm:G_05 ;
+rdfs:label "Лица с ограниченными возможностями передвижения" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0601
+pm:G_0601 rdf:type owl:NamedIndividual,
+                    pm:G_06 ;
+rdfs:label "Туристы в составе организованных групп" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0602
+pm:G_0602 rdf:type owl:NamedIndividual,
+                    pm:G_06 ;
+rdfs:label "Неорганизованные туристы" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0603
+pm:G_0603 rdf:type owl:NamedIndividual,
+                    pm:G_06 ;
+rdfs:label "Приезжие к мероприятиям" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0604
+pm:G_0604 rdf:type owl:NamedIndividual,
+                    pm:G_06 ;
+rdfs:label "Приезжие по рабочим вопросам" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0701
+pm:G_0701 rdf:type owl:NamedIndividual,
+                    pm:G_07 ;
+rdfs:label "Владельцы собак" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0702
+pm:G_0702 rdf:type owl:NamedIndividual,
+                    pm:G_07 ;
+rdfs:label "Автовладельцы" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0703
+pm:G_0703 rdf:type owl:NamedIndividual,
+                    pm:G_07 ;
+rdfs:label "Мотоциклисты" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0704
+pm:G_0704 rdf:type owl:NamedIndividual,
+                    pm:G_07 ;
+rdfs:label "Велосипедисты" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0705
+pm:G_0705 rdf:type owl:NamedIndividual,
+                    pm:G_07 ;
+rdfs:label "Пользователи общественного транспорта" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0706
+pm:G_0706 rdf:type owl:NamedIndividual,
+                    pm:G_07 ;
+rdfs:label "Трудовые мигранты" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0707
+pm:G_0707 rdf:type owl:NamedIndividual,
+                    pm:G_07 ;
+rdfs:label "Верующие, православные" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0708
+pm:G_0708 rdf:type owl:NamedIndividual,
+                    pm:G_07 ;
+rdfs:label "Верующие, мусульмане" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0709
+pm:G_0709 rdf:type owl:NamedIndividual,
+                    pm:G_07 ;
+rdfs:label "Горожане, ведущие раздельный сбор мусора" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0710
+pm:G_0710 rdf:type owl:NamedIndividual,
+                    pm:G_07 ;
+rdfs:label "Горожане, занимающиеся спортом" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#G_0711
+pm:G_0711 rdf:type owl:NamedIndividual,
+                    pm:G_07 ;
+rdfs:label "Беременные женщины" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#S_801
+pm:S_801 rdf:type owl:NamedIndividual,
+                    pm:Situation ;
+rdfs:label "Самоизоляция " .
+
+
+###  http://citygraph.onti.actcognitive.org/population#S_802
+pm:S_802 rdf:type owl:NamedIndividual,
+                    pm:Situation ;
+rdfs:label "Заболевание гриппом" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#S_803
+pm:S_803 rdf:type owl:NamedIndividual,
+                    pm:Situation ;
+rdfs:label "Травма" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#S_804
+pm:S_804 rdf:type owl:NamedIndividual,
+                    pm:Situation ;
+rdfs:label "ДТП" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#S_805
+pm:S_805 rdf:type owl:NamedIndividual,
+                    pm:Situation ;
+rdfs:label "Жертва административного правонарушения" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#S_806
+pm:S_806 rdf:type owl:NamedIndividual,
+                    pm:Situation ;
+rdfs:label "Жертва уголовного правонарушения" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#S_807
+pm:S_807 rdf:type owl:NamedIndividual,
+                    pm:Situation ;
+rdfs:label "Свадьба" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#S_808
+pm:S_808 rdf:type owl:NamedIndividual,
+                    pm:Situation ;
+rdfs:label "Похороны" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#S_809
+pm:S_809 rdf:type owl:NamedIndividual,
+                    pm:Situation ;
+rdfs:label "Роды" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#S_810
+pm:S_810 rdf:type owl:NamedIndividual,
+                    pm:Situation ;
+rdfs:label "Свидание" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#S_811
+pm:S_811 rdf:type owl:NamedIndividual,
+                    pm:Situation ;
+rdfs:label "Пьянство, наркомания" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#S_812
+pm:S_812 rdf:type owl:NamedIndividual,
+                    pm:Situation ;
+rdfs:label "Заболевание туберкулезом" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#S_813
+pm:S_813 rdf:type owl:NamedIndividual,
+                    pm:Situation ;
+rdfs:label "Заболевание венерическими заболеваниями" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#S_814
+pm:S_814 rdf:type owl:NamedIndividual,
+                    pm:Situation ;
+rdfs:label "Заболевание гепатитами" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#S_815
+pm:S_815 rdf:type owl:NamedIndividual,
+                    pm:Situation ;
+rdfs:label "Заболевание ВИЧ" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#S_816
+pm:S_816 rdf:type owl:NamedIndividual,
+                    pm:Situation ;
+rdfs:label "Заболевание новой коронавирусной инфекцией" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#S_817
+pm:S_817 rdf:type owl:NamedIndividual,
+                    pm:Situation ;
+rdfs:label "Заболевание сахарным диабетом" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#S_818
+pm:S_818 rdf:type owl:NamedIndividual,
+                    pm:Situation ;
+rdfs:label "Заболевание раком" .                                                                   
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
