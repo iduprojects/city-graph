@@ -1353,96 +1353,124 @@ pm:ex_OCE_0801 rdf:type owl:NamedIndividual ,
 
 ###  http://citygraph.onti.actcognitive.org/population#Алые_паруса
 pm:Алые_паруса rdf:type owl:NamedIndividual ,
-                        pm:CelebrationDay .
+                        pm:CelebrationDay ;
+               rdfs:label "Алые паруса" .
 
 
 ###  http://citygraph.onti.actcognitive.org/population#Встреча_компанией
 pm:Встреча_компанией rdf:type owl:NamedIndividual ,
-                              pm:SpecialDay .
+                              pm:SpecialDay ;
+                     rdfs:label "Встреча компанией" .
 
 
 ###  http://citygraph.onti.actcognitive.org/population#Выходной_день
 pm:Выходной_день rdf:type owl:NamedIndividual ,
-                          pm:RegularDay .
+                          pm:RegularDay ;
+                 rdfs:label "Выходной день" .
 
 
 ###  http://citygraph.onti.actcognitive.org/population#День_рождения
 pm:День_рождения rdf:type owl:NamedIndividual ,
-                          pm:CelebrationDay .
-
-
-###  http://citygraph.onti.actcognitive.org/population#Жильё
-pm:Жильё rdf:type owl:NamedIndividual .
+                          pm:CelebrationDay ;
+                 rdfs:label "День рождения" .
 
 
 ###  http://citygraph.onti.actcognitive.org/population#Корпоратив
 pm:Корпоратив rdf:type owl:NamedIndividual ,
-                       pm:CelebrationDay .
+                       pm:CelebrationDay ;
+              rdfs:label "Корпоратив" .
 
 
 ###  http://citygraph.onti.actcognitive.org/population#Культурный_досуг
 pm:Культурный_досуг rdf:type owl:NamedIndividual ,
-                             pm:SpecialDay .
+                             pm:SpecialDay ;
+                    rdfs:label "Культурный досуг" .
 
 
 ###  http://citygraph.onti.actcognitive.org/population#Новый_год
 pm:Новый_год rdf:type owl:NamedIndividual ,
-                      pm:CelebrationDay .
+                      pm:CelebrationDay ;
+             rdfs:label "Новый год" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#Особенный_день
+pm:Особенный_день rdf:type owl:NamedIndividual .
 
 
 ###  http://citygraph.onti.actcognitive.org/population#Получение_государственных_услуг
 pm:Получение_государственных_услуг rdf:type owl:NamedIndividual ,
-                                            pm:SpecialDay .
+                                            pm:SpecialDay ;
+                                   rdfs:label "Получение государственных услуг" .
 
 
 ###  http://citygraph.onti.actcognitive.org/population#Получение_медицинских_услуг
 pm:Получение_медицинских_услуг rdf:type owl:NamedIndividual ,
-                                        pm:SpecialDay .
+                                        pm:SpecialDay ;
+                               rdfs:label "Получение медицинских услуг" .
 
 
 ###  http://citygraph.onti.actcognitive.org/population#Похороны_день
 pm:Похороны_день rdf:type owl:NamedIndividual ,
-                          pm:SpecialDay .
+                          pm:SpecialDay ;
+                 rdfs:label "Похороны день" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#Праздничный_день
+pm:Праздничный_день rdf:type owl:NamedIndividual .
 
 
 ###  http://citygraph.onti.actcognitive.org/population#Рабочий_день
 pm:Рабочий_день rdf:type owl:NamedIndividual ,
-                         pm:RegularDay .
+                         pm:RegularDay ;
+                rdfs:label "Рабочий день" .
 
 
 ###  http://citygraph.onti.actcognitive.org/population#Развод
 pm:Развод rdf:type owl:NamedIndividual ,
-                   pm:SpecialDay .
+                   pm:SpecialDay ;
+          rdfs:label "Развод" .
 
 
 ###  http://citygraph.onti.actcognitive.org/population#Религиозный_праздник
 pm:Религиозный_праздник rdf:type owl:NamedIndividual ,
-                                 pm:CelebrationDay .
+                                 pm:CelebrationDay ;
+                        rdfs:label "Религиозный праздник" .
 
 
 ###  http://citygraph.onti.actcognitive.org/population#Роды_день
 pm:Роды_день rdf:type owl:NamedIndividual ,
-                      pm:SpecialDay .
+                      pm:SpecialDay ;
+             rdfs:label "Роды день" .
 
 
 ###  http://citygraph.onti.actcognitive.org/population#Свадьба_день
 pm:Свадьба_день rdf:type owl:NamedIndividual ,
-                         pm:SpecialDay .
+                         pm:SpecialDay ;
+                rdfs:label "Свадьба день" .
 
 
 ###  http://citygraph.onti.actcognitive.org/population#Свидание_день
 pm:Свидание_день rdf:type owl:NamedIndividual ,
-                          pm:SpecialDay .
+                          pm:SpecialDay ;
+                 rdfs:label "Свидание день" .
 
 
 ###  http://citygraph.onti.actcognitive.org/population#Спортивный_досуг
 pm:Спортивный_досуг rdf:type owl:NamedIndividual ,
-                             pm:SpecialDay .
+                             pm:SpecialDay ;
+                    rdfs:label "Спортивный досуг" .
 
 
 ###  http://citygraph.onti.actcognitive.org/population#Экологичный_досуг
 pm:Экологичный_досуг rdf:type owl:NamedIndividual ,
-                              pm:SpecialDay .
+                              pm:SpecialDay ;
+                     rdfs:label "Экологичный досуг" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#9-е_мая
+<http://citygraph.onti.actcognitive.org/population#9-е_мая> rdf:type owl:NamedIndividual ,
+                                                                     pm:CelebrationDay ;
+                                                            rdfs:label "9-е мая" .
 
 
 ###  http://citygraph.onti.actcognitive.org/population#9-е_мая
