@@ -1175,10 +1175,10 @@ pm:OCE_Рекреационная_зона rdf:type owl:NamedIndividual,
 rdfs:label "Рекреационная_зона" .
 
 
-###  http://citygraph.onti.actcognitive.org/population#OCE_Пляж
-pm:OCE_Пляж rdf:type owl:NamedIndividual,
+###  http://citygraph.onti.actcognitive.org/population#OCE_Набережная
+pm:OCE_Набережная rdf:type owl:NamedIndividual,
                              pm:OCE_0501 ;
-rdfs:label "Пляж" .
+rdfs:label "Набережная" .
 
 
 ###  http://citygraph.onti.actcognitive.org/population#OCE_Игровая_площадка
