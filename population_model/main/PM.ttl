@@ -26,14 +26,24 @@ pm:hasGroup rdf:type owl:ObjectProperty ;
             rdfs:range pm:Group .
 
 
+###  http://citygraph.onti.actcognitive.org/population#hasIntensity
+pm:hasIntensity rdf:type owl:ObjectProperty ;
+                rdfs:domain pm:AssessmentLifeSituation ;
+                rdfs:range pm:AssessmentIntensity .
+
+
 ###  http://citygraph.onti.actcognitive.org/population#hasLifeSituation
 pm:hasLifeSituation rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf pm:topObjAssessmentProperty .
+                    rdfs:subPropertyOf pm:topObjAssessmentProperty ;
+                    rdfs:domain pm:AssessmentLifeSituation ;
+                    rdfs:range pm:LifeSituation .
 
 
 ###  http://citygraph.onti.actcognitive.org/population#hasLifeSituationAssessment
 pm:hasLifeSituationAssessment rdf:type owl:ObjectProperty ;
-                              rdfs:subPropertyOf pm:hasAssessment .
+                              rdfs:subPropertyOf pm:hasAssessment ;
+                              rdfs:domain pm:AdditionalClass ;
+                              rdfs:range pm:AssessmentLifeSituation .
 
 
 ###  http://citygraph.onti.actcognitive.org/population#hasOCE
@@ -97,6 +107,7 @@ pm:hasUsageValue rdf:type owl:DatatypeProperty ;
 ###  http://citygraph.onti.actcognitive.org/population#inMinutes
 pm:inMinutes rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf pm:topDataAssessmentProperty ;
+             rdfs:domain pm:AssessmentLifeSituation ;
              rdfs:range xsd:float ;
              rdfs:comment "в минутах" .
 
@@ -155,6 +166,11 @@ pm:Assessment rdf:type owl:Class ;
 pm:AssessmentIntensity rdf:type owl:Class ;
                        rdfs:subClassOf pm:Assessment ;
                        rdfs:label "Потребность" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#AssessmentLifeSituation
+pm:AssessmentLifeSituation rdf:type owl:Class ;
+                           rdfs:label "Доступность" .
 
 
 ###  http://citygraph.onti.actcognitive.org/population#G_01
