@@ -411,7 +411,7 @@ pm:OCE_0604 rdf:type owl:Class ;
 ###  http://citygraph.onti.actcognitive.org/population#OCE_07
 pm:OCE_07 rdf:type owl:Class ;
           rdfs:subClassOf pm:OCE ;
-          rdfs:label "Инфраструктура приложения труда" .
+          rdfs:label "Объект инфраструктуры приложения труда" .
 
 
 ###  http://citygraph.onti.actcognitive.org/population#OtherGroup
