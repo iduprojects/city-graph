@@ -21,11 +21,6 @@ pm:hasAssessment rdf:type owl:ObjectProperty ;
                  rdfs:range pm:Assessment .
 
 
-###  http://citygraph.onti.actcognitive.org/population#hasLifeSituationAssessment
-pm:hasLifeSituationAssessment rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf pm:hasAssessment .
-
-
 ###  http://citygraph.onti.actcognitive.org/population#hasGroup
 pm:hasGroup rdf:type owl:ObjectProperty ;
             rdfs:range pm:Group .
@@ -34,6 +29,11 @@ pm:hasGroup rdf:type owl:ObjectProperty ;
 ###  http://citygraph.onti.actcognitive.org/population#hasLifeSituation
 pm:hasLifeSituation rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf pm:topObjAssessmentProperty .
+
+
+###  http://citygraph.onti.actcognitive.org/population#hasLifeSituationAssessment
+pm:hasLifeSituationAssessment rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf pm:hasAssessment .
 
 
 ###  http://citygraph.onti.actcognitive.org/population#hasOCE
@@ -205,6 +205,13 @@ pm:Group rdf:type owl:Class ;
          rdfs:comment "Добавить подгруппы экземплярами в подклассы Социальной группы с одноимённого листа в таблице. При этом возрастные характеристики вносить не в название экземпляра, а связывать с ними data property hasStartDate и hasEndDate." ,
                       "Один из подклассов данной группы - Индивидуальные группы горожан - определён как \"Состояния с длительным временем пребывания\". Возможно, эту характеристику стоит расширить на весь класс Социальная группа - это отделит его от класса Жизненная ситуация." ;
          rdfs:label "Социальная группа" .
+
+
+###  http://citygraph.onti.actcognitive.org/population#LifeSituation
+pm:LifeSituation rdf:type owl:Class ;
+                 rdfs:comment "Подклассы частично совпадают с подклассами Особенного дня. Такие помечены суффиксом _ситуация." ,
+                              "Состояния с коротким временем пребывания." ;
+                 rdfs:label "Жизненная ситуация" .
 
 
 ###  http://citygraph.onti.actcognitive.org/population#OCE
@@ -411,13 +418,6 @@ pm:OCE_07 rdf:type owl:Class ;
 pm:OtherGroup rdf:type owl:Class ;
               rdfs:subClassOf pm:Group ;
               rdfs:label "Дополнительная группа" .
-
-
-###  http://citygraph.onti.actcognitive.org/population#LifeSituation
-pm:LifeSituation rdf:type owl:Class ;
-             rdfs:comment "Подклассы частично совпадают с подклассами Особенного дня. Такие помечены суффиксом _ситуация." ,
-                          "Состояния с коротким временем пребывания." ;
-             rdfs:label "Жизненная ситуация" .
 
 
 ###  http://citygraph.onti.actcognitive.org/population#ValueFunction
